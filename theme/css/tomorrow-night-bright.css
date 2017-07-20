@@ -1,0 +1,141 @@
+/*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
+.prettyprint {
+  /*background-color: #002b36; */
+  color: #93a1a1;
+  /*font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;*/
+  /*border: 1px solid #e1e1e8;*/
+  border: 0px solid red;
+  
+	-webkit-border-radius: 6px;/**苹果；谷歌，等一些浏览器认，因为他们都用的是webkit内核**/
+	-moz-border-radius: 6px;/*专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+    border-radius: 6px;/*Mozilla/Firefox 和 Safari 3支持该属性*/
+}
+
+.prettyprint.linenums {  
+ -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;  
+ -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;  
+ box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;  
+}  
+
+
+.pln {
+  color: #eaeaea;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 33px;
+  color: #969896;
+}
+
+ol.linenums li {  
+ padding-left: 12px;  
+ color: #bebec5;
+ line-height: 18px;  
+ text-shadow: 0 1px 0 #B4B4B4;  
+}  
+
+
+ol.linenums 
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9{
+  /*padding-left: 1em;*/
+  background-color: green;
+  list-style-type: decimal;
+}
+
+
+@media screen {
+
+  /* string content */
+
+  .str {
+    color: #b9ca4a;
+  }
+
+  /* keyword */
+
+  .kwd {
+    color: #c397d8;
+  }
+
+  /* comment */
+
+  .com {
+    color: #969896;
+  }
+
+  /* type name */
+
+  .typ {
+    color: #7aa6da;
+  }
+
+  /* literal value */
+
+  .lit {
+    color: #e78c45;
+  }
+
+  /* punctuation */
+
+  .pun {
+    color: #eaeaea;
+  }
+
+  /* lisp open bracket */
+
+  .opn {
+    color: #eaeaea;
+  }
+
+  /* lisp close bracket */
+
+  .clo {
+    color: #eaeaea;
+  }
+
+  /* markup tag name */
+
+  .tag {
+    color: #d54e53;
+  }
+
+  /* markup attribute name */
+
+  .atn {
+    color: #e78c45;
+  }
+
+  /* markup attribute value */
+
+  .atv {
+    color: #70c0b1;
+  }
+
+  /* declaration */
+
+  .dec {
+    color: #e78c45;
+  }
+
+  /* variable name */
+
+  .var {
+    color: #d54e53;
+  }
+
+  /* function name */
+
+  .fun {
+    color: #7aa6da;
+  }
+}

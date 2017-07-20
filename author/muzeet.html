@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+
+<head>
+    <title>OxCAFEBABE - Articles by muzeet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" id="responsive-style-css"  href="/theme/css/tomorrow-night-bright.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='/theme/css/style.css' type="text/css" media="all" />
+	<!--<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/pygmentMy.css' type="text/css" media="all" />-->
+	<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/archive.css' type="text/css" media="all" />
+	
+	<script type="text/javascript" src="/theme/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/theme/js/numberLines.js"></script>
+	<script type="text/javascript" src="/theme/js/prettify.js"></script>
+	
+    <link href="http://www.muzeet.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
+    
+</head>
+
+<body id="index" class="blog"  onload="$('pre').addClass('prettyprint');window.prettyPrint && prettyPrint();">
+<div id="container" class="hfeed">
+    <header id="header" >
+        <div id="logo">
+                <h1>OxCAFEBABE</h1>
+        </div> <!-- /#logo-->
+        <nav id="menu" class="main-nav"><ul class="menu">
+            <li  class="active"><a href="/">博客主页</a></li>
+            <li  class="active"><a href="/archives.html">文章列表</a></li>
+            <li  class="active"><a href="/categories.html">分类目录</a></li>
+            <li  class="active"><a href="/category/Cloud&Data/">Cloud&Data</a></li>
+            <li  class="active"><a href="/category/Code/">程序人生</a></li>
+            <li  class="active"><a href="/category/读书/">读书</a></li>
+            <li  class="active"><a href="/category/博客设计/">博客设计</a></li>
+            <li  class="active"><a href="#">关于本站</a></li>
+
+        </ul></nav><!-- /#menu -->
+    </header>
+    <section id="wrapper" class="clearfix">
+        <section id="content" class="grid col-620" >
+<h2>Articles by muzeet</h2>
+                <section class="breadcrumb-list">
+				<!--
+					-->
+                </section>
+
+
+<ul>
+<li class="posts"><article class="post hentry">
+	<header>
+		<div class="post-info">
+		<span class="post-lable">发布于：</span>
+			<abbr class="date" title="2017-07-01T00:00:00+08:00"> 
+				<a href="../archives/2017/index.html">2017-07-01 </a>
+			</abbr>
+		<span class="post-lable">分类：</span>
+			<abbr class="category">
+				<a href="../category/博客设计/">博客设计</a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+		<h2 class="title" >
+			<a href="../posts/2017/07/01/Test-Code-Highlight-by-pygment.html" rel="bookmark" title="Permalink to 代码高亮（pygment）">代码高亮（pygment）</a>
+		</h2>
+		
+	</header>
+	<div class="summary"><h2>1. 测试code block</h2>
+<p>下面是一段代码，代码使用pygment进行高亮处理。</p>
+<p>求二叉树的第k个节点：</p>
+<div class="highlight"><pre><span></span>public class KthNode
+{
+     public TreeNode kthNode(TreeNode pRoot, int k)
+     {
+        //求二叉排序树的第k个节点，只需要中序遍历，即可
+        if(pRoot == null || k &lt; 1)
+            return null;
+        Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();
+        TreeNode p = pRoot;
+        TreeNode kthNode = null;
+        int count = 0;
+        while(p != null || !stack.empty() &amp;&amp; count !=k ){
+            if(p != null){
+                stack.push(p);
+                p = p.left;
+            }
+            else{
+               p = stack.pop();
+               count++;
+               if(count == k)
+                   kthNode = p;
+               p = p.right;
+            }
+        }
+        return kthNode;
+     }
+}
+</pre></div></div>
+	<footer>
+		<div class="readmore">
+			<span class="more"><a href="../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">继续阅读</a></span>
+		</div>
+	</footer>
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<div class="post-info">
+		<span class="post-lable">发布于：</span>
+			<abbr class="date" title="2016-06-06T00:00:00+08:00"> 
+				<a href="../archives/2016/index.html">2016-06-06 </a>
+			</abbr>
+		<span class="post-lable">分类：</span>
+			<abbr class="category">
+				<a href="../category/生活/">生活</a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+		<h2 class="title" >
+			<a href="../posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html" rel="bookmark" title="Permalink to 理想的生活方式">理想的生活方式</a>
+		</h2>
+		
+	</header>
+	<div class="summary"><h1>理想的生活态度</h1>
+<h2>理想中的工作桌面</h2>
+<p><img alt="桌面" src="http://7xq1t9.com1.z0.glb.clouddn.com/0001_desktop.jpg" title="理想的工作桌面应该是这样的"></p>
+<h2>理想的心态</h2>
+<p><img alt="心态" src="http://7xq1t9.com1.z0.glb.clouddn.com/0001_lifeStyle.jpg" title="理想的心态应该是这样的"></p>
+<div align="center">
+<iframe height=498 width=510 src="http://player.youku.com/embed/XNjcyMDU4Njg0" frameborder=0 allowfullscreen></iframe>
+</div></div>
+	<footer>
+		<div class="readmore">
+			<span class="more"><a href="../posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html">继续阅读</a></span>
+		</div>
+	</footer>
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<div class="post-info">
+		<span class="post-lable">发布于：</span>
+			<abbr class="date" title="2016-01-16T00:00:00+08:00"> 
+				<a href="../archives/2016/index.html">2016-01-16 </a>
+			</abbr>
+		<span class="post-lable">分类：</span>
+			<abbr class="category">
+				<a href="../category/读书/">读书</a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+		<h2 class="title" >
+			<a href="../posts/2016/01/16/du-shu-de-zhong-yao-xing.html" rel="bookmark" title="Permalink to 读书的重要性">读书的重要性</a>
+		</h2>
+		
+	</header>
+	<div class="summary"><h1>读书</h1>
+<p>古人云，“书读百遍，其义自现”。书读的多了，才能有助于完善自己的人生观和价值观。读书应该是一种习惯，古今中外的优秀典藏中吸取营养。一个人有没有书香气，可以从脸上辨别出。想有更广阔的思维空间，读书吧；想具有别具一格的个性，读书吧。也许从下面这幅图中，我们可以看到读书的重要性。</p>
+<p><img alt="读书" src="http://7xq1t9.com1.z0.glb.clouddn.com/importanceOfReading.jpg" title="读书"></p></div>
+	<footer>
+		<div class="readmore">
+			<span class="more"><a href="../posts/2016/01/16/du-shu-de-zhong-yao-xing.html">继续阅读</a></span>
+		</div>
+	</footer>
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<div class="post-info">
+		<span class="post-lable">发布于：</span>
+			<abbr class="date" title="2016-01-13T00:00:00+08:00"> 
+				<a href="../archives/2016/index.html">2016-01-13 </a>
+			</abbr>
+		<span class="post-lable">分类：</span>
+			<abbr class="category">
+				<a href="../category/markdown/">markdown</a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+		<h2 class="title" >
+			<a href="../posts/2016/01/13/markdown-yu-fa-shuo-ming.html" rel="bookmark" title="Permalink to Markdown 语法说明">Markdown 语法说明</a>
+		</h2>
+		
+	</header>
+	<div class="summary"><h2>概述</h2>
+<h3>宗旨</h3>
+<p>Markdown 的目标是实现「易读易写」。</p>
+<h3>兼容 HTML</h3>
+<p>Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。  </p>
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。<br>
+要制约的只有一些 HTML 区块元素――<code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt;p&gt;</code> 标签。   </p>
+<div class="highlight"><pre><span></span>这是一个普通段落。
+
+<span class="nt">&lt;table&gt;</span>
+ <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+ <span class="nt">&lt;/tr&gt;</span>
+<span...</div>
+	<footer>
+		<div class="readmore">
+			<span class="more"><a href="../posts/2016/01/13/markdown-yu-fa-shuo-ming.html">继续阅读</a></span>
+		</div>
+	</footer>
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<div class="post-info">
+		<span class="post-lable">发布于：</span>
+			<abbr class="date" title="2015-10-01T00:00:00+08:00"> 
+				<a href="../archives/2015/index.html">2015-10-01 </a>
+			</abbr>
+		<span class="post-lable">分类：</span>
+			<abbr class="category">
+				<a href="../category/Java/">Java</a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+		<h2 class="title" >
+			<a href="../posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html" rel="bookmark" title="Permalink to Java编程思想-读书笔记">Java编程思想-读书笔记</a>
+		</h2>
+		
+	</header>
+	<div class="summary"><p>《Java 编程思想》，原书英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。作为Java领域必读书籍，阅读此书时，我打算在阅读的过程中随时记录每个章节的技术要点和难点以及Java中的一些边边角角，以便巩固Java基础，也备日后随时查阅。</p>
+<p><img alt="Java编程思想" src="http://7xq1t9.com1.z0.glb.clouddn.com/think%20in%20java%204th.jpg" title="thinking in java 4th"></p>
+<p align="center"><em>Java编程思想</em></p>
+
+<h2>1. 对象导论</h2>
+<ul>
+<li>has-a —— 组合，is-a —— 继承。</li>
+<li>所有可以发送给基类对象的消息同时也可以发送给导出类对象，即导出类与基类具有相同的类型、等价性。</li>
+<li>把将导出类看作是它的基类的过程称为向上转型（upcasting）。</li>
+<li>Java 是单根继承结构，终极基类就是 Object。</li>
+</ul>
+<h2>2. 一切都是对象</h2>
+<ul>
+<li>尽管一切都看作是对象，但操纵的标识符实际上是对象的一个“引用”。</li>
+<li>栈用于存放一些对象引用、基本变量的值，堆用于存放所有的 Java 对象。</li>
+<li>堆不同于栈的好处是：编译器不需要知道存储的数据在堆里存活多长时间。</li>
+<li>9种基本类型：boolean（不明确）、char（16-bit）、byte（8-bit）、short（16-bit）、int（32-bit）、long（64-bit）、float（32-bit）、double（64-bit）、void（不明确）。（数值类型均有正负号）</li>
+<li>Java 有一个垃圾回收器，用来监视用 new 创建的所有对象，并辨别那些不会再被引用的对象。</li>
+<li>方法名和参数列表（一起称为“方法签名”）唯一地标志出某个方法。</li>
+</ul>
+<h2>3....</div>
+	<footer>
+		<div class="readmore">
+			<span class="more"><a href="../posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html">继续阅读</a></span>
+		</div>
+	</footer>
+</article></li>
+<hr/>
+</ul>
+<p class="paginator">
+	<span id="previous_page">
+	</span>
+	<span id="cur_page">
+    第 1 / 1页
+	</span>
+	
+	<span id="next_page">
+	</span>
+</p>
+        </section><!-- #content -->
+        <section id="widgets" class="grid col-300 fit" >
+            <!--
+            <section id="widget-search" class="widget-wrapper widget_search">
+
+                <form id="searchform" action="http://www.google.com/search" method="get">
+                    <input id="q" class="field" type="text" placeholder="Search Blog" name="q" ></input>
+                    <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
+                    <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
+                    <input id="channel" name="channel" type="hidden" value="suggest" ></input>
+                    <input id="searchsubmit" class="submit" type="submit" value="">
+                </form>
+            </section>
+            -->
+
+			<section  id="widget-aboutme" class="widget-wrapper">
+				<div class="widget-title">
+                    关于本人
+                </div>
+				<p align="center"><img src="http://7xq1t9.com1.z0.glb.clouddn.com/thank_you.png" /></p>
+
+				<p>资深代码渣，热衷于折腾。<a href="#" >更多介绍...</a></p>
+				<p>声明：所有言论仅代表个人观点，与所在单位无关。</p><p>本人主页为<a href="http://www.muzeet.cn" target="_blank">http://www.muzeet.cn</a></p>
+				
+			</section>
+
+			
+            <section id="widget-category" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    分类目录
+                </div>
+				<div class="tag_cloud">
+						<a href="../category/博客设计/" style="font-size: 100.0%;">博客设计(1)</a>
+						<a href="../category/读书/" style="font-size: 100.0%;">读书(1)</a>
+						<a href="../category/Java/" style="font-size: 100.0%;">Java(1)</a>
+						<a href="../category/markdown/" style="font-size: 100.0%;">markdown(1)</a>
+						<a href="../category/生活/" style="font-size: 100.0%;">生活(1)</a>
+				</div>
+            </section>
+
+            <section id="widget-category" class="widget-wrapper widget_recentArticle">
+                <div class="widget-title">
+                    最近文章
+                </div>
+				<div>
+				<ul id="recent-posts">
+					<li>
+					  <a href="../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a>
+					</li>
+					<li>
+					  <a href="../posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html">理想的生活方式</a>
+					</li>
+					<li>
+					  <a href="../posts/2016/01/16/du-shu-de-zhong-yao-xing.html">读书的重要性</a>
+					</li>
+					<li>
+					  <a href="../posts/2016/01/13/markdown-yu-fa-shuo-ming.html">Markdown 语法说明</a>
+					</li>
+					<li>
+					  <a href="../posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html">Java编程思想-读书笔记</a>
+					</li>
+				</ul>
+				</div>
+            </section>
+
+            <section id="widget-category" class="widget-wrapper widget_recentComments">
+                <div class="widget-title">
+                    最近评论
+                </div>
+				<div>
+				<ul id="recent-posts">
+			
+				</ul>
+				</div>
+            </section>
+			
+            <section id="widget-links" class="widget-wrapper">
+                <div class="widget-title">
+                   友情链接
+                </div>
+                <span><a href="http://www.demiaowu.cn/">暗淡了乌云</a>&nbsp;|&nbsp;<a href="http://www.demiaowu.cn/">暗淡了乌云</a></span>
+            </section>
+
+
+            <section id="widget-links" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    有用链接
+                </div>
+                <ul>
+				    <span>
+                        <a href="http://getpelican.com/">Pelican</a>
+                        <a href="http://python.org/">Python.org</a>
+                        <a href="http://jinja.pocoo.org/">Jinja2</a>
+					</span>
+                </ul>
+            </section>
+            
+			<section id="widget-copyright" class="widget-wrapper widget_archive">
+			<div class="widget-title">
+                    版权协议
+            </div>
+			 
+				<div class="grid col-300 copyright" >
+					<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>
+					<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+				</div>
+			 </section>
+        </section><!-- widgets -->
+    </section><!-- /#wrapper -->
+    <footer id="footer" class="clearfix"><section class="footer-wrapper">
+        <div class="grid col-940" >
+            <div class="grid col-540"></div>
+            <div class="grid col-380 fit" >
+                <ul class="social-icons">
+                    <!-- TO BE CONTINUED -->
+                </ul>
+            </div>
+        </div>
+		
+		<div class="grid col-300 copyright" >
+					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
+						<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"" alt="知识共享许可协议"></img>
+					</a>
+				</div>
+        <div class="grid col-300 ">
+		
+        </div>
+        <div class="grid col-300 fit powered">
+          Copyright © 2017 - muzeet - Powered by Pelican
+        </div>
+    </section></footer>
+</div>
+
+<!--
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('pre').addClass('prettyprint linenums') 
+		//添加Google code Hight需要的class
+		prettyPrint();
+	});
+		
+</script>
+-->
+
+</body>
+</html>

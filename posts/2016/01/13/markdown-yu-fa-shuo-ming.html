@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+
+<head>
+    <title>OxCAFEBABE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" id="responsive-style-css"  href="/theme/css/tomorrow-night-bright.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='/theme/css/style.css' type="text/css" media="all" />
+	<!--<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/pygmentMy.css' type="text/css" media="all" />-->
+	<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/archive.css' type="text/css" media="all" />
+	
+	<script type="text/javascript" src="/theme/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/theme/js/numberLines.js"></script>
+	<script type="text/javascript" src="/theme/js/prettify.js"></script>
+	
+    <link href="http://www.muzeet.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
+    <link href="http://www.muzeet.com/feeds/markdown.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Categories Atom Feed" />
+    
+</head>
+
+<body id="index" class="blog"  onload="$('pre').addClass('prettyprint');window.prettyPrint && prettyPrint();">
+<div id="container" class="hfeed">
+    <header id="header" >
+        <div id="logo">
+                <h1>OxCAFEBABE</h1>
+        </div> <!-- /#logo-->
+        <nav id="menu" class="main-nav"><ul class="menu">
+            <li  class="active"><a href="/">博客主页</a></li>
+            <li  class="active"><a href="/archives.html">文章列表</a></li>
+            <li  class="active"><a href="/categories.html">分类目录</a></li>
+            <li  class="active"><a href="/category/Cloud&Data/">Cloud&Data</a></li>
+            <li  class="active"><a href="/category/Code/">程序人生</a></li>
+            <li  class="active"><a href="/category/读书/">读书</a></li>
+            <li  class="active"><a href="/category/博客设计/">博客设计</a></li>
+            <li  class="active"><a href="#">关于本站</a></li>
+
+        </ul></nav><!-- /#menu -->
+    </header>
+    <section id="wrapper" class="clearfix">
+        <section id="content" class="grid col-620" >
+                <section class="breadcrumb-list">
+				<!--
+<a href="../../../..">Blog</a> ›<a href="category/markdown/">markdown</a> ›Markdown 语法说明
+					-->
+                </section>
+
+
+<section id="post" class="post hentry">
+    <header>
+    <h2 class="post-title" >Markdown 语法说明</h2>
+    
+    <div id="post-meta-head" class="post-meta">
+        <span class="meta-prep">发布于：</span>
+        <abbr class="date" title="2016-01-13T00:00:00+08:00"> 
+            <!--<a href="../../../../2016/01/13/index.html">2016-01-13 </a>-->
+			<a href="../../../../archives/2016/index.html">2016-01-13 </a>
+        </abbr>
+        <span class="meta-prep">&nbsp;|&nbsp;标签：</span>
+                <a href="../../../../tag/table/">table</a>
+        <!-- TOBE COMMENTS -->
+    </div>
+    </header>
+    <div class="post-entry">
+        <h2>概述</h2>
+<h3>宗旨</h3>
+<p>Markdown 的目标是实现「易读易写」。</p>
+<h3>兼容 HTML</h3>
+<p>Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。  </p>
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。<br>
+要制约的只有一些 HTML 区块元素――<code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt;p&gt;</code> 标签。   </p>
+<div class="highlight"><pre><span></span>这是一个普通段落。
+
+<span class="nt">&lt;table&gt;</span>
+ <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+ <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+
+这是另一个普通段落。
+</pre></div>
+
+
+<p>效果：</p>
+<p>这是一个普通段落。</p>
+<table>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+</table>
+
+<p>这是另一个普通段落。</p>
+<p>1.在 HTML 区块标签间的 Markdown 格式语法将不会被处理<br>
+2.HTML 的区段（行内）标签如<code>&lt;span&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;del&gt;</code> 可以在 Markdown 的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用 Markdown 格式，而直接采用 HTML 标签来格式化。举例说明：如果比较喜欢 HTML 的 <code>&lt;a&gt;</code> 或 <code>&lt;img&gt;</code> 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图像标签语法。</p>
+<h3>特殊字符自动装换</h3>
+<p>在 HTML 文件中，有两个字符需要特殊处理： &lt; 和 &amp;,显示这些字符的原型必须使用实体形式： <code>&amp;lt;</code> 和 <code>&amp;amp;</code><br>
+markdown中，如果使用的 &amp; 字符是 HTML 字符实体的一部分，它会保留原状，否则它会被转换成 <code>&amp;amp;</code></p>
+<p>版权符号 ©：<code>&amp;copy;</code></p>
+<p>code范围内，不论是行内还是区块， &lt; 和 &amp; 两个符号都一定会被转换成 HTML 实体</p>
+<hr>
+<h2>区块元素</h2>
+<h3>段落和换行</h3>
+<p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p>
+<p>「由一个或多个连续的文本行组成」这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符）</p>
+<p>依赖markdown来插入<code>&lt;/br&gt;</code>换行符。两个以上的空格+回车</p>
+<p>一个以上的空行和两个以上的空格+回车区别：一个以上空行是表示不同段落，空格加回车是表示同一个段落中的换行，前者间距更大。</p>
+<h3>标题</h3>
+<p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。</p>
+<p>类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），任何数量的 = 和 - 都可以有效果。例如：</p>
+<div class="highlight"><pre><span></span>H1
+======
+
+H2
+------
+</pre></div>
+
+
+<p>效果：</p>
+<h1>H1标题</h1>
+<h2>H2标题</h2>
+<p>类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：</p>
+<div class="highlight"><pre><span></span># 这是 H1标题
+
+## 这是 H2标题
+
+###### 这是 H6标题
+</pre></div>
+
+
+<p>效果：</p>
+<h1>这是 H1标题</h1>
+<h2>这是 H2标题</h2>
+<h6>这是 H6标题</h6>
+<hr>
+<h3>区块引用 Blockquotes</h3>
+<p>Markdown 标记区块引用是使用类似 email 中用 &gt; 的引用方式。</p>
+<p>在每行的最前面加上 &gt;：  </p>
+<div class="highlight"><pre><span></span>&gt;区块引用  
+&gt;
+&gt;任然是区块引用  
+&gt;
+&gt;还是区块引用
+&gt;
+</pre></div>
+
+
+<blockquote>
+<p>区块引用    </p>
+<p>任然是区块引用  </p>
+<p>还是区块引用
+</p>
+</blockquote>
+<p>区块引用中表示不同段落：空格+回车</p>
+<p>Markdown 只在整个段落的第一行最前面加上 &gt; ：</p>
+<div class="highlight"><pre><span></span>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+
+&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
+</pre></div>
+
+
+<p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &gt; ：</p>
+<div class="highlight"><pre><span></span>&gt;第一级别的区块引用
+&gt;
+&gt;&gt;第二级的区块引用  
+&gt;
+&gt;&gt;第二级的区块引用
+&gt;
+&gt;回到第一级别的区块引用
+</pre></div>
+
+
+<blockquote>
+<p>第一级别的区块引用</p>
+<blockquote>
+<p>第二级的区块引用  </p>
+<p>第二级的区块引用</p>
+</blockquote>
+<p>回到第一级别的区块引用</p>
+</blockquote>
+<p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：</p>
+<div class="highlight"><pre><span></span>&gt;## 这是一个标题。##
+&gt;
+&gt;列表: 
+&gt;
+&gt;1.   这是第一行列表项。
+&gt;2.   这是第二行列表项。
+&gt; 
+&gt;给出一些例子代码：
+&gt; 
+&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</pre></div>
+
+
+<blockquote>
+<h2>这是一个标题。</h2>
+<p>列表: </p>
+<ol>
+<li>这是第一行列表项。</li>
+<li>这是第二行列表项。</li>
+</ol>
+<p>给出一些例子代码：</p>
+<div class="highlight"><pre><span></span>return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</pre></div>
+
+
+</blockquote>
+<h3>列表</h3>
+<p>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用<strong>*</strong> 、<strong>+</strong> 或是 <strong>-</strong> 作为列表标记（标记与列表名称有一个以上空格）：</p>
+<div class="highlight"><pre><span></span>* 第一行
+* 第二行
+* 第三行
+</pre></div>
+
+
+<ul>
+<li>第一行</li>
+<li>第二行</li>
+<li>第三行</li>
+</ul>
+<p>有序列表则使用数字接着一个英文句点：（数字句点与文字之间至少一个空格）</p>
+<div class="highlight"><pre><span></span>1.  Bird
+2.  McHale
+3.  Parish
+</pre></div>
+
+
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<p>列表项目标记(<em> 或者 1.)通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记(</em> 或者 1.)后面则一定要接着至少一个空格或制表符。</p>
+<p>如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 <code>&lt;p&gt;</code> 标签包起来：</p>
+<div class="highlight"><pre><span></span>*   Bird
+
+*   Magic
+</pre></div>
+
+
+<p>会被转换为：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;ul&gt;</span>
+<span class="nt">&lt;li&gt;&lt;p&gt;</span>Bird<span class="nt">&lt;/p&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;p&gt;</span>Magic<span class="nt">&lt;/p&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+
+
+<p>列表项目可以包含多个段落（多个段落用一个以上空行），每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：(一个以上空行+下面段落的每一行首部缩进4个空格)</p>
+<ol>
+<li>
+<p>This is a list item with two paragraphs. Lorem ipsum    dolor sit amet,
+    consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.  </p>
+<p>Vestibulum enim wisi, viverra nec, fringilla in laoreet vitae, 
+risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.</p>
+</li>
+<li>
+<p>Suspendisse id sem consectetuer libero luctus adipiscing.</p>
+</li>
+</ol>
+<p>列表项目中存在引用:（4个空格 or 1个制表符）</p>
+<div class="highlight"><pre><span></span>*   A list item with a blockquote:
+    &gt; This is a blockquote
+    &gt; inside a list item.
+*   Another
+</pre></div>
+
+
+<ul>
+<li>
+<p>A list item with a blockquote</p>
+<blockquote>
+<p>This is a blockquote
+inside a list item.</p>
+<ul>
+<li>Another</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>列表项目中存在代码区块:(8个空格 or 2个制表符)</p>
+<div class="highlight"><pre><span></span>*   一列表项包含一个列表区块：
+
+       &lt;代码写在这&gt;
+</pre></div>
+
+
+<ul>
+<li>一列表项包含一个列表区块：<div class="highlight"><pre><span></span>&lt;代码写在这&gt;
+</pre></div>
+
+
+</li>
+</ul>
+<p>列表项首说出现数字-句点-空白，原样显示:句点前面加上反斜杠。</p>
+<div class="highlight"><pre><span></span><span class="n">code</span><span class="o">:</span>
+<span class="mi">1</span><span class="o">.</span>  <span class="err">一列表项包含数字</span><span class="o">-</span><span class="err">句点</span><span class="o">-</span><span class="err">空白。</span>
+
+    <span class="mi">1986</span><span class="o">\.</span>  <span class="n">What</span> <span class="n">a</span> <span class="n">great</span> <span class="n">season</span>
+
+    <span class="mi">1987</span><span class="o">\.</span>  <span class="n">what</span> <span class="n">a</span> <span class="n">shame</span>
+
+<span class="mi">2</span><span class="o">.</span>  <span class="err">一列表项包含数字</span><span class="o">-</span><span class="err">句点</span><span class="o">-</span><span class="err">空白</span>
+</pre></div>
+
+
+<p>不加\ 效果:</p>
+<ol>
+<li>
+<p>一列表项包含数字-句点-空白。</p>
+<ol>
+<li>
+<p>What a great season</p>
+</li>
+<li>
+<p>what a shame  </p>
+</li>
+</ol>
+</li>
+<li>
+<p>一列表项包含数字-句点-空白</p>
+</li>
+</ol>
+<p>加\ 效果:</p>
+<ol>
+<li>
+<p>一列表项包含数字-句点-空白。</p>
+<p>1986.  What a great season</p>
+<p>1987.  what a shame  </p>
+</li>
+<li>
+<p>一列表项包含数字-句点-空白</p>
+</li>
+</ol>
+<p>列表项中又存在列表项：</p>
+<p>只需要在列表项中继续加列表项标记，前面加4个空格或者制表符。</p>
+<hr>
+<h3>代码区块</h3>
+<p>Markdown 会用 <code>&lt;pre&gt;</code> 和 <code>&lt;code&gt;</code> 标签来把代码区块包起来。</p>
+<p>标记为代码区块：缩进 4 个空格或是 1 个制表符。一直持续到没有缩进的那一行（或是文件结尾）</p>
+<div class="highlight"><pre><span></span>这是一个普通段落：
+
+    这是一个代码区块。
+</pre></div>
+
+
+<p>Markdown 会转换成：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>这是一个普通段落：<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;pre&gt;&lt;code&gt;</span>这是一个代码区块。
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+</pre></div>
+
+
+<p>java <code>main()</code>：</p>
+<div class="highlight"><pre><span></span>public static void main(String[] args){
+
+}
+</pre></div>
+
+
+<p>在代码区块里面， &amp; 、 &lt; 和 &gt; 会自动转成 HTML 实体</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>
+    <span class="ni">&amp;copy;</span> 2004 Foo Corporation
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+
+<p>会被转换为：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;pre&gt;&lt;code&gt;</span><span class="ni">&amp;lt;</span>div class=&quot;footer&quot;<span class="ni">&amp;gt;</span>
+   <span class="ni">&amp;amp;</span>copy; 2004 Foo Corporation
+<span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+</pre></div>
+
+
+<h3>分隔线</h3>
+<p>在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。可以在星号或是减号中间插入空格。</p>
+<div class="highlight"><pre><span></span>* * *
+
+---
+
+___
+</pre></div>
+
+
+<hr>
+<hr>
+<hr>
+<h2>区段元素</h2>
+<h3>链接</h3>
+<p>Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。不管是哪一种，链接文字都是用 [方括号] 来标记。</p>
+<ul>
+<li>
+<p>行内式链接：只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。</p>
+<div class="highlight"><pre><span></span>这是链接到[百度](http://www.baidu.com/ &quot;百度&quot;)的链接.
+
+这是链接到[百度](http://www.baidu.com/)的无title属性链接.
+</pre></div>
+
+
+<p>这是链接到<a href="http://www.baidu.com/" title="百度">百度</a>的链接.</p>
+<p>这是连接到<a href="http://www.baidu.com/">百度</a>的无title属性链接.</p>
+</li>
+<li>
+<p>参考式：链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记</p>
+<div class="highlight"><pre><span></span>这是链接到[百度][baidu]的参考式链接.
+</pre></div>
+
+
+<p>这是链接到[百度][baidu]的参考式链接.</p>
+<p>你也可以选择性地在两个方括号中间加上一个空格：</p>
+<div class="highlight"><pre><span></span>这是链接到[百度] [baidu]的参考式链接.
+</pre></div>
+
+
+<p>这是链接到[百度] [baidu]的参考式链接.</p>
+<p>接着，在文件的任意处，你可以把这个标记的链接内容定义出来：</p>
+<div class="highlight"><pre><span></span>[baidu]:http://www.baidu.com &quot;百度&quot;
+</pre></div>
+
+
+<p>[baidu]:http://www.baidu.com "百度"</p>
+<p>链接内容定义的形式为：</p>
+<ul>
+<li>方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字</li>
+<li>接着一个冒号</li>
+<li>接着一个以上的空格或制表符</li>
+<li>接着链接的网址</li>
+<li>选择性地接着 title 内容，可以用单引号、双引号或是括弧包着</li>
+</ul>
+<p>下面这三种链接的定义都是相同：</p>
+<div class="highlight"><pre><span></span>[foo]: http://example.com/  &quot;Optional Title Here&quot;
+[foo]: http://example.com/  &#39;Optional Title Here&#39;
+[foo]: http://example.com/  (Optional Title Here)
+</pre></div>
+
+
+<p>链接网址也可以用尖括号包起来</p>
+<div class="highlight"><pre><span></span>[id]: &lt;http://example.com/&gt;  &quot;Optional Title Here&quot;
+</pre></div>
+
+
+<p>可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话</p>
+<div class="highlight"><pre><span></span>[id]: http://example.com/longish/path/to/resource/here
+ &quot;Optional Title Here&quot;
+</pre></div>
+
+
+<p>链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写，因此下面两个链接是一样的：</p>
+<div class="highlight"><pre><span></span><span class="k">[link text][a]</span>
+<span class="k">[link text][A]</span>
+</pre></div>
+
+
+<p>隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号:</p>
+<div class="highlight"><pre><span></span>[Google][]
+</pre></div>
+
+
+<p>[Google][]</p>
+<p>然后定义链接内容：</p>
+<div class="highlight"><pre><span></span>[Google]: http://google.com/
+</pre></div>
+
+
+<p>[Google]: http://google.com/</p>
+</li>
+<li>
+<p>下面是一个参考式链接的范例：</p>
+<div class="highlight"><pre><span></span>I get 10 times more traffic from [Google] [1] 
+than from [Yahoo] [2] or [MSN] [3].
+
+[1]: http://google.com/        &quot;Google&quot;
+[2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;
+[3]: http://search.msn.com/    &quot;MSN Search&quot;
+</pre></div>
+
+
+<p>下面是用行内式写的同样一段内容的 Markdown 文件，提供作为比较之用：</p>
+<div class="highlight"><pre><span></span>I get 10 times more traffic from 
+[Google](http://google.com/ &quot;Google&quot;)
+than from 
+[Yahoo](http://search.yahoo.com/ &quot;Yahoo Search&quot; 
+or
+[MSN](http://search.msn.com/ &quot;MSN Search&quot;).
+</pre></div>
+
+
+</li>
+</ul>
+<h3>强调</h3>
+<p>Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 <code>&lt;em&gt;</code> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <code>&lt;strong&gt;</code>，例如：</p>
+<div class="highlight"><pre><span></span>*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+</pre></div>
+
+
+<p>会转成：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;em&gt;</span>single asterisks<span class="nt">&lt;/em&gt;</span>
+
+<span class="nt">&lt;em&gt;</span>single underscores<span class="nt">&lt;/em&gt;</span>
+
+<span class="nt">&lt;strong&gt;</span>double asterisks<span class="nt">&lt;/strong&gt;</span>
+
+<span class="nt">&lt;strong&gt;</span>double underscores<span class="nt">&lt;/strong&gt;</span>
+</pre></div>
+
+
+<p><em>single asterisks</em></p>
+<p><em>single underscores</em></p>
+<p><strong>double asterisks</strong></p>
+<p><strong>double underscores</strong></p>
+<p><strong>如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号，表示强调的 * 和 _ 之间不能有空格。</strong></p>
+<div class="highlight"><pre><span></span>叫号机** 哈哈 **
+</pre></div>
+
+
+<p>叫号机<em> 哈哈 </em><br>
+叫号机<strong> 哈哈 </strong></p>
+<p>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：
+<strong>this is text</strong>，注意反斜线要匹配。</p>
+<div class="highlight"><pre><span></span>    this \**is\** text
+
+    this \*\*is\*\* text
+
+    \*this **is** text\*
+</pre></div>
+
+
+<p>this *<em>is</em>* text</p>
+<p>this **is** text</p>
+<p>*this <strong>is</strong> text*</p>
+<h3>代码</h3>
+<p>如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：</p>
+<div class="highlight"><pre><span></span>Use the `printf()` function.
+</pre></div>
+
+
+<p>Use the <code>printf()</code> function.</p>
+<p>会产生：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>Use the <span class="nt">&lt;code&gt;</span>printf()<span class="nt">&lt;/code&gt;</span> function.<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+
+
+<p>如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：</p>
+<div class="highlight"><pre><span></span>``There is a literal backtick (`) here.``
+</pre></div>
+
+
+<p>这段语法会产生：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;&lt;code&gt;</span>There is a literal backtick (`) here.<span class="nt">&lt;/code&gt;&lt;/p&gt;</span>
+</pre></div>
+
+
+<p><code>There is a literal backtick (`) here.</code></p>
+<p>代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：</p>
+<div class="highlight"><pre><span></span>A single backtick in a code span: `` ` ``
+
+A backtick-delimited string in a code span: `` `foo` ``
+
+`` ` ``,开始出插入反引号
+</pre></div>
+
+
+<p>A single backtick in a code span: <code>`</code></p>
+<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+<p><code>`</code>,开始出插入反引号</p>
+<p>在代码区段内，&amp; 和尖括号都会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易</p>
+<div class="highlight"><pre><span></span>Please don&#39;t use any `&lt;blink&gt;` tags.
+</pre></div>
+
+
+<p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>
+<p>转为：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>Please don&#39;t use any <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>blink<span class="ni">&amp;gt;</span>
+<span class="nt">&lt;/code&gt;</span> tags.<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+
+
+<h3>图片</h3>
+<p>Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。</p>
+<ul>
+<li>
+<p>行内式的图片语法</p>
+<div class="highlight"><pre><span></span><span class="o">!</span><span class="p">[</span><span class="n">Alt</span> <span class="n">text</span><span class="p">](</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">img</span><span class="p">.</span><span class="n">jpg</span><span class="p">)</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">Alt</span> <span class="n">text</span><span class="p">](</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">img</span><span class="p">.</span><span class="n">jpg</span> <span class="s">&quot;Optional title&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>详细叙述如下：</p>
+<ul>
+<li>一个惊叹号 !</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。</li>
+</ul>
+</li>
+<li>
+<p>参考式的图片语法</p>
+<div class="highlight"><pre><span></span><span class="o">!</span><span class="p">[</span><span class="n">Alt</span> <span class="n">text</span><span class="p">][</span><span class="kt">id</span><span class="p">]</span>
+
+<span class="err">「</span><span class="kt">id</span><span class="err">」是图片参考的名称，图片参考的定义方式则和连结参考一样：</span>
+<span class="p">[</span><span class="kt">id</span><span class="p">]</span><span class="o">:</span> <span class="n">url</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">image</span>  <span class="s">&quot;Optional title attribute&quot;</span>
+</pre></div>
+
+
+</li>
+</ul>
+<p>行内式：
+<img alt="qiniu" src="http://7xq1t9.com1.z0.glb.clouddn.com/night_dribbble.gif" title="行内式"></p>
+<p>参考式：
+<img alt="七牛" src="http://7xq1t9.com1.z0.glb.clouddn.com/night_dribbble.gif" title="参考式"></p>
+<p><strong>Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 <code>&lt;img&gt;</code> 标签。</strong></p>
+<h2>其他</h2>
+<h3>自动链接</h3>
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。</p>
+<p>网址：</p>
+<div class="highlight"><pre><span></span>&lt;http://example.com/&gt;
+</pre></div>
+
+
+<p><a href="http://example.com/">http://example.com/</a></p>
+<p>Markdown 会转为：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>http://example.com/<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+
+<p>电子邮箱：</p>
+<p>邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：</p>
+<div class="highlight"><pre><span></span>&lt;address@example.com&gt;
+</pre></div>
+
+
+<p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#100;&#100;&#114;&#101;&#115;&#115;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#97;&#100;&#100;&#114;&#101;&#115;&#115;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a></p>
+<p>Markdown 会转成：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&amp;#x6D;&amp;#x61;i&amp;#x6C;&amp;#x74;&amp;#x6F;:&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;</span>
+<span class="s">&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;e&amp;#x2E;&amp;#99;&amp;#111;</span>
+<span class="s">&amp;#109;&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;</span>
+<span class="ni">&amp;#109;&amp;#x70;&amp;#x6C;</span>e<span class="ni">&amp;#x2E;&amp;#99;&amp;#111;&amp;#109;</span><span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+
+<p>在浏览器里面，这段字串（其实是 <code>&lt;a href="mailto:address@example.com"&gt;address@example.com&lt;/a&gt;</code>）会变成一个可以点击的「address@example.com」链接。</p>
+<h3>反斜杠</h3>
+<p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号。</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<div class="highlight"><pre><span></span>\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+</pre></div>
+    </div><!-- /.entry-content -->
+    <footer class="post-meta">
+	    
+		<span class="meta-prep">muzeet&nbsp;发布于</span>
+        <abbr class="date">
+            <span>&nbsp;2016-01-13</span>
+        </abbr>
+        <span class="meta-prep">&nbsp;&nbsp;分类:</span>
+        <abbr class="category">
+            <a href="../../../../category/markdown/">markdown</a>
+        </abbr>
+    </footer>
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_qzone">QQ空间</a>
+		<a class="jiathis_button_tsina">新浪微博</a>
+		<a class="jiathis_button_tqq">腾讯微博</a>
+		<a class="jiathis_button_weixin">微信</a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+	<!--
+    <section id="respond">
+        <div id="disqus_thread">
+        <script type="text/javascript">
+        var disqus_identifier = "posts/2016/01/13/markdown-yu-fa-shuo-ming.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        </div>
+		
+    </section>
+	-->
+
+	
+	
+	<!-- 多说评论框 start -->
+	<!--
+	<div class="comments">
+		<h2>Comments !</h2>
+		<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"muzeet"};
+			(function() {
+				var ds = document.createElement('script');
+				ds.type = 'text/javascript';ds.async = true;
+				ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+				ds.charset = 'UTF-8';
+				(document.getElementsByTagName('head')[0] 
+				 || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+			</script>
+		<!-- 多说公共JS代码 end -->
+		<!--
+	</div>
+	-->
+	</br>
+	<section class="respond" id="comments">
+		  <div class="comments">
+			<h2>Comments !</h2>
+			<!-- Duoshuo Comment BEGIN -->
+			<div class="ds-thread"></div>
+			<script type="text/javascript">
+				var duoshuoQuery = {short_name:"muzeet"};
+		  (function() {
+		   var ds = document.createElement('script');
+		   ds.type = 'text/javascript';ds.async = true;
+		   ds.src = 'http://static.duoshuo.com/embed.js';
+		   ds.charset = 'UTF-8';
+		   (document.getElementsByTagName('head')[0]
+			|| document.getElementsByTagName('body')[0]).appendChild(ds);
+
+		   })();
+		  </script>
+		  <noscript>Please enable JavaScript to view the comments.</noscript>
+	</section>
+<!-- Duoshuo Comment END -->
+
+</section>
+
+        </section><!-- #content -->
+        <section id="widgets" class="grid col-300 fit" >
+            <!--
+            <section id="widget-search" class="widget-wrapper widget_search">
+
+                <form id="searchform" action="http://www.google.com/search" method="get">
+                    <input id="q" class="field" type="text" placeholder="Search Blog" name="q" ></input>
+                    <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
+                    <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
+                    <input id="channel" name="channel" type="hidden" value="suggest" ></input>
+                    <input id="searchsubmit" class="submit" type="submit" value="">
+                </form>
+            </section>
+            -->
+			<section id="widget-category" class="widget-wrapper">
+				<div class="search_div">
+				<form action="http://google.com/search" method="get">
+					<input type="hidden" name="q" value="site:muzeet.cn" />
+					<input class="search" type="text" name="q" results="0" placeholder="Google"/>
+				</form>
+				</div>
+			</section>
+			
+            <section id="widget-category" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    分类目录
+                </div>
+				<div class="tag_cloud">
+						<a href="../../../../category/博客设计/" style="font-size: 100.0%;">博客设计(1)</a>
+						<a href="../../../../category/读书/" style="font-size: 100.0%;">读书(1)</a>
+						<a href="../../../../category/Java/" style="font-size: 100.0%;">Java(1)</a>
+						<a href="../../../../category/markdown/" style="font-size: 100.0%;">markdown(1)</a>
+						<a href="../../../../category/生活/" style="font-size: 100.0%;">生活(1)</a>
+				</div>
+            </section>
+
+            <section id="widget-category" class="widget-wrapper widget_recentArticle">
+                <div class="widget-title">
+                    最近文章
+                </div>
+				<div>
+				<ul id="recent-posts">
+					<li>
+					  <a href="../../../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a>
+					</li>
+					<li>
+					  <a href="../../../../posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html">理想的生活方式</a>
+					</li>
+					<li>
+					  <a href="../../../../posts/2016/01/16/du-shu-de-zhong-yao-xing.html">读书的重要性</a>
+					</li>
+					<li>
+					  <a href="../../../../posts/2016/01/13/markdown-yu-fa-shuo-ming.html">Markdown 语法说明</a>
+					</li>
+					<li>
+					  <a href="../../../../posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html">Java编程思想-读书笔记</a>
+					</li>
+				</ul>
+				</div>
+            </section>
+
+            <section id="widget-category" class="widget-wrapper widget_recentComments">
+                <div class="widget-title">
+                    最近评论
+                </div>
+				<div>
+				<ul id="recent-posts">
+			
+				</ul>
+				</div>
+            </section>
+			
+            <section id="widget-links" class="widget-wrapper">
+                <div class="widget-title">
+                   友情链接
+                </div>
+                <span><a href="http://www.demiaowu.cn/">暗淡了乌云</a>&nbsp;|&nbsp;<a href="http://www.demiaowu.cn/">暗淡了乌云</a></span>
+            </section>
+
+
+            <section id="widget-links" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    有用链接
+                </div>
+                <ul>
+				    <span>
+                        <a href="http://getpelican.com/">Pelican</a>
+                        <a href="http://python.org/">Python.org</a>
+                        <a href="http://jinja.pocoo.org/">Jinja2</a>
+					</span>
+                </ul>
+            </section>
+            
+			<section id="widget-copyright" class="widget-wrapper widget_archive">
+			<div class="widget-title">
+                    版权协议
+            </div>
+			 
+				<div class="grid col-300 copyright" >
+					<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>
+					<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+				</div>
+			 </section>
+        </section><!-- widgets -->
+    </section><!-- /#wrapper -->
+    <footer id="footer" class="clearfix"><section class="footer-wrapper">
+        <div class="grid col-940" >
+            <div class="grid col-540"></div>
+            <div class="grid col-380 fit" >
+                <ul class="social-icons">
+                    <!-- TO BE CONTINUED -->
+                </ul>
+            </div>
+        </div>
+		
+		<div class="grid col-300 copyright" >
+					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
+						<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"" alt="知识共享许可协议"></img>
+					</a>
+				</div>
+        <div class="grid col-300 ">
+		
+        </div>
+        <div class="grid col-300 fit powered">
+          Copyright © 2017 - muzeet - Powered by Pelican
+        </div>
+    </section></footer>
+</div>
+
+<!--
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('pre').addClass('prettyprint linenums') 
+		//添加Google code Hight需要的class
+		prettyPrint();
+	});
+		
+</script>
+-->
+
+</body>
+</html>

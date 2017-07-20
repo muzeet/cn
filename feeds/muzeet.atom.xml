@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - muzeet</title><link href="http://www.muzeet.com/" rel="alternate"></link><link href="http://www.muzeet.com/feeds/muzeet.atom.xml" rel="self"></link><id>http://www.muzeet.com/</id><updated>2017-07-01T00:00:00+08:00</updated><entry><title>代码高亮（pygment）</title><link href="http://www.muzeet.com/posts/2017/07/01/Test-Code-Highlight-by-pygment.html" rel="alternate"></link><published>2017-07-01T00:00:00+08:00</published><updated>2017-07-01T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.com,2017-07-01:/posts/2017/07/01/Test-Code-Highlight-by-pygment.html</id><summary type="html">&lt;p&gt;使用pygment进行代码高亮处理。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. 测试code block&lt;/h2&gt;
+&lt;p&gt;下面是一段代码，代码使用pygment进行高亮处理。&lt;/p&gt;
+&lt;p&gt;求二叉树的第k个节点：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public class KthNode
+{
+     public TreeNode kthNode(TreeNode pRoot, int k)
+     {
+        //求二叉排序树的第k个节点，只需要中序遍历，即可
+        if(pRoot == null || k &amp;lt; 1)
+            return null;
+        Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;TreeNode&amp;gt;();
+        TreeNode p = pRoot;
+        TreeNode kthNode = null;
+        int count = 0;
+        while(p != null || !stack.empty() &amp;amp;&amp;amp; count !=k ){
+            if(p != null){
+                stack.push(p);
+                p = p.left;
+            }
+            else{
+               p = stack.pop();
+               count++;
+               if(count == k)
+                   kthNode = p;
+               p = p.right;
+            }
+        }
+        return kthNode;
+     }
+}
+&lt;/pre&gt;&lt;/div&gt;</content><category term="代码高亮"></category></entry><entry><title>理想的生活方式</title><link href="http://www.muzeet.com/posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.com,2016-06-06:/posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html</id><summary type="html">&lt;p&gt;理想中的生活方式。&lt;/p&gt;</summary><content type="html">&lt;h1&gt;理想的生活态度&lt;/h1&gt;
+&lt;h2&gt;理想中的工作桌面&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="桌面" src="http://7xq1t9.com1.z0.glb.clouddn.com/0001_desktop.jpg" title="理想的工作桌面应该是这样的"&gt;&lt;/p&gt;
+&lt;h2&gt;理想的心态&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="心态" src="http://7xq1t9.com1.z0.glb.clouddn.com/0001_lifeStyle.jpg" title="理想的心态应该是这样的"&gt;&lt;/p&gt;
+&lt;div align="center"&gt;
+&lt;iframe height=498 width=510 src="http://player.youku.com/embed/XNjcyMDU4Njg0" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><category term="table"></category></entry><entry><title>读书的重要性</title><link href="http://www.muzeet.com/posts/2016/01/16/du-shu-de-zhong-yao-xing.html" rel="alternate"></link><published>2016-01-16T00:00:00+08:00</published><updated>2016-05-14T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.com,2016-01-16:/posts/2016/01/16/du-shu-de-zhong-yao-xing.html</id><summary type="html">&lt;p&gt;论读书的重要性。&lt;/p&gt;</summary><content type="html">&lt;h1&gt;读书&lt;/h1&gt;
+&lt;p&gt;古人云，“书读百遍，其义自现”。书读的多了，才能有助于完善自己的人生观和价值观。读书应该是一种习惯，古今中外的优秀典藏中吸取营养。一个人有没有书香气，可以从脸上辨别出。想有更广阔的思维空间，读书吧；想具有别具一格的个性，读书吧。也许从下面这幅图中，我们可以看到读书的重要性。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="读书" src="http://7xq1t9.com1.z0.glb.clouddn.com/importanceOfReading.jpg" title="读书"&gt;&lt;/p&gt;</content><category term="table"></category></entry><entry><title>Markdown 语法说明</title><link href="http://www.muzeet.com/posts/2016/01/13/markdown-yu-fa-shuo-ming.html" rel="alternate"></link><published>2016-01-13T00:00:00+08:00</published><updated>2016-05-14T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.com,2016-01-13:/posts/2016/01/13/markdown-yu-fa-shuo-ming.html</id><summary type="html">&lt;p&gt;Markdown语法&lt;/p&gt;</summary><content type="html">&lt;h2&gt;概述&lt;/h2&gt;
+&lt;h3&gt;宗旨&lt;/h3&gt;
+&lt;p&gt;Markdown 的目标是实现「易读易写」。&lt;/p&gt;
+&lt;h3&gt;兼容 HTML&lt;/h3&gt;
+&lt;p&gt;Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。  &lt;/p&gt;
+&lt;p&gt;不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。&lt;br&gt;
+要制约的只有一些 HTML 区块元素――&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 标签。   &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是一个普通段落。
+
+&lt;span class="nt"&gt;&amp;lt;table&amp;gt;&lt;/span&gt;
+ &lt;span class="nt"&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;1&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;2&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;3&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+ &lt;span class="nt"&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;
+
+这是另一个普通段落。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;p&gt;这是一个普通段落。&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;这是另一个普通段落。&lt;/p&gt;
+&lt;p&gt;1.在 HTML 区块标签间的 Markdown 格式语法将不会被处理&lt;br&gt;
+2.HTML 的区段（行内）标签如&lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; 可以在 Markdown 的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用 Markdown 格式，而直接采用 HTML 标签来格式化。举例说明：如果比较喜欢 HTML 的 &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; 或 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图像标签语法。&lt;/p&gt;
+&lt;h3&gt;特殊字符自动装换&lt;/h3&gt;
+&lt;p&gt;在 HTML 文件中，有两个字符需要特殊处理： &amp;lt; 和 &amp;amp;,显示这些字符的原型必须使用实体形式： &lt;code&gt;&amp;amp;lt;&lt;/code&gt; 和 &lt;code&gt;&amp;amp;amp;&lt;/code&gt;&lt;br&gt;
+markdown中，如果使用的 &amp;amp; 字符是 HTML 字符实体的一部分，它会保留原状，否则它会被转换成 &lt;code&gt;&amp;amp;amp;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;版权符号 ©：&lt;code&gt;&amp;amp;copy;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;code范围内，不论是行内还是区块， &amp;lt; 和 &amp;amp; 两个符号都一定会被转换成 HTML 实体&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;区块元素&lt;/h2&gt;
+&lt;h3&gt;段落和换行&lt;/h3&gt;
+&lt;p&gt;一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。&lt;/p&gt;
+&lt;p&gt;「由一个或多个连续的文本行组成」这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符）&lt;/p&gt;
+&lt;p&gt;依赖markdown来插入&lt;code&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;换行符。两个以上的空格+回车&lt;/p&gt;
+&lt;p&gt;一个以上的空行和两个以上的空格+回车区别：一个以上空行是表示不同段落，空格加回车是表示同一个段落中的换行，前者间距更大。&lt;/p&gt;
+&lt;h3&gt;标题&lt;/h3&gt;
+&lt;p&gt;Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。&lt;/p&gt;
+&lt;p&gt;类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），任何数量的 = 和 - 都可以有效果。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;H1
+======
+
+H2
+------
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;h1&gt;H1标题&lt;/h1&gt;
+&lt;h2&gt;H2标题&lt;/h2&gt;
+&lt;p&gt;类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# 这是 H1标题
+
+## 这是 H2标题
+
+###### 这是 H6标题
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;h1&gt;这是 H1标题&lt;/h1&gt;
+&lt;h2&gt;这是 H2标题&lt;/h2&gt;
+&lt;h6&gt;这是 H6标题&lt;/h6&gt;
+&lt;hr&gt;
+&lt;h3&gt;区块引用 Blockquotes&lt;/h3&gt;
+&lt;p&gt;Markdown 标记区块引用是使用类似 email 中用 &amp;gt; 的引用方式。&lt;/p&gt;
+&lt;p&gt;在每行的最前面加上 &amp;gt;：  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;区块引用  
+&amp;gt;
+&amp;gt;任然是区块引用  
+&amp;gt;
+&amp;gt;还是区块引用
+&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;区块引用    &lt;/p&gt;
+&lt;p&gt;任然是区块引用  &lt;/p&gt;
+&lt;p&gt;还是区块引用
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;区块引用中表示不同段落：空格+回车&lt;/p&gt;
+&lt;p&gt;Markdown 只在整个段落的第一行最前面加上 &amp;gt; ：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+
+&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &amp;gt; ：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;第一级别的区块引用
+&amp;gt;
+&amp;gt;&amp;gt;第二级的区块引用  
+&amp;gt;
+&amp;gt;&amp;gt;第二级的区块引用
+&amp;gt;
+&amp;gt;回到第一级别的区块引用
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;第一级别的区块引用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二级的区块引用  &lt;/p&gt;
+&lt;p&gt;第二级的区块引用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回到第一级别的区块引用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;## 这是一个标题。##
+&amp;gt;
+&amp;gt;列表: 
+&amp;gt;
+&amp;gt;1.   这是第一行列表项。
+&amp;gt;2.   这是第二行列表项。
+&amp;gt; 
+&amp;gt;给出一些例子代码：
+&amp;gt; 
+&amp;gt;     return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;h2&gt;这是一个标题。&lt;/h2&gt;
+&lt;p&gt;列表: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这是第一行列表项。&lt;/li&gt;
+&lt;li&gt;这是第二行列表项。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;给出一些例子代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h3&gt;列表&lt;/h3&gt;
+&lt;p&gt;Markdown 支持有序列表和无序列表。&lt;/p&gt;
+&lt;p&gt;无序列表使用&lt;strong&gt;*&lt;/strong&gt; 、&lt;strong&gt;+&lt;/strong&gt; 或是 &lt;strong&gt;-&lt;/strong&gt; 作为列表标记（标记与列表名称有一个以上空格）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;* 第一行
+* 第二行
+* 第三行
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;第一行&lt;/li&gt;
+&lt;li&gt;第二行&lt;/li&gt;
+&lt;li&gt;第三行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有序列表则使用数字接着一个英文句点：（数字句点与文字之间至少一个空格）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  Bird
+2.  McHale
+3.  Parish
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;列表项目标记(&lt;em&gt; 或者 1.)通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记(&lt;/em&gt; 或者 1.)后面则一定要接着至少一个空格或制表符。&lt;/p&gt;
+&lt;p&gt;如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 标签包起来：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*   Bird
+
+*   Magic
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;会被转换为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;Bird&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;Magic&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;列表项目可以包含多个段落（多个段落用一个以上空行），每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：(一个以上空行+下面段落的每一行首部缩进4个空格)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs. Lorem ipsum    dolor sit amet,
+    consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.  &lt;/p&gt;
+&lt;p&gt;Vestibulum enim wisi, viverra nec, fringilla in laoreet vitae, 
+risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;列表项目中存在引用:（4个空格 or 1个制表符）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*   A list item with a blockquote:
+    &amp;gt; This is a blockquote
+    &amp;gt; inside a list item.
+*   Another
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a blockquote&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote
+inside a list item.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Another&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列表项目中存在代码区块:(8个空格 or 2个制表符)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*   一列表项包含一个列表区块：
+
+       &amp;lt;代码写在这&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;一列表项包含一个列表区块：&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;代码写在这&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列表项首说出现数字-句点-空白，原样显示:句点前面加上反斜杠。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="err"&gt;一列表项包含数字&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;句点&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;空白。&lt;/span&gt;
+
+    &lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="o"&gt;\.&lt;/span&gt;  &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;great&lt;/span&gt; &lt;span class="n"&gt;season&lt;/span&gt;
+
+    &lt;span class="mi"&gt;1987&lt;/span&gt;&lt;span class="o"&gt;\.&lt;/span&gt;  &lt;span class="n"&gt;what&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;shame&lt;/span&gt;
+
+&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="err"&gt;一列表项包含数字&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;句点&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;空白&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;不加\ 效果:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一列表项包含数字-句点-空白。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;What a great season&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;what a shame  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一列表项包含数字-句点-空白&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;加\ 效果:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一列表项包含数字-句点-空白。&lt;/p&gt;
+&lt;p&gt;1986.  What a great season&lt;/p&gt;
+&lt;p&gt;1987.  what a shame  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一列表项包含数字-句点-空白&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;列表项中又存在列表项：&lt;/p&gt;
+&lt;p&gt;只需要在列表项中继续加列表项标记，前面加4个空格或者制表符。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;代码区块&lt;/h3&gt;
+&lt;p&gt;Markdown 会用 &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; 标签来把代码区块包起来。&lt;/p&gt;
+&lt;p&gt;标记为代码区块：缩进 4 个空格或是 1 个制表符。一直持续到没有缩进的那一行（或是文件结尾）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是一个普通段落：
+
+    这是一个代码区块。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Markdown 会转换成：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;这是一个普通段落：&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;这是一个代码区块。
+&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;java &lt;code&gt;main()&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public static void main(String[] args){
+
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在代码区块里面， &amp;amp; 、 &amp;lt; 和 &amp;gt; 会自动转成 HTML 实体&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;footer&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;copy;&lt;/span&gt; 2004 Foo Corporation
+&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;会被转换为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;div class=&amp;quot;footer&amp;quot;&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+   &lt;span class="ni"&gt;&amp;amp;amp;&lt;/span&gt;copy; 2004 Foo Corporation
+&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/div&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;分隔线&lt;/h3&gt;
+&lt;p&gt;在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。可以在星号或是减号中间插入空格。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;* * *
+
+---
+
+___
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2&gt;区段元素&lt;/h2&gt;
+&lt;h3&gt;链接&lt;/h3&gt;
+&lt;p&gt;Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。不管是哪一种，链接文字都是用 [方括号] 来标记。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行内式链接：只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度](http://www.baidu.com/ &amp;quot;百度&amp;quot;)的链接.
+
+这是链接到[百度](http://www.baidu.com/)的无title属性链接.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这是链接到&lt;a href="http://www.baidu.com/" title="百度"&gt;百度&lt;/a&gt;的链接.&lt;/p&gt;
+&lt;p&gt;这是连接到&lt;a href="http://www.baidu.com/"&gt;百度&lt;/a&gt;的无title属性链接.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参考式：链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度][baidu]的参考式链接.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这是链接到[百度][baidu]的参考式链接.&lt;/p&gt;
+&lt;p&gt;你也可以选择性地在两个方括号中间加上一个空格：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度] [baidu]的参考式链接.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这是链接到[百度] [baidu]的参考式链接.&lt;/p&gt;
+&lt;p&gt;接着，在文件的任意处，你可以把这个标记的链接内容定义出来：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[baidu]:http://www.baidu.com &amp;quot;百度&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;[baidu]:http://www.baidu.com "百度"&lt;/p&gt;
+&lt;p&gt;链接内容定义的形式为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字&lt;/li&gt;
+&lt;li&gt;接着一个冒号&lt;/li&gt;
+&lt;li&gt;接着一个以上的空格或制表符&lt;/li&gt;
+&lt;li&gt;接着链接的网址&lt;/li&gt;
+&lt;li&gt;选择性地接着 title 内容，可以用单引号、双引号或是括弧包着&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面这三种链接的定义都是相同：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[foo]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;
+[foo]: http://example.com/  &amp;#39;Optional Title Here&amp;#39;
+[foo]: http://example.com/  (Optional Title Here)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;链接网址也可以用尖括号包起来&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[id]: &amp;lt;http://example.com/&amp;gt;  &amp;quot;Optional Title Here&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[id]: http://example.com/longish/path/to/resource/here
+ &amp;quot;Optional Title Here&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写，因此下面两个链接是一样的：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[link text][a]&lt;/span&gt;
+&lt;span class="k"&gt;[link text][A]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[Google][]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;[Google][]&lt;/p&gt;
+&lt;p&gt;然后定义链接内容：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[Google]: http://google.com/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;[Google]: http://google.com/&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下面是一个参考式链接的范例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;I get 10 times more traffic from [Google] [1] 
+than from [Yahoo] [2] or [MSN] [3].
+
+[1]: http://google.com/        &amp;quot;Google&amp;quot;
+[2]: http://search.yahoo.com/  &amp;quot;Yahoo Search&amp;quot;
+[3]: http://search.msn.com/    &amp;quot;MSN Search&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;下面是用行内式写的同样一段内容的 Markdown 文件，提供作为比较之用：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;I get 10 times more traffic from 
+[Google](http://google.com/ &amp;quot;Google&amp;quot;)
+than from 
+[Yahoo](http://search.yahoo.com/ &amp;quot;Yahoo Search&amp;quot; 
+or
+[MSN](http://search.msn.com/ &amp;quot;MSN Search&amp;quot;).
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;强调&lt;/h3&gt;
+&lt;p&gt;Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;会转成：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;em&amp;gt;&lt;/span&gt;single asterisks&lt;span class="nt"&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;em&amp;gt;&lt;/span&gt;single underscores&lt;span class="nt"&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;double asterisks&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;double underscores&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号，表示强调的 * 和 _ 之间不能有空格。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;叫号机** 哈哈 **
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;叫号机&lt;em&gt; 哈哈 &lt;/em&gt;&lt;br&gt;
+叫号机&lt;strong&gt; 哈哈 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：
+&lt;strong&gt;this is text&lt;/strong&gt;，注意反斜线要匹配。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    this \**is\** text
+
+    this \*\*is\*\* text
+
+    \*this **is** text\*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;this *&lt;em&gt;is&lt;/em&gt;* text&lt;/p&gt;
+&lt;p&gt;this **is** text&lt;/p&gt;
+&lt;p&gt;*this &lt;strong&gt;is&lt;/strong&gt; text*&lt;/p&gt;
+&lt;h3&gt;代码&lt;/h3&gt;
+&lt;p&gt;如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Use the `printf()` function.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;会产生：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Use the &lt;span class="nt"&gt;&amp;lt;code&amp;gt;&lt;/span&gt;printf()&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; function.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;``There is a literal backtick (`) here.``
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这段语法会产生：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;There is a literal backtick (`) here.&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;A single backtick in a code span: `` ` ``
+
+A backtick-delimited string in a code span: `` `foo` ``
+
+`` ` ``,开始出插入反引号
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;`&lt;/code&gt;,开始出插入反引号&lt;/p&gt;
+&lt;p&gt;在代码区段内，&amp;amp; 和尖括号都会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Please don&amp;#39;t use any `&amp;lt;blink&amp;gt;` tags.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Please don't use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;p&gt;转为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Please don&amp;#39;t use any &lt;span class="nt"&gt;&amp;lt;code&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;blink&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; tags.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;图片&lt;/h3&gt;
+&lt;p&gt;Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行内式的图片语法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Optional title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;详细叙述如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个惊叹号 !&lt;/li&gt;
+&lt;li&gt;接着一个方括号，里面放上图片的替代文字&lt;/li&gt;
+&lt;li&gt;接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参考式的图片语法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="err"&gt;「&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="err"&gt;」是图片参考的名称，图片参考的定义方式则和连结参考一样：&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;  &lt;span class="s"&gt;&amp;quot;Optional title attribute&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;行内式：
+&lt;img alt="qiniu" src="http://7xq1t9.com1.z0.glb.clouddn.com/night_dribbble.gif" title="行内式"&gt;&lt;/p&gt;
+&lt;p&gt;参考式：
+&lt;img alt="七牛" src="http://7xq1t9.com1.z0.glb.clouddn.com/night_dribbble.gif" title="参考式"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 标签。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;h3&gt;自动链接&lt;/h3&gt;
+&lt;p&gt;Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。&lt;/p&gt;
+&lt;p&gt;网址：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;http://example.com/&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Markdown 会转为：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://example.com/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;http://example.com/&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;电子邮箱：&lt;/p&gt;
+&lt;p&gt;邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;address@example.com&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#97;&amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#97;&amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Markdown 会转成：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;amp;#x6D;&amp;amp;#x61;i&amp;amp;#x6C;&amp;amp;#x74;&amp;amp;#x6F;:&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;e&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;amp;#109;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&lt;/span&gt;
+&lt;span class="ni"&gt;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;&lt;/span&gt;e&lt;span class="ni"&gt;&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&amp;amp;#109;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在浏览器里面，这段字串（其实是 &lt;code&gt;&amp;lt;a href="mailto:address@example.com"&amp;gt;address@example.com&amp;lt;/a&amp;gt;&lt;/code&gt;）会变成一个可以点击的「address@example.com」链接。&lt;/p&gt;
+&lt;h3&gt;反斜杠&lt;/h3&gt;
+&lt;p&gt;Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号。&lt;/p&gt;
+&lt;p&gt;Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+&lt;/pre&gt;&lt;/div&gt;</content><category term="table"></category></entry><entry><title>Java编程思想-读书笔记</title><link href="http://www.muzeet.com/posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html" rel="alternate"></link><published>2015-10-01T00:00:00+08:00</published><updated>2016-05-14T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.com,2015-10-01:/posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html</id><summary type="html">&lt;p&gt;本文是《Thinking in java》读书笔记，记录了该书中的重点内容。&lt;/p&gt;</summary><content type="html">&lt;p&gt;《Java 编程思想》，原书英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。作为Java领域必读书籍，阅读此书时，我打算在阅读的过程中随时记录每个章节的技术要点和难点以及Java中的一些边边角角，以便巩固Java基础，也备日后随时查阅。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Java编程思想" src="http://7xq1t9.com1.z0.glb.clouddn.com/think%20in%20java%204th.jpg" title="thinking in java 4th"&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;em&gt;Java编程思想&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;1. 对象导论&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;has-a —— 组合，is-a —— 继承。&lt;/li&gt;
+&lt;li&gt;所有可以发送给基类对象的消息同时也可以发送给导出类对象，即导出类与基类具有相同的类型、等价性。&lt;/li&gt;
+&lt;li&gt;把将导出类看作是它的基类的过程称为向上转型（upcasting）。&lt;/li&gt;
+&lt;li&gt;Java 是单根继承结构，终极基类就是 Object。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. 一切都是对象&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;尽管一切都看作是对象，但操纵的标识符实际上是对象的一个“引用”。&lt;/li&gt;
+&lt;li&gt;栈用于存放一些对象引用、基本变量的值，堆用于存放所有的 Java 对象。&lt;/li&gt;
+&lt;li&gt;堆不同于栈的好处是：编译器不需要知道存储的数据在堆里存活多长时间。&lt;/li&gt;
+&lt;li&gt;9种基本类型：boolean（不明确）、char（16-bit）、byte（8-bit）、short（16-bit）、int（32-bit）、long（64-bit）、float（32-bit）、double（64-bit）、void（不明确）。（数值类型均有正负号）&lt;/li&gt;
+&lt;li&gt;Java 有一个垃圾回收器，用来监视用 new 创建的所有对象，并辨别那些不会再被引用的对象。&lt;/li&gt;
+&lt;li&gt;方法名和参数列表（一起称为“方法签名”）唯一地标志出某个方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 操作符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;赋值操作的是一个对象的引用。&lt;/li&gt;
+&lt;li&gt;== 和 ！= 比较的是对象的引用。&lt;/li&gt;
+&lt;li&gt;除非在自己的新类中覆盖 equals() 方法，否则不可能表现出我们希望的行为。&lt;/li&gt;
+&lt;li&gt;以二进制形式显示结果可以使用 Integer 和 Long 类的静态方法 toBinaryString()。&lt;/li&gt;
+&lt;li&gt;移位操作符只可用来处理整数类型（基本类型的一种）。左移位(&amp;lt;&amp;lt;)，低位补0；有符号右移位(&amp;gt;&amp;gt;)，符号扩展（正补0，负补1）；无符号右移位(&amp;gt;&amp;gt;&amp;gt;)，高位补0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. 控制执行流程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 里唯一用到逗号操作符（注意不是逗号分隔符）的地方就是 for 循环的控制表达式。&lt;/li&gt;
+&lt;li&gt;return 关键词：一方面指定一个方法返回值，另一方面它会导致当前的方法退出，并返回那个值。&lt;/li&gt;
+&lt;li&gt;在 Java 里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中 break 或 continue。&lt;/li&gt;
+&lt;li&gt;switch 语句支持的类型：可以隐式转换到 int 的数据类型（如byte、short、char；long不行），String 类型（1.7以后）以及 Enum 类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5. 初始化与清理&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;区分重载方法：每一个重载的方法都必须有一个独一无二的参数类型列表。&lt;/li&gt;
+&lt;li&gt;如果已经定义了一个构造器（无论是否有参数），编译器就不会帮你自动创建默认构造器。&lt;/li&gt;
+&lt;li&gt;this 关键字只能在方法内部使用，表示对“调用方法的那个对象”的引用。&lt;/li&gt;
+&lt;li&gt;static 方法就是没有 this 的方法。&lt;/li&gt;
+&lt;li&gt;垃圾回收的特点：1.对象可能不被垃圾回收。 2.垃圾回收并不等于“析构”。 3.垃圾回收只与内存有关。&lt;/li&gt;
+&lt;li&gt;垃圾回收器查找存活对象：从栈和静态存储区开始，遍历所有的引用。就能找到所有“活”的对象。&lt;/li&gt;
+&lt;li&gt;Java 虚拟机会进行监控，如果所有对象都很稳定，垃圾回收器的效率降低的话，就切换到“标记-清扫”方式；同样，Java 虚拟机会跟踪“标记-清扫”的是效果，要是堆空间出现很多碎片，就会切换回“停止-复制”方式。这就是“自适应”技术。—— “自适应的、分代的、停止-复制、标记-清扫”式垃圾回收器。&lt;/li&gt;
+&lt;li&gt;惰性评估，即编译器只在必要的时候才编译代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;6. 访问控制权限&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;访问权限等级由大到小依次为：public、protected、包访问权限和 private。（注意：protected 也提供包访问权限）&lt;/li&gt;
+&lt;li&gt;package 语句，必须是文件中除注释以外的第一句程序代码。&lt;/li&gt;
+&lt;li&gt;把数据和方法包装进类中，以及具体实现的隐藏，常共同被称作封装。&lt;/li&gt;
+&lt;li&gt;类既不可以是 private 的，也不可以是 protected 的。（内部类是特例）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;7. 复用类&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用组合还是继承：是否需要从新类向基类进行向上转型？需要，则继承。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;final&lt;/code&gt;&lt;/strong&gt;所定义的域，必须在域定义处或者每个构造器中用表达式对final进行赋值。&lt;/li&gt;
+&lt;li&gt;对于基本类型，final 使数字恒定不变；而对于对象引用，final 使引用恒定不变，一旦引用被初始化指向一个对象，就无法再把它改为指向另外一个对象，然而对象本身却是可以被修改的，比如数组对象。&lt;/li&gt;
+&lt;li&gt;final关键字的使用场景，数据、方法和类：&lt;ul&gt;
+&lt;li&gt;永久不改变的&lt;strong&gt;编译时常量&lt;/strong&gt; (编译时常量是用final修饰的在定义时已经被赋予具体值的常量)，这类常量必须是基本数据类型，final关键字修饰，且常量在定义的时候必须对其进行赋值。&lt;/li&gt;
+&lt;li&gt;在运行时被初始化的常量，在定义处被赋值(Random赋予随机值)，根据运行结果进行初始化。&lt;/li&gt;
+&lt;li&gt;既是final又是static的域，该类常量在定义的时候必须进行赋值。赋基本数据类型则为编译时常量。也可以定义时赋值，运行时被初始化。&lt;/li&gt;
+&lt;li&gt;空白final是被声明为final但又未给定初始值的域。空白final必须在构造器中使用表达式初始化，空白final对于不同的对象具有不同的取值，但仍然可以保持其恒定不变的特征。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用 final 方法的原因：&lt;ol&gt;
+&lt;li&gt;方法锁定，以防任何子类复写该方法。&lt;/li&gt;
+&lt;li&gt;效率，编译器会将 final 方法的所有调用转为内嵌调用。&lt;/li&gt;
+&lt;li&gt;方法声明为final可以有效的关闭动态绑定，即告诉编译器不需要对其进行动态绑定(父类方法声明为private，则子类不能复写，则不能动态绑定)。  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;final类禁止被继承，final类中的所有方法都隐式的指定为final的，不能被覆盖。&lt;/li&gt;
+&lt;li&gt;构造器调用顺序：基类的构造器在导出类的构造过程中被调用，而且按照继承层次逐渐向上链接，以使每个基类的构造器都得到调用。&lt;ol&gt;
+&lt;li&gt;在其他任何事物发生之前，将分配给对象的存储空间初始化为二进制零。&lt;/li&gt;
+&lt;li&gt;在调用各类构造器之前会按照声明的顺序调用成员的初始化方法。&lt;/li&gt;
+&lt;li&gt;调用基类的构造器&lt;/li&gt;
+&lt;li&gt;调用导出类的构造器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;导出类调用基类构造器原理&lt;ol&gt;
+&lt;li&gt;基类没有构造器，编译器会自动合成默认构造器。自动合成的默认类构造器会自动赋予与类一样的访问权限。&lt;/li&gt;
+&lt;li&gt;在导出类的构造器中，没有明确指定调用哪个基类构造器，则会调用默认构造器。&lt;/li&gt;
+&lt;li&gt;基类中没有默认构造器但是存在其他构造器，则必须在导出类中使用Super指定构造器，否则编译器报错。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;使用继承时，导出类可以访问基类中任何声明为public和protected的成员，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;8. 多态&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;绑定：将一个方法调用同一个方法的主体关联起来被称做绑定&lt;/li&gt;
+&lt;li&gt;多态，也称作动态绑定、后期绑定或运行时绑定。&lt;ol&gt;
+&lt;li&gt;前期绑定：在程序执行前进行绑定(由编译器和连接程序完成)&lt;/li&gt;
+&lt;li&gt;后期绑定：在运行时根据对象的类型进行绑定&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;使用基类引用导出类对象，具体执行什么代码是由引用所指向的具体对象决定的。&lt;/li&gt;
+&lt;li&gt;Java 中除了 static 方法和 final 方法（private 方法属于 final 方法）之外，其他所有的方法都是后期绑定。&lt;/li&gt;
+&lt;li&gt;基类中只有非private方法才可以被覆盖，基类的private方法在子类中不可见，子类中的同名方法会被认为是一个全新的方法。子类覆盖基类的非private方法时，可见性必须为非private。&lt;/li&gt;
+&lt;li&gt;类的域、静态方法和final方法会在编译期进行解析，不会进行动态绑定。&lt;/li&gt;
+&lt;li&gt;自定义清理方法的执行顺序：销毁的顺序应该和初始化顺序相反：&lt;ol&gt;
+&lt;li&gt;对于字段：和字段的声明顺序相反。&lt;/li&gt;
+&lt;li&gt;对于基类：首先对导出类进行清理，然后在导出类清理方法中执行基类的清理方法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;构造器编写准则：尽可能简单的方法使对象进入正常状态，避免调用其他方法。可以安全调用基类的final方法和private方法。&lt;/li&gt;
+&lt;li&gt;java中的类型转换会在运行期进行“运行期类型识别(RTT)”，会抛出ClassCastException类转型异常。&lt;/li&gt;
+&lt;li&gt;一条通用的准则是：“用继承表达行为间的差异，并用字段表达状态上的变化”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;9. 接口&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;抽象方法，只有声明而没有方法体。&lt;/li&gt;
+&lt;li&gt;包含抽象方法的类为抽象类，必须被限定为抽象的(abstract)。抽象类不能创建对象，从抽象类继承，导出类必须实现抽象基类中的所有抽象方法，否则仍然为抽象类，必须使用abstract关键字限定。被声明为abstract的方法表示强制要求继承者这覆写该方法。&lt;/li&gt;
+&lt;li&gt;interface 被用来建立类与类之间的协议，接口是一个完全抽象的类。interface前只能包含public和包访问权限两种可视性。&lt;/li&gt;
+&lt;li&gt;接口中的方法只能是抽象的和public的。没有显示声明为public，自动是public的。可以包含域，但是这些域隐式的是static和final的。(隐式：自动是static和final类型，方法的abstract和public可以不写，默认存在)&lt;/li&gt;
+&lt;li&gt;使用接口的原因：1. 能够向上转型为多个基类，可以带来灵活性 2. 防止创建接口的对象&lt;/li&gt;
+&lt;li&gt;extends可以用于从多个基类接口继承&lt;/li&gt;
+&lt;li&gt;接口中的任何域都自动是static和final的，JavaSE5之前用来产生枚举类型。&lt;/li&gt;
+&lt;li&gt;接口中定义的域不能是空final，但是可以被非常量表达式初始化。&lt;/li&gt;
+&lt;li&gt;接口可以嵌套在内和其他接口中。非嵌套接口只有public和包访问两种可视性，嵌套在类中的接口可以为private，定义嵌套在接口中的接口不能为private。&lt;/li&gt;
+&lt;li&gt;当实现某个接口时并不需要实现嵌套在接口内部的任何接口，private接口不能在定义它的类之外被实现（不能在private接口定义之外创建实现类），但是public接口可以。private接口也不能在定义它的类外被使用，即实现类不能在其他类中向上转型。&lt;/li&gt;
+&lt;li&gt;设计的原则是优先选择类而不是接口，如果接口的必需性变得非常明确，则使用接口进行重构。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;10. 内部类&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在外围内中使用内部类就像使用任何其他类一样，可以在外围类中创建方法返回内部类的对象。&lt;/li&gt;
+&lt;li&gt;内部类拥有其外围类的所有元素的访问权。原理：外围类对象创建一个内部类对象时，内部类会秘密捕获指向外围类对象的引用，通过该引用可以访问所有的外围类成员。&lt;/li&gt;
+&lt;li&gt;在外部类中生成内部类对象：&lt;ul&gt;
+&lt;li&gt;非静态内部类对象只能与外部类对象相关联时才可以被创建(内部类中必须捕获外部类对象)&lt;ol&gt;
+&lt;li&gt;非静态方法中创建内部类对象，InnerClass对象 = new InnerClass();//调用方法时给定了外部类对象&lt;/li&gt;
+&lt;li&gt;静态方法中创建内部类对象，InnerClass对象 = OuterClass对象.new InnerClass();//必须指定外部类对象&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;如果创建的是嵌套类(静态内部类)，则不需要先创建外部类对象&lt;ul&gt;
+&lt;li&gt;静态方法和非静态方法中，InnerClass对象 = new InnerClass();//不需要指定外部类对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在其他类中生成内部类对象：&lt;ul&gt;
+&lt;li&gt;非静态内部类，InnerClass对象 = OuterClass对象.new InnerClass();//必须指定外部类对象&lt;/li&gt;
+&lt;li&gt;静态内部类，InnerClass对象 = new InnerClass();//不需要指定外部类对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在内部类中生成外部类对象引用，使用OuterClassName.this。&lt;/li&gt;
+&lt;li&gt;内部类定义为private,则必须提供公共的访问方法，否则不能访问该内部类。&lt;/li&gt;
+&lt;li&gt;方法或任何作用域内都可以定义内部类。方法中的内部类只能在方法内部使用，作用域内的内部类只能在作用域内使用。局部内部类不能有访问修饰符，因为不是外围类的一部分，但是它可以访问当前代码内的常量（属于外围类）和外围类的所有成员。&lt;/li&gt;
+&lt;li&gt;匿名内部类使用外部定义的对象时，则参数引用必须是final的，被传递给匿名类的基类构造器的参数除外。&lt;/li&gt;
+&lt;li&gt;初始化内部内定义的字段，1. 通过参数传递 2. 通过实例初始化，即在内部类定义中初始化，{}包围。&lt;/li&gt;
+&lt;li&gt;匿名内部类既能扩展类也可以实现接口，不能二者兼备；并且只能实现一个接口。&lt;/li&gt;
+&lt;li&gt;不能从嵌套类(static声明的内部类)的对象中访问非静态的外围类对象。普通内部类的字段和方法只能放在类的外部层次上，同时不能包含static数据和static字段，也不能包含嵌套类。嵌套类可以包含所有这些。&lt;/li&gt;
+&lt;li&gt;接口中可以放置内部类，自动转成public和static,是嵌套类。&lt;/li&gt;
+&lt;li&gt;内部类可以嵌套多层，可以透明地访问它所嵌套的所有层次的外围类的所有成员。&lt;/li&gt;
+&lt;li&gt;使用内部类的原因：&lt;ul&gt;
+&lt;li&gt;内部类一般继承自某个类或者实现某个接口，当需要用到接口的多个实现类时，每个内部类都可以独立的继承自一个接口的实现类，无论外围类是否已经继承了该接口的实现类。&lt;/li&gt;
+&lt;li&gt;内部类提供了可以继承多个具体或者抽象类的能力，内部类解决了多重继承的问题。&lt;/li&gt;
+&lt;li&gt;内部类可以有多个实例，每个实例有自己的状态信息并且与外围类对象信息相互独立。&lt;/li&gt;
+&lt;li&gt;在单个外围类中，可以让多个内部类以不同的方式实现同一个接口或者继承同一类。&lt;/li&gt;
+&lt;li&gt;创建内部类对象的时刻并不依赖于外围内对象的创建。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;内部类的继承，内部类中指向外围类对象的“秘密”引用必须被初始化，而在导出类中不再存在可连接的默认对象。导出类构造函数必须有OuterClass的对象参数，构造器内部调用OuterClassReference.super()初始化外围类引用。&lt;/li&gt;
+&lt;li&gt;内部类覆盖问题，继承某个外围类时，内部类在外围类和导出类中存在两个独立的版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;11. 持有对象&lt;/h2&gt;
+&lt;h2&gt;12. 通过异常处理错误&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Java异常类层次结构图：&lt;br&gt;
+&lt;img alt="Java异常类" src="http://7xq1t9.com1.z0.glb.clouddn.com/java_Exception_Architecture.jpg" title="java异常类层次结构图"&gt;&lt;br&gt;
+Error：用来表示编译时和系统错误。&lt;br&gt;
+Exception：表示可以被抛出的基本类型，在java类库、用户方法以及运行时故障中都可能抛出Exception异常。&lt;/li&gt;
+&lt;li&gt;抛出异常后，发生的事：&lt;ul&gt;
+&lt;li&gt;同java中其他的对象的创建一样，将使用new在堆上创建异常对象。&lt;/li&gt;
+&lt;li&gt;当前的执行路径被终止，并且从当前环境中弹出对异常对象的引用。异常处理机制接管程序，从异常处理程序处继续执行程序，是程序从错误状态中恢复或者换一种方式继续运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;异常处理的重要目标是将错误处理的代码同错误发生的地点分离，这使得你可以在一段代码中专注于要完成的事情，至于如何处理错误则放在另外一段代码中完成；异常处理的重要原则是：只有你知道如何处理的情况下才捕获异常。&lt;/li&gt;
+&lt;li&gt;标准异常类有两个构造器：1. 默认构造器 2. 接收字符串作为参数的构造器&lt;/li&gt;
+&lt;li&gt;自定义异常，最好选择意思相近的异常进行继承。最好让编译器产生默认构造器。创建异常对象时会调用基类的默认构造器。&lt;/li&gt;
+&lt;li&gt;在定义抽象类和接口时使方法先进行异常说明，可以使派生类和接口实现能够抛出这些预先申明的异常。&lt;/li&gt;
+&lt;li&gt;printStackTrace()方法打印Throwable和Throwable的调用栈轨迹，调用栈显示了到异常抛出点的方法调用序列。&lt;/li&gt;
+&lt;li&gt;重新抛出异常会把异常抛给上一级环境中的异常处理程序，同一个try块的后续catch子句将被忽略。只是将异常对象重新抛出，printStackTrace()显示是仍是原来异常抛出点的调用栈信息，调用fillInStackTrace()方法返回Throwable对象，printStackTrace()将显示的再次抛出点的调用栈信息。捕获异常后抛出另一个异常，则原来异常发生点的信息会丢失，只剩下新抛出点的相关信息。&lt;/li&gt;
+&lt;li&gt;Throwable的子类中Error、Exception、RuntimeException的构造器可以接受一个cause对象作为参数，其他异常类使用initCase(cause对象)，用来表示院士异常，将原始异常传递给新的异常，可通过异常链追踪到异常最初发生的位置。&lt;/li&gt;
+&lt;li&gt;运行时异常：RuntimeException或者其导出类会自动被Java虚拟机抛出，所以不必在异常说明中声明，称为“不受检查异常”，其输出将报告给System.err；如果RuntimeException(及其子类)没有被捕获而直达main()，在程序退出前将调用异常的printStackTrace()方法。&lt;/li&gt;
+&lt;li&gt;只能在代码中忽略RuntimeException(及其子类)异常，其他类型的异常的处理由编译器强制实施，原因是RuntimeException异常代表的是编程错误，是代码控制能力之外因素导致的。&lt;/li&gt;
+&lt;li&gt;finally子句的使用时机：当要把除内存之外的资源恢复到初始状态时。finally 子句需要清理的资源：已经打开的文件或网络连接，在屏幕上画的图形，甚至可以是外部世界的某个开关。&lt;/li&gt;
+&lt;li&gt;异常的限制：&lt;ul&gt;
+&lt;li&gt;当导出类覆盖基类方法时，导出类方法只能抛出基类方法的异常说明里列出的异常，或者不抛出任何异常即使它是基类所定义的异常。换种说法，一个出现在基类方法的异常说明中的异常不一定会出现在派生类方法的异常说明中。&lt;/li&gt;
+&lt;li&gt;异常限制对构造器不起作用，导出类构造器可以抛出任何异常；因为基类构造器会默认被调用，所以导出类构造器的异常说明中必须包含基类构造器的异常说明。派生类构造器不能捕获基类构造器抛出的异常。&lt;/li&gt;
+&lt;li&gt;如果导出类中覆盖基类的方法抛出了基类方法异常说明之外的异常，编译不会通过。&lt;/li&gt;
+&lt;li&gt;如果导出类向上转型，则编译器会正确的要求捕获基类必须捕获的异常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在构造阶段可能被抛出异常，并且要求清理的类，最安全的使用方式是使用嵌套的try子句。P273&lt;ul&gt;
+&lt;li&gt;基本原则是：在构造需要清理的对象之后，应该立即进入&lt;code&gt;try-finally&lt;/code&gt;语句块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;吞食则有害：“被检查异常”，编译器会强制在没准备好处理错误的位置被迫加上catch子句，使得异常确实发生了，在后续代码中被吞食消失了。不知道如何处理也捕获了异常或者捕获后只是打印出一些无用的信息。&lt;/li&gt;
+&lt;li&gt;被检查异常对大项目的坏处大于好处&lt;strong&gt;(坏处是：原来可以管理的东西现在已经变得无法管理了，这就是过多的类型检查和“被检查异常”所造成的问题)&lt;/strong&gt;，解决办法：&lt;ul&gt;
+&lt;li&gt;把异常传递给控制台&lt;/li&gt;
+&lt;li&gt;把”被检查的异常“转换成”不被检查异常“，即用&lt;code&gt;RuntimeException&lt;/code&gt;封装。可以屏蔽掉被检查异常同时也不会吞没被检查异常，不同些&lt;code&gt;try-catch&lt;/code&gt;子句和异常说明，直接忽略异常，让它自己沿着调用栈往上”冒泡”。抛出被包装的原始异常，&lt;code&gt;throw e.getCause();&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;至理名言：好的程序设计语言能帮助程序员写出好程序，但无论哪种语言都避免不了程序员用它写出了坏程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;13. 字符串&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;String对象时不可变的，String类中每一个看起来会修改String值的方法实际上都是创建一个全新的String对象，以包含修改后的字符串内容。当需要改变字符串内容时会返回一个新的String对象，内容没有改变，则返回指向原对象的引用。&lt;/li&gt;
+&lt;li&gt;String对象作为方法参数时，都会复制一份引用，而该引用所指的对象其实一直待在单一的物理位置上，从来没有变过，在方法内部会创建一个全新的String对象。&lt;/li&gt;
+&lt;li&gt;String对象的&lt;strong&gt;+&lt;/strong&gt;、&lt;strong&gt;+=&lt;/strong&gt;操作符重载，是java中仅有的两个重载过的操作符。为了生成最终的String,+、+=会产生一大堆需要垃圾回收的中间对象，性能相当糟糕。&lt;/li&gt;
+&lt;li&gt;编译器会自动优化字符串连接操作(创建StringBuilder)，当在循环语句中使用连接操作，最好显示的创建StringBuilder对象，效率较高。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toString()&lt;/code&gt;方法中调用打印&lt;code&gt;this&lt;/code&gt;打印内存地址，会无意识的发生递归调用；应该调用的是&lt;code&gt;Object.toString()&lt;/code&gt;方法。所以应该在&lt;code&gt;toString()&lt;/code&gt;中使用&lt;code&gt;super.toString()&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;printf&lt;/code&gt;和&lt;code&gt;format&lt;/code&gt;方法可以运用格式修饰符，&lt;code&gt;format&lt;/code&gt;方法可以应用于&lt;code&gt;PrintStream&lt;/code&gt;或&lt;code&gt;PrintWriter&lt;/code&gt;或&lt;code&gt;System.out&lt;/code&gt;对象。&lt;/li&gt;
+&lt;li&gt;所有新的格式化功能都由&lt;code&gt;java.util.Formatter&lt;/code&gt;类处理，创建该类对象时，构造器必须指定结果输出位置。常用输出位置是&lt;code&gt;PrintStream&lt;/code&gt;、&lt;code&gt;OutputStream&lt;/code&gt;、&lt;code&gt;File&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String.format()&lt;/code&gt;用以生成格式化的String对象，接受Formatter.format()方法一样的参数。方法内部也是创建Formatter对象。&lt;/li&gt;
+&lt;li&gt;正则表达式&lt;ul&gt;
+&lt;li&gt;String类的&lt;code&gt;matches()&lt;/code&gt;、&lt;code&gt;split()&lt;/code&gt;、&lt;code&gt;replace()&lt;/code&gt;方法可以接受正则表达式字符串参数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Pattern&lt;/code&gt;和&lt;code&gt;Matcher&lt;/code&gt;，导入&lt;code&gt;java.util.regex&lt;/code&gt;包，用&lt;code&gt;static Pattern.compile()&lt;/code&gt;方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg1为正字表达式字符串&lt;/span&gt;
+&lt;span class="n"&gt;Matcher&lt;/span&gt; &lt;span class="n"&gt;matcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matcher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg2为需要检索的字符串&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;调用&lt;/span&gt;&lt;span class="n"&gt;Macther对象的方法&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断整个输入字符串是否匹配正则表达式模式&lt;/span&gt;
+&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;lookingAt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断该字符串的始部分是否匹配模式&lt;/span&gt;
+&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串&lt;/span&gt;
+&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;参数表示搜索的起点&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;组（&lt;/span&gt;&lt;span class="n"&gt;Groups&lt;/span&gt;&lt;span class="err"&gt;）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;表示整个表达式，组号&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;表示被第一对括号括起来的组。&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;BC&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner构造器可以接受任何类型的输入对象&lt;/span&gt;&lt;span class="err"&gt;，包括&lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;InputStream&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Readable对象&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner默认使用空白字符对输入进行分词&lt;/span&gt;&lt;span class="err"&gt;，可以用正则表达式指定自定义的定界符。&lt;/span&gt;&lt;span class="sb"&gt;`Scanner对象.useDelimiter(&amp;quot;正则表达式&amp;quot;)`&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner使用正则表达式进行扫描&lt;/span&gt;&lt;span class="err"&gt;：如果正则表达式中含有定界符则永远不会匹配成功。&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;14. 类型信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;运行时类型信息使得可以在程序运行时发现和使用类型信息。主要两种方式：&lt;ul&gt;
+&lt;li&gt;传统的RTTI，假设在编译时已经知道了所有的类型。&lt;/li&gt;
+&lt;li&gt;反射机制，允许在运行时发现和使用类的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;从容器(实际上是将所有事物当做Object持有)取出元素时，会自动将结果转型成具体类型。在Java中，所有类型转换都是在运行时进行正确性检查的。&lt;/li&gt;
+&lt;li&gt;Class对象，类时程序的一部分，每个类都有一个Class对象，该Class对象由JVM类加载器加载后生成的。存放在java内存模型的方法区中。&lt;/li&gt;
+&lt;li&gt;类加载器首先会检查类的Class对象是否已经被加载，如果尚未被加载，默认的类加载器会根据类名查找.class文件，类的字节码被加载时，会接受验证，确保没有被破坏，并且不包含不良java代码。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成Class对象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Class.forName("完整类名");&lt;/code&gt;，会抛出&lt;code&gt;ClassNotFundException&lt;/code&gt;异常。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类字面常量：&lt;code&gt;类名.class&lt;/code&gt;；简单而且安全，在编译时就会受到检查，不需要置于try语句块中。类字面常量不仅可以应用于普通的类，还可以应用于接口、数组、基本类型。基本数据类型的包装器类有一个标准字段TYPE,TYPE字段是一个引用，指向对应的基本数据类型的Class对象。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;boolean.class 等价于 Boolean.TYPE
+char.class  ... Character.TYPE
+byte.class  ... Byte.TYPE
+short.class ... Short.TYPE
+int.class  ... Integer.TYPE 等价于 Integer.Class
+long.class ... Long.TYPE
+float.class ... Float.TYPE
+double.class ... Double.TYPE
+void.class  ... Void.TYPE
+__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;使用类所做的准备工作步骤：&lt;ul&gt;
+&lt;li&gt;加载，由类加载器执行，查找字节码，通常是在classpath所指定的路径中查找，并从这些字节码中创建一个Class对象&lt;/li&gt;
+&lt;li&gt;链接，在链接阶段将验证类中的字节码，为静态域分配存储空间，将静态域初始化为默认值，并且如果必须的话，将解析这个类创建的对其他类的所有引用。&lt;/li&gt;
+&lt;li&gt;初始化，执行静态初始化器和静态初始化块，如果类具有超类，则对其进行初始化。&lt;br&gt;
+初始化被延迟到对静态方法（构造器隐式地也是静态的）或者非常数静态域（编译时常量）进行首次引用时才执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;编译时常量（final定义的域并且被赋予基本类型值）不需要初始化即可被读取，&lt;code&gt;Class.forName("类名")&lt;/code&gt;会立即引起对类的初始化。如果一个static域不是final的，那么在对它访问时，总是要求在它被读取之前，要先进行链接（为这个域分配存储空间）和初始化（初始化该存储空间）。&lt;/li&gt;
+&lt;li&gt;泛化的Class引用：Class引用添加泛化语法的原因是为了提供编译期类型检查，使用普通Class引用必须直到运行时才会发现问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Class intClass = int.class;
+Class&lt;Integer&gt; genericIntClass = int.class;
+genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
+&lt;p&gt;intClass = double.class;
+//genericIntclass = double.class;//不合法的 
+    泛化类引用只能赋值为指向其声明的类型，但是普通类引用可以被重新赋值为指向任何其他的Class对象。通过泛化语法，可以让编译器强制执行额外的类型检查。&lt;/p&gt;
+&lt;p&gt;Class&lt;Number&gt; genericNumberClass = int.class;//不合法
+    Integer继承自Number，但是Integer Class对象不是Number Class对象的子类。
+    使用通配符可以泛化Class对象引用，Class&amp;lt;?&amp;gt;优于平凡的Class，即便是等价的。 
+    创建Class引用，该引用被限定为某种类型，或者为该类型的任何子类型，需要将通配符和extends关键字相结合。&lt;/p&gt;
+&lt;p&gt;Class&amp;lt;? extends Number&amp;gt; bounded = int.class;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将泛化用于Class对象时，&lt;code&gt;newInstance()&lt;/code&gt;将返回该对象的确切类型：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;
+&lt;span class="nx"&gt;Class&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="c1"&gt;//使用泛化的Class对象事，newInstance时可以生产具体的对象&lt;/span&gt;
+&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="c1"&gt;//并不会产生具体的类对象&lt;/span&gt;
+&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt; &lt;span class="nx"&gt;super&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getSuperclass&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="nx"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="c1"&gt;//编译不通过&lt;/span&gt;
+&lt;span class="c1"&gt;// Class&amp;lt;Toy&amp;gt; up2 = ftClass.getSuperclass();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;编译器允许声明某个Class是每个类的超类Class，&lt;code&gt;Class&amp;lt;? Super SomeClass&amp;gt;&lt;/code&gt;，而不会接受直接已知的超类Class，&lt;code&gt;getSuperClass()&lt;/code&gt;返回的是基类，并且编译器在编译期就知道是什么类型，由于是含糊类型，所以&lt;code&gt;newInstance()&lt;/code&gt;返回的不是精确类型。
+- Class引用的转型语法，&lt;code&gt;newObject = NewObjectClass引用.cast(OldObject)&lt;/code&gt;
+- 传统的类型转换，由RTTI确保转型的正确性，如果执行一个错误的类型转换会抛出ClassCastException
+- 动态的instanceof
+&lt;em&gt; &lt;code&gt;instanceof()&lt;/code&gt;有严格的比较限制，只可将其与命名类型进行比较，而不能与Class对象作比较。(只能与具体的类名进行比较，不能与Class对象数组中对象进行逐一比较)。&lt;code&gt;对象 instanceof 类名&lt;/code&gt;。
+&lt;/em&gt; &lt;code&gt;Class.isInstance()&lt;/code&gt;，&lt;code&gt;Class对象.isInstance(类的对象)&lt;/code&gt;。
+- 注册工厂：基类中含有所有实例类的工厂的集合，各导出类中含有内部类作为自己的工厂。
+- instanceof与Class：instanceof保持了类型的概念，是这个类或者是这个类的派生类都将返回真，而用==或者&lt;code&gt;equals()&lt;/code&gt;比较实际的Class对象，并没有考虑继承，它或者是这个确切的类型或者不是。
+- 反射：运行时的类信息
+- 类型在编译时已知，RTTI才能识别类型；但是假设获取了一个指向某个并不在当前程序空间中的对象的引用，即编译时程序根本不可能获知这个对象所属的类。
+- Class类与&lt;code&gt;java.lang.reflect&lt;/code&gt;类库提供对反射的支持，包含Filed、Method、Constructor类，这些类都是由JVM在运行时创建的，用以表示未知类中对应的成员。
+- 反射必须加载类的Class对象，即类的.class文件是必须获取的，通过本地机器或者通过网络取得，与RTTI的区别在于：RTTI，编译器在编译时打开和检查.class文件；而反射，.class文件在编译时是不可获取的，所以在运行时打开和检查.class文件。
+- 空对象：使用内置的Null表示缺少对象时，每次都学要检测其是否为null，并且null没有任何的行为。空对象可以接受传递给它所代表的对象的消息，打比赛股将返回表示为实际上并不存在任何真实的对象的值。
+- 空对象最大的用处在于它更加靠近数据，因为对象表示的问题是空间内的实体
+- 空对象也可以通过实现Null接口来表示其为空&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    public interface Null{}
+    public static class NullPerson extends Person implements Null{
+            private NullPerson(){supper();};
+            public String toString(){};
+    }
+    public static final Person NULL = new NullPerson();
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;空对象都是单例的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口与类型信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;   
+&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
+    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
+    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;u&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
+    &lt;span class="kr"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
+    &lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;//编译错误&lt;/span&gt;
+    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;HiddenB&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nx"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="nx"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="nx"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;
+&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="nx"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="nx"&gt;B类型可用&lt;/span&gt;
+
+&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="nx"&gt;private方法&lt;/span&gt;
+&lt;span class="nx"&gt;Method&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;反射可以调用非公共访问权限的方法，对域来说也适用。&lt;/span&gt;&lt;span class="nx"&gt;final域在修改时是安全的&lt;/span&gt;&lt;span class="err"&gt;，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;15. 泛型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用接口或者继承对程序的约束力还是太强了，一旦指明了接口，则要求代码必须使用特定的接口，而我们希望达到的目的是编写更加通用的代码应用于某种不具体的类型，而不是一个具体的接口或者类。泛型实现了参数化类型的概念，使代码可以应用于多种类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;16. 数组&lt;/h2&gt;
+&lt;h2&gt;17. 容器深入研究&lt;/h2&gt;
+&lt;h2&gt;18. Java I/O系统&lt;/h2&gt;
+&lt;h2&gt;19. 枚举类型&lt;/h2&gt;
+&lt;h2&gt;20. 注解&lt;/h2&gt;
+&lt;h2&gt;21. 并发&lt;/h2&gt;</content><category term="table"></category></entry></feed>

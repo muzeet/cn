@@ -1,0 +1,70 @@
+.category
+{
+	margin:2em 0 0 1em;
+}
+.archive_list
+{
+	border-bottom: 1px #B4B4B4 dashed;
+}
+#ev_article
+{
+	margin-left:2.8em;
+	border:0px red solid;
+}
+.archives_year
+{
+	border: 0px red solid;
+}
+
+.yearClass
+{
+  color:#AAAAAA;
+  font-size: 1.8em;
+  font-weight: 200;/*400==normal*/
+  /*display: inline-block;*/
+  position: relative; 
+  top: 0.4em;
+  float: left;
+  border: 0px red solid;
+  
+}
+
+.archives_year h1 {
+	position: relative;
+	float:left;
+	margin-left: 1.2em;
+	border: 0px green solid;
+	font-size: 1.6em;	
+}
+.archives_year h1 a {
+  color: inherit;
+  font-weight: normal;
+  display: inline-block;
+}
+.archives_year h1 a:hover
+{
+  color:#0066CC;
+}
+.archives_content
+{
+	
+}
+
+
+.archives_year  time {
+  float:left;
+  font-size: 1em;
+  color: #AAAAAA;
+  font-weight: normal;
+  border:0px blue solid;
+  position: relative;
+  text-align: center;
+  top: 0.8em;
+}
+.year { display: none; }
+
+#archive_footer
+{
+	border-bottom: 1px #B4B4B4 dashed;
+	padding:0 0 0.5em 6em;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - 博客设计</title><link href="http://www.muzeet.com/" rel="alternate"></link><link href="http://www.muzeet.com/feeds/bo-ke-she-ji.atom.xml" rel="self"></link><id>http://www.muzeet.com/</id><updated>2017-07-01T00:00:00+08:00</updated><entry><title>代码高亮（pygment）</title><link href="http://www.muzeet.com/posts/2017/07/01/Test-Code-Highlight-by-pygment.html" rel="alternate"></link><published>2017-07-01T00:00:00+08:00</published><updated>2017-07-01T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.com,2017-07-01:/posts/2017/07/01/Test-Code-Highlight-by-pygment.html</id><summary type="html">&lt;p&gt;使用pygment进行代码高亮处理。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. 测试code block&lt;/h2&gt;
+&lt;p&gt;下面是一段代码，代码使用pygment进行高亮处理。&lt;/p&gt;
+&lt;p&gt;求二叉树的第k个节点：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public class KthNode
+{
+     public TreeNode kthNode(TreeNode pRoot, int k)
+     {
+        //求二叉排序树的第k个节点，只需要中序遍历，即可
+        if(pRoot == null || k &amp;lt; 1)
+            return null;
+        Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;TreeNode&amp;gt;();
+        TreeNode p = pRoot;
+        TreeNode kthNode = null;
+        int count = 0;
+        while(p != null || !stack.empty() &amp;amp;&amp;amp; count !=k ){
+            if(p != null){
+                stack.push(p);
+                p = p.left;
+            }
+            else{
+               p = stack.pop();
+               count++;
+               if(count == k)
+                   kthNode = p;
+               p = p.right;
+            }
+        }
+        return kthNode;
+     }
+}
+&lt;/pre&gt;&lt;/div&gt;</content><category term="代码高亮"></category></entry></feed>
