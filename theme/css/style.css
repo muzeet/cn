@@ -1537,7 +1537,6 @@ li.posts {
 	clear: both;
 	color: #9f9f9f;
 	font-size: 12px;
-	margin-bottom: 10px;
 
 }
 
@@ -3459,5 +3458,10 @@ img
 {
 	background-color:#1863A1;
 	color:#FFF;
+}
+
+.jiathis_style
+{
+	margin-top:0.75em;
 }
 
