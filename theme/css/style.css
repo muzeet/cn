@@ -1136,7 +1136,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 h1 {
     font-size: 2.250em; /* = 42px */
     margin-bottom: .5em;
-    margin-top: .5em;
+    margin-top: 1.5em;
+	
+	border-bottom: 2px solid #eee;
 }
 
 h2 {
