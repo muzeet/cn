@@ -5,18 +5,29 @@
     <title>OxCAFEBABE</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" id="responsive-style-css"  href="../../theme/css/tomorrow-night-bright.css" type="text/css" media="all" />
+	<!--<link rel="stylesheet" id="responsive-style-css"  href="../../theme/css/tomorrow-night-bright.css" type="text/css" media="all" />-->
     <link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/style.css' type="text/css" media="all" />
-	<!--<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/pygmentMy.css' type="text/css" media="all" />-->
+	<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/pygmentMy.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/archive.css' type="text/css" media="all" />
+	<!--
+	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/androidstudio.css' type="text/css" media="all" />
+	-->
 	
 	<script type="text/javascript" src="../../theme/js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="../../theme/js/numberLines.js"></script>
 	<script type="text/javascript" src="../../theme/js/prettify.js"></script>
+	<!--
+	<script type="text/javascript" src="../../theme/js/highlight.pack.js"></script>
+	-->
 	
     <link href="http://www.muzeet.cn/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
     
 </head>
+<!--
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+-->
 
 <body id="index" class="blog"  onload="$('pre').addClass('prettyprint');window.prettyPrint && prettyPrint();">
 <div id="container" class="hfeed">
@@ -67,35 +78,35 @@
 	</header>
 	<div class="summary"><h2>1. 测试code block</h2>
 <p>下面是一段代码，代码使用pygment进行高亮处理。</p>
-<p>求二叉树的第k个节点：</p>
-<div class="highlight"><pre><span></span>public class KthNode
-{
-     public TreeNode kthNode(TreeNode pRoot, int k)
-     {
-        //求二叉排序树的第k个节点，只需要中序遍历，即可
-        if(pRoot == null || k &lt; 1)
-            return null;
-        Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();
-        TreeNode p = pRoot;
-        TreeNode kthNode = null;
-        int count = 0;
-        while(p != null || !stack.empty() &amp;&amp; count !=k ){
-            if(p != null){
-                stack.push(p);
-                p = p.left;
+<p>求二叉树的第k个节点：
+    <code>java
+    public class KthNode
+    {
+         public TreeNode kthNode(TreeNode pRoot, int k)
+         {
+            //求二叉排序树的第k个节点，只需要中序遍历，即可
+            if(pRoot == null || k &lt; 1)
+                return null;
+            Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();
+            TreeNode p = pRoot;
+            TreeNode kthNode = null;
+            int count = 0;
+            while(p != null || !stack.empty() &amp;&amp; count !=k ){
+                if(p != null){
+                    stack.push(p);
+                    p = p.left;
+                }
+                else{
+                   p = stack.pop();
+                   count++;
+                   if(count == k)
+                       kthNode = p;
+                   p = p.right;
+                }
             }
-            else{
-               p = stack.pop();
-               count++;
-               if(count == k)
-                   kthNode = p;
-               p = p.right;
-            }
-        }
-        return kthNode;
-     }
-}
-</pre></div></div>
+            return kthNode;
+         }
+    }</code></p></div>
 	<footer>
 		<div class="readmore">
 			<span class="more"><a href="../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">继续阅读</a></span>
@@ -147,6 +158,7 @@
                 </div>
 				<div class="tag_cloud">
 						<a href="../../category/博客设计/" style="font-size: 100.0%;">博客设计(1)</a>
+						<a href="../../category/Code/" style="font-size: 100.0%;">Code(1)</a>
 						<a href="../../category/读书/" style="font-size: 100.0%;">读书(1)</a>
 						<a href="../../category/Java/" style="font-size: 100.0%;">Java(1)</a>
 						<a href="../../category/markdown/" style="font-size: 100.0%;">markdown(1)</a>
@@ -162,6 +174,9 @@
 				<ul id="recent-posts">
 					<li>
 					  <a href="../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a>
+					</li>
+					<li>
+					  <a href="../../posts/2016/06/06/ce-shi-dai-ma-gao-liang.html">测试代码高亮</a>
 					</li>
 					<li>
 					  <a href="../../posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html">理想的生活方式</a>

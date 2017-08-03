@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<!--<link rel="stylesheet" id="responsive-style-css"  href="../../theme/css/tomorrow-night-bright.css" type="text/css" media="all" />-->
     <link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/style.css' type="text/css" media="all" />
-	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/pygmentMy.css' type="text/css" media="all" />
+	<link rel="stylesheet" id="responsive-style-css"  href='/theme/css/pygmentMy.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/archive.css' type="text/css" media="all" />
 	<!--
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/androidstudio.css' type="text/css" media="all" />
@@ -19,11 +19,10 @@
 	<!--
 	<script type="text/javascript" src="../../theme/js/highlight.pack.js"></script>
 	-->
+	
     <link href="http://www.muzeet.cn/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
-    <link href="http://www.muzeet.cn/cn/feeds/bo-ke-she-ji.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Categories Atom Feed" />
     
 </head>
-
 <!--
 <script>
     hljs.initHighlightingOnLoad();
@@ -50,41 +49,76 @@
     </header>
     <section id="wrapper" class="clearfix">
         <section id="content" class="grid col-620" >
-<div class="archive_list"><h1 class="content-archive">分类: <span style="color:rgb(0,102,204)">博客设计</span></h1></div>
+<h4 class="content-archive">Articles tagged with <span style="color:rgb(0,102,204)">code</span>: </h4>
                 <section class="breadcrumb-list">
 				<!--
-<a href="../..">Blog</a> ››Category: <a href="category/博客设计/">博客设计</a>
+<a href="../..">Blog</a> ››Tag: <a href="tag/code/">code</a>
 					-->
                 </section>
 
 
-
-<div id="blog-archives" class="category">
-<div class="yearClass"><span>2017</span></div>
-<article>
-    <div id="ev_article">
-	<dd>
-		<span class="archives_year archives_content">
-			<time datetime="2017-07-01T00:00:00+08:00" pubdate>
-				<span class='year'>2017</span>
-				<span class='month'>07</span>
-				<span class='day'>01</span>
-			</time>
-			<h1><a href="../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a></h1>
-		</span>
-	</dd>
-	<dd>
-		<footer class="post-meta archives_content" id="archive_footer">
-			<span class="meta-prep">分类:</span>
-			<abbr class="category">
-				<a href="../../category/博客设计/">博客设计</a>
+<ul>
+<li class="posts"><article class="post hentry">
+	<header>
+		<div class="post-info">
+		<span class="post-lable">发布于：</span>
+			<abbr class="date" title="2016-06-06T00:00:00+08:00"> 
+				<a href="../../archives/2016/index.html">2016-06-06 </a>
 			</abbr>
-		</footer>
-	</dd>
-	</div>
-</article>
+		<span class="post-lable">分类：</span>
+			<abbr class="category">
+				<a href="../../category/Code/">Code</a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+		<h2 class="title" >
+			<a href="../../posts/2016/06/06/ce-shi-dai-ma-gao-liang.html" rel="bookmark" title="Permalink to 测试代码高亮">测试代码高亮</a>
+		</h2>
+		
+	</header>
+	<div class="summary"><pre>
+<code class="java">
+public class HelloWorld {
+    /**
+    * 输出一行字符串“Hello World!”
+    * @param args
+    */
+    public static void main(String[] args) {
+         System.out.println("Hello World!");
+    }
+}
+</code>
+</pre>
 
-</div>
+<p>代码高亮 语言 描述 来源地址 link
+<code>java Thisisajava http://www.muzeet.cn/cn link
+public class HelloWorld {
+    /**
+    * 输出一行字符串“Hello World!”
+    * @param args
+    */
+    public static void main(String[] args) {
+         System.out.println("Hello World!");
+    }
+}</code></p></div>
+	<footer>
+		<div class="readmore">
+			<span class="more"><a href="../../posts/2016/06/06/ce-shi-dai-ma-gao-liang.html">继续阅读</a></span>
+		</div>
+	</footer>
+</article></li>
+<hr/>
+</ul>
+<p class="paginator">
+	<span id="previous_page">
+	</span>
+	<span id="cur_page">
+    第 1 / 1页
+	</span>
+	
+	<span id="next_page">
+	</span>
+</p>
         </section><!-- #content -->
         <section id="widgets" class="grid col-300 fit" >
             <!--
@@ -99,14 +133,18 @@
                 </form>
             </section>
             -->
-			<section id="widget-category" class="widget-wrapper">
-				<div class="search_div">
-				<form action="http://google.com/search" method="get">
-					<input type="hidden" name="q" value="site:www.muzeet.cn/cn" />
-					<input class="search" type="text" name="q" results="0" placeholder="Google"/>
-				</form>
-				</div>
+
+			<section  id="widget-aboutme" class="widget-wrapper">
+				<div class="widget-title">
+                    关于本人
+                </div>
+				<p align="center"><img src="http://7xq1t9.com1.z0.glb.clouddn.com/thank_you.png" /></p>
+
+				<p>资深代码渣，热衷于折腾。<a href="#" >更多介绍...</a></p>
+				<p>声明：所有言论仅代表个人观点，与所在单位无关。</p><p>本人主页为<a href="http://www.muzeet.cn" target="_blank">http://www.muzeet.cn</a></p>
+				
 			</section>
+
 			
             <section id="widget-category" class="widget-wrapper widget_archive">
                 <div class="widget-title">
