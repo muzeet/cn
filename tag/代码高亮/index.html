@@ -78,35 +78,13 @@
 	</header>
 	<div class="summary"><h2>1. 测试code block</h2>
 <p>下面是一段代码，代码使用pygment进行高亮处理。</p>
-<p>求二叉树的第k个节点：
-    <code>java
-    public class KthNode
-    {
-         public TreeNode kthNode(TreeNode pRoot, int k)
-         {
-            //求二叉排序树的第k个节点，只需要中序遍历，即可
-            if(pRoot == null || k &lt; 1)
-                return null;
-            Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();
-            TreeNode p = pRoot;
-            TreeNode kthNode = null;
-            int count = 0;
-            while(p != null || !stack.empty() &amp;&amp; count !=k ){
-                if(p != null){
-                    stack.push(p);
-                    p = p.left;
-                }
-                else{
-                   p = stack.pop();
-                   count++;
-                   if(count == k)
-                       kthNode = p;
-                   p = p.right;
-                }
-            }
-            return kthNode;
-         }
-    }</code></p></div>
+<p>求二叉树的第k个节点：</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KthNode</span></span>
+<span class="code-line"><span class="o">{</span></span>
+<span class="code-line">     <span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">kthNode</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">pRoot</span><span class="o">,</span> <span class="kt">int</span> <span class="n">k</span><span class="o">)</span></span>
+<span class="code-line">     <span class="o">{</span></span>
+<span class="code-line">        <span class="c1">//求二叉排序树的第k个节点，只需要中序遍历，即可</span></span>
+<span class="code-line">        <span class="k">if</span><span class="o">(</span><span class="n">pRoot</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">k</span> <span...</div>
 	<footer>
 		<div class="readmore">
 			<span class="more"><a href="../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">继续阅读</a></span>

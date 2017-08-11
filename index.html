@@ -76,35 +76,13 @@
 	</header>
 	<div class="summary"><h2>1. 测试code block</h2>
 <p>下面是一段代码，代码使用pygment进行高亮处理。</p>
-<p>求二叉树的第k个节点：
-    <code>java
-    public class KthNode
-    {
-         public TreeNode kthNode(TreeNode pRoot, int k)
-         {
-            //求二叉排序树的第k个节点，只需要中序遍历，即可
-            if(pRoot == null || k &lt; 1)
-                return null;
-            Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();
-            TreeNode p = pRoot;
-            TreeNode kthNode = null;
-            int count = 0;
-            while(p != null || !stack.empty() &amp;&amp; count !=k ){
-                if(p != null){
-                    stack.push(p);
-                    p = p.left;
-                }
-                else{
-                   p = stack.pop();
-                   count++;
-                   if(count == k)
-                       kthNode = p;
-                   p = p.right;
-                }
-            }
-            return kthNode;
-         }
-    }</code></p></div>
+<p>求二叉树的第k个节点：</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KthNode</span></span>
+<span class="code-line"><span class="o">{</span></span>
+<span class="code-line">     <span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">kthNode</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">pRoot</span><span class="o">,</span> <span class="kt">int</span> <span class="n">k</span><span class="o">)</span></span>
+<span class="code-line">     <span class="o">{</span></span>
+<span class="code-line">        <span class="c1">//求二叉排序树的第k个节点，只需要中序遍历，即可</span></span>
+<span class="code-line">        <span class="k">if</span><span class="o">(</span><span class="n">pRoot</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">k</span> <span...</div>
 	<footer>
 		<div class="readmore">
 			<span class="more"><a href="./posts/2017/07/01/Test-Code-Highlight-by-pygment.html">继续阅读</a></span>
@@ -129,31 +107,25 @@
 		</h2>
 		
 	</header>
-	<div class="summary"><pre>
-<code class="java">
-public class HelloWorld {
-    /**
-    * 输出一行字符串“Hello World!”
-    * @param args
-    */
-    public static void main(String[] args) {
-         System.out.println("Hello World!");
-    }
-}
-</code>
+	<div class="summary"><pre><span class="code-line"></span>
+<span class="code-line"><code class="java"></span>
+<span class="code-line">public class HelloWorld {</span>
+<span class="code-line">    /**</span>
+<span class="code-line">    * 输出一行字符串“Hello World!”</span>
+<span class="code-line">    * @param args</span>
+<span class="code-line">    */</span>
+<span class="code-line">    public static void main(String[] args) {</span>
+<span class="code-line">         System.out.println("Hello World!");</span>
+<span class="code-line">    }</span>
+<span class="code-line">}</span>
+<span class="code-line"></code></span>
 </pre>
 
-<p>代码高亮 语言 描述 来源地址 link
-<code>java Thisisajava http://www.muzeet.cn/cn link
-public class HelloWorld {
-    /**
-    * 输出一行字符串“Hello World!”
-    * @param args
-    */
-    public static void main(String[] args) {
-         System.out.println("Hello World!");
-    }
-}</code></p></div>
+<p>代码高亮 语言 描述 来源地址 link</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span></span>
+<span class="code-line"><span class="cm">/**</span></span>
+<span class="code-line"><span class="cm">* 输出一行字符串“Hello World!”</span></span>
+<span class="code-line"><span...</div>
 	<footer>
 		<div class="readmore">
 			<span class="more"><a href="./posts/2016/06/06/ce-shi-dai-ma-gao-liang.html">继续阅读</a></span>
@@ -244,15 +216,13 @@ public class HelloWorld {
 <p>Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。  </p>
 <p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。<br>
 要制约的只有一些 HTML 区块元素――<code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt;p&gt;</code> 标签。   </p>
-<div class="highlight"><pre><span></span>这是一个普通段落。
-
-<span class="nt">&lt;table&gt;</span>
- <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
- <span class="nt">&lt;/tr&gt;</span>
-<span...</div>
+<div class="highlight"><pre><span class="code-line"><span></span>这是一个普通段落。</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nt">&lt;table&gt;</span></span>
+<span class="code-line"> <span class="nt">&lt;tr&gt;</span></span>
+<span class="code-line">    <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span></span>
+<span class="code-line">    <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span></span>
+<span class="code-line">   ...</div>
 	<footer>
 		<div class="readmore">
 			<span class="more"><a href="./posts/2016/01/13/markdown-yu-fa-shuo-ming.html">继续阅读</a></span>

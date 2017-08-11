@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - muzeet</title><link href="http://www.muzeet.cn/cn/" rel="alternate"></link><link href="http://www.muzeet.cn/cn/feeds/muzeet.atom.xml" rel="self"></link><id>http://www.muzeet.cn/cn/</id><updated>2017-07-01T00:00:00+08:00</updated><entry><title>代码高亮（pygment）</title><link href="http://www.muzeet.cn/cn/posts/2017/07/01/Test-Code-Highlight-by-pygment.html" rel="alternate"></link><published>2017-07-01T00:00:00+08:00</published><updated>2017-07-01T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2017-07-01:/cn/posts/2017/07/01/Test-Code-Highlight-by-pygment.html</id><summary type="html">&lt;p&gt;使用pygment进行代码高亮处理。&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. 测试code block&lt;/h2&gt;
 &lt;p&gt;下面是一段代码，代码使用pygment进行高亮处理。&lt;/p&gt;
-&lt;p&gt;求二叉树的第k个节点：
-    &lt;code&gt;java
-    public class KthNode
-    {
-         public TreeNode kthNode(TreeNode pRoot, int k)
-         {
-            //求二叉排序树的第k个节点，只需要中序遍历，即可
-            if(pRoot == null || k &amp;lt; 1)
-                return null;
-            Stack&amp;lt;TreeNode&amp;gt; stack = new Stack&amp;lt;TreeNode&amp;gt;();
-            TreeNode p = pRoot;
-            TreeNode kthNode = null;
-            int count = 0;
-            while(p != null || !stack.empty() &amp;amp;&amp;amp; count !=k ){
-                if(p != null){
-                    stack.push(p);
-                    p = p.left;
-                }
-                else{
-                   p = stack.pop();
-                   count++;
-                   if(count == k)
-                       kthNode = p;
-                   p = p.right;
-                }
-            }
-            return kthNode;
-         }
-    }&lt;/code&gt;&lt;/p&gt;</content><category term="代码高亮"></category></entry><entry><title>测试代码高亮</title><link href="http://www.muzeet.cn/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2016-06-06:/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html</id><summary type="html">&lt;p&gt;测试代码高亮by highlight.js。&lt;/p&gt;</summary><content type="html">&lt;pre&gt;
-&lt;code class="java"&gt;
-public class HelloWorld {
-    /**
-    * 输出一行字符串“Hello World!”
-    * @param args
-    */
-    public static void main(String[] args) {
-         System.out.println("Hello World!");
-    }
-}
-&lt;/code&gt;
+&lt;p&gt;求二叉树的第k个节点：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;KthNode&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;TreeNode&lt;/span&gt; &lt;span class="nf"&gt;kthNode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TreeNode&lt;/span&gt; &lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;     &lt;span class="o"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;//求二叉排序树的第k个节点，只需要中序遍历，即可&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pRoot&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="n"&gt;Stack&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;TreeNode&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;stack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Stack&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;TreeNode&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="n"&gt;TreeNode&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pRoot&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="n"&gt;TreeNode&lt;/span&gt; &lt;span class="n"&gt;kthNode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;empty&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;){&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;                &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;push&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;                &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;left&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;            &lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;               &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;pop&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;               &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;++;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;               &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;                   &lt;span class="n"&gt;kthNode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;               &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;right&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;            &lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;kthNode&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;     &lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="代码高亮"></category></entry><entry><title>测试代码高亮</title><link href="http://www.muzeet.cn/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2016-06-06:/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html</id><summary type="html">&lt;p&gt;测试代码高亮by highlight.js。&lt;/p&gt;</summary><content type="html">&lt;pre&gt;&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;code class="java"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;public class HelloWorld {&lt;/span&gt;
+&lt;span class="code-line"&gt;    /**&lt;/span&gt;
+&lt;span class="code-line"&gt;    * 输出一行字符串“Hello World!”&lt;/span&gt;
+&lt;span class="code-line"&gt;    * @param args&lt;/span&gt;
+&lt;span class="code-line"&gt;    */&lt;/span&gt;
+&lt;span class="code-line"&gt;    public static void main(String[] args) {&lt;/span&gt;
+&lt;span class="code-line"&gt;         System.out.println("Hello World!");&lt;/span&gt;
+&lt;span class="code-line"&gt;    }&lt;/span&gt;
+&lt;span class="code-line"&gt;}&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;代码高亮 语言 描述 来源地址 link
-&lt;code&gt;java Thisisajava http://www.muzeet.cn/cn link
-public class HelloWorld {
-    /**
-    * 输出一行字符串“Hello World!”
-    * @param args
-    */
-    public static void main(String[] args) {
-         System.out.println("Hello World!");
-    }
-}&lt;/code&gt;&lt;/p&gt;</content><category term="code"></category></entry><entry><title>理想的生活方式</title><link href="http://www.muzeet.cn/cn/posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2016-06-06:/cn/posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html</id><summary type="html">&lt;p&gt;理想中的生活方式。&lt;/p&gt;</summary><content type="html">&lt;h1&gt;理想的生活态度&lt;/h1&gt;
+&lt;p&gt;代码高亮 语言 描述 来源地址 link&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;HelloWorld&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="cm"&gt;* 输出一行字符串“Hello World!”&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="cm"&gt;* @param args&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="cm"&gt;*/&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;     &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="code"></category></entry><entry><title>理想的生活方式</title><link href="http://www.muzeet.cn/cn/posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2016-06-06:/cn/posts/2016/06/06/li-xiang-de-sheng-huo-fang-shi.html</id><summary type="html">&lt;p&gt;理想中的生活方式。&lt;/p&gt;</summary><content type="html">&lt;h1&gt;理想的生活态度&lt;/h1&gt;
 &lt;h2&gt;理想中的工作桌面&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="桌面" src="http://7xq1t9.com1.z0.glb.clouddn.com/0001_desktop.jpg" title="理想的工作桌面应该是这样的"&gt;&lt;/p&gt;
 &lt;h2&gt;理想的心态&lt;/h2&gt;
@@ -69,17 +69,17 @@ public class HelloWorld {
 &lt;p&gt;Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。  &lt;/p&gt;
 &lt;p&gt;不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。&lt;br&gt;
 要制约的只有一些 HTML 区块元素――&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 标签。   &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是一个普通段落。
-
-&lt;span class="nt"&gt;&amp;lt;table&amp;gt;&lt;/span&gt;
- &lt;span class="nt"&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;1&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;2&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;3&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
- &lt;span class="nt"&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;
-
-这是另一个普通段落。
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;这是一个普通段落。&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;table&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt; &lt;span class="nt"&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;1&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;2&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;3&lt;span class="nt"&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt; &lt;span class="nt"&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;这是另一个普通段落。&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -111,11 +111,11 @@ markdown中，如果使用的 &amp;amp; 字符是 HTML 字符实体的一部分�
 &lt;h3&gt;标题&lt;/h3&gt;
 &lt;p&gt;Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。&lt;/p&gt;
 &lt;p&gt;类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），任何数量的 = 和 - 都可以有效果。例如：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;H1
-======
-
-H2
-------
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;H1&lt;/span&gt;
+&lt;span class="code-line"&gt;======&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;H2&lt;/span&gt;
+&lt;span class="code-line"&gt;------&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -123,11 +123,11 @@ H2
 &lt;h1&gt;H1标题&lt;/h1&gt;
 &lt;h2&gt;H2标题&lt;/h2&gt;
 &lt;p&gt;类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# 这是 H1标题
-
-## 这是 H2标题
-
-###### 这是 H6标题
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;# 这是 H1标题&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;## 这是 H2标题&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;###### 这是 H6标题&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -139,12 +139,12 @@ H2
 &lt;h3&gt;区块引用 Blockquotes&lt;/h3&gt;
 &lt;p&gt;Markdown 标记区块引用是使用类似 email 中用 &amp;gt; 的引用方式。&lt;/p&gt;
 &lt;p&gt;在每行的最前面加上 &amp;gt;：  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;区块引用  
-&amp;gt;
-&amp;gt;任然是区块引用  
-&amp;gt;
-&amp;gt;还是区块引用
-&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;区块引用  &lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;任然是区块引用  &lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;还是区块引用&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -156,22 +156,22 @@ H2
 &lt;/blockquote&gt;
 &lt;p&gt;区块引用中表示不同段落：空格+回车&lt;/p&gt;
 &lt;p&gt;Markdown 只在整个段落的第一行最前面加上 &amp;gt; ：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,&lt;/span&gt;
+&lt;span class="code-line"&gt;consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse&lt;/span&gt;
+&lt;span class="code-line"&gt;id sem consectetuer libero luctus adipiscing.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &amp;gt; ：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;第一级别的区块引用
-&amp;gt;
-&amp;gt;&amp;gt;第二级的区块引用  
-&amp;gt;
-&amp;gt;&amp;gt;第二级的区块引用
-&amp;gt;
-&amp;gt;回到第一级别的区块引用
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;第一级别的区块引用&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&amp;gt;第二级的区块引用  &lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&amp;gt;第二级的区块引用&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;回到第一级别的区块引用&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -184,16 +184,16 @@ id sem consectetuer libero luctus adipiscing.
 &lt;p&gt;回到第一级别的区块引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;## 这是一个标题。##
-&amp;gt;
-&amp;gt;列表: 
-&amp;gt;
-&amp;gt;1.   这是第一行列表项。
-&amp;gt;2.   这是第二行列表项。
-&amp;gt; 
-&amp;gt;给出一些例子代码：
-&amp;gt; 
-&amp;gt;     return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;## 这是一个标题。##&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;列表: &lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;1.   这是第一行列表项。&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;2.   这是第二行列表项。&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt; &lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;给出一些例子代码：&lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt; &lt;/span&gt;
+&lt;span class="code-line"&gt;&amp;gt;     return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -205,7 +205,7 @@ id sem consectetuer libero luctus adipiscing.
 &lt;li&gt;这是第二行列表项。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;给出一些例子代码：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -213,9 +213,9 @@ id sem consectetuer libero luctus adipiscing.
 &lt;h3&gt;列表&lt;/h3&gt;
 &lt;p&gt;Markdown 支持有序列表和无序列表。&lt;/p&gt;
 &lt;p&gt;无序列表使用&lt;strong&gt;*&lt;/strong&gt; 、&lt;strong&gt;+&lt;/strong&gt; 或是 &lt;strong&gt;-&lt;/strong&gt; 作为列表标记（标记与列表名称有一个以上空格）：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;* 第一行
-* 第二行
-* 第三行
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;* 第一行&lt;/span&gt;
+&lt;span class="code-line"&gt;* 第二行&lt;/span&gt;
+&lt;span class="code-line"&gt;* 第三行&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -225,9 +225,9 @@ id sem consectetuer libero luctus adipiscing.
 &lt;li&gt;第三行&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;有序列表则使用数字接着一个英文句点：（数字句点与文字之间至少一个空格）&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  Bird
-2.  McHale
-3.  Parish
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;1.  Bird&lt;/span&gt;
+&lt;span class="code-line"&gt;2.  McHale&lt;/span&gt;
+&lt;span class="code-line"&gt;3.  Parish&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -238,17 +238,17 @@ id sem consectetuer libero luctus adipiscing.
 &lt;/ol&gt;
 &lt;p&gt;列表项目标记(&lt;em&gt; 或者 1.)通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记(&lt;/em&gt; 或者 1.)后面则一定要接着至少一个空格或制表符。&lt;/p&gt;
 &lt;p&gt;如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; 标签包起来：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*   Bird
-
-*   Magic
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;*   Bird&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;*   Magic&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;会被转换为：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;Bird&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;Magic&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;Bird&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;Magic&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -266,10 +266,10 @@ sit amet velit.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;列表项目中存在引用:（4个空格 or 1个制表符）&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*   A list item with a blockquote:
-    &amp;gt; This is a blockquote
-    &amp;gt; inside a list item.
-*   Another
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;*   A list item with a blockquote:&lt;/span&gt;
+&lt;span class="code-line"&gt;    &amp;gt; This is a blockquote&lt;/span&gt;
+&lt;span class="code-line"&gt;    &amp;gt; inside a list item.&lt;/span&gt;
+&lt;span class="code-line"&gt;*   Another&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -286,28 +286,28 @@ inside a list item.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;列表项目中存在代码区块:(8个空格 or 2个制表符)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*   一列表项包含一个列表区块：
-
-       &amp;lt;代码写在这&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;*   一列表项包含一个列表区块：&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;       &amp;lt;代码写在这&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
-&lt;li&gt;一列表项包含一个列表区块：&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;代码写在这&amp;gt;
+&lt;li&gt;一列表项包含一个列表区块：&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;代码写在这&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;列表项首说出现数字-句点-空白，原样显示:句点前面加上反斜杠。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="err"&gt;一列表项包含数字&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;句点&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;空白。&lt;/span&gt;
-
-    &lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="o"&gt;\.&lt;/span&gt;  &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;great&lt;/span&gt; &lt;span class="n"&gt;season&lt;/span&gt;
-
-    &lt;span class="mi"&gt;1987&lt;/span&gt;&lt;span class="o"&gt;\.&lt;/span&gt;  &lt;span class="n"&gt;what&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;shame&lt;/span&gt;
-
-&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="err"&gt;一列表项包含数字&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;句点&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;空白&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="err"&gt;一列表项包含数字&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;句点&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;空白。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="mi"&gt;1986&lt;/span&gt;&lt;span class="o"&gt;\.&lt;/span&gt;  &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;great&lt;/span&gt; &lt;span class="n"&gt;season&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="mi"&gt;1987&lt;/span&gt;&lt;span class="o"&gt;\.&lt;/span&gt;  &lt;span class="n"&gt;what&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;shame&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;  &lt;span class="err"&gt;一列表项包含数字&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;句点&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="err"&gt;空白&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -345,49 +345,49 @@ inside a list item.&lt;/p&gt;
 &lt;h3&gt;代码区块&lt;/h3&gt;
 &lt;p&gt;Markdown 会用 &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; 标签来把代码区块包起来。&lt;/p&gt;
 &lt;p&gt;标记为代码区块：缩进 4 个空格或是 1 个制表符。一直持续到没有缩进的那一行（或是文件结尾）&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是一个普通段落：
-
-    这是一个代码区块。
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;这是一个普通段落：&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    这是一个代码区块。&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Markdown 会转换成：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;这是一个普通段落：&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;这是一个代码区块。
-&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;这是一个普通段落：&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;这是一个代码区块。&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;java &lt;code&gt;main()&lt;/code&gt;：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;public static void main(String[] args){
-
-}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;public static void main(String[] args){&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;在代码区块里面， &amp;amp; 、 &amp;lt; 和 &amp;gt; 会自动转成 HTML 实体&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;footer&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="ni"&gt;&amp;amp;copy;&lt;/span&gt; 2004 Foo Corporation
-&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;footer&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="ni"&gt;&amp;amp;copy;&lt;/span&gt; 2004 Foo Corporation&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;会被转换为：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;div class=&amp;quot;footer&amp;quot;&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
-   &lt;span class="ni"&gt;&amp;amp;amp;&lt;/span&gt;copy; 2004 Foo Corporation
-&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/div&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;div class=&amp;quot;footer&amp;quot;&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;   &lt;span class="ni"&gt;&amp;amp;amp;&lt;/span&gt;copy; 2004 Foo Corporation&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/div&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;分隔线&lt;/h3&gt;
 &lt;p&gt;在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。可以在星号或是减号中间插入空格。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;* * *
-
----
-
-___
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;* * *&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;---&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;___&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -400,9 +400,9 @@ ___
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;行内式链接：只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度](http://www.baidu.com/ &amp;quot;百度&amp;quot;)的链接.
-
-这是链接到[百度](http://www.baidu.com/)的无title属性链接.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度](http://www.baidu.com/ &amp;quot;百度&amp;quot;)的链接.&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;这是链接到[百度](http://www.baidu.com/)的无title属性链接.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -411,19 +411,19 @@ ___
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;参考式：链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度][baidu]的参考式链接.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度][baidu]的参考式链接.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;这是链接到[百度][baidu]的参考式链接.&lt;/p&gt;
 &lt;p&gt;你也可以选择性地在两个方括号中间加上一个空格：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度] [baidu]的参考式链接.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;这是链接到[百度] [baidu]的参考式链接.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;这是链接到[百度] [baidu]的参考式链接.&lt;/p&gt;
 &lt;p&gt;接着，在文件的任意处，你可以把这个标记的链接内容定义出来：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[baidu]:http://www.baidu.com &amp;quot;百度&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;[baidu]:http://www.baidu.com &amp;quot;百度&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -437,37 +437,37 @@ ___
 &lt;li&gt;选择性地接着 title 内容，可以用单引号、双引号或是括弧包着&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;下面这三种链接的定义都是相同：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[foo]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;
-[foo]: http://example.com/  &amp;#39;Optional Title Here&amp;#39;
-[foo]: http://example.com/  (Optional Title Here)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;[foo]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;&lt;/span&gt;
+&lt;span class="code-line"&gt;[foo]: http://example.com/  &amp;#39;Optional Title Here&amp;#39;&lt;/span&gt;
+&lt;span class="code-line"&gt;[foo]: http://example.com/  (Optional Title Here)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;链接网址也可以用尖括号包起来&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[id]: &amp;lt;http://example.com/&amp;gt;  &amp;quot;Optional Title Here&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;[id]: &amp;lt;http://example.com/&amp;gt;  &amp;quot;Optional Title Here&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[id]: http://example.com/longish/path/to/resource/here
- &amp;quot;Optional Title Here&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;[id]: http://example.com/longish/path/to/resource/here&lt;/span&gt;
+&lt;span class="code-line"&gt; &amp;quot;Optional Title Here&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写，因此下面两个链接是一样的：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[link text][a]&lt;/span&gt;
-&lt;span class="k"&gt;[link text][A]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[link text][a]&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;[link text][A]&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[Google][]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;[Google][]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;[Google][]&lt;/p&gt;
 &lt;p&gt;然后定义链接内容：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[Google]: http://google.com/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;[Google]: http://google.com/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -475,22 +475,22 @@ ___
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;下面是一个参考式链接的范例：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;I get 10 times more traffic from [Google] [1] 
-than from [Yahoo] [2] or [MSN] [3].
-
-[1]: http://google.com/        &amp;quot;Google&amp;quot;
-[2]: http://search.yahoo.com/  &amp;quot;Yahoo Search&amp;quot;
-[3]: http://search.msn.com/    &amp;quot;MSN Search&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;I get 10 times more traffic from [Google] [1] &lt;/span&gt;
+&lt;span class="code-line"&gt;than from [Yahoo] [2] or [MSN] [3].&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;[1]: http://google.com/        &amp;quot;Google&amp;quot;&lt;/span&gt;
+&lt;span class="code-line"&gt;[2]: http://search.yahoo.com/  &amp;quot;Yahoo Search&amp;quot;&lt;/span&gt;
+&lt;span class="code-line"&gt;[3]: http://search.msn.com/    &amp;quot;MSN Search&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;下面是用行内式写的同样一段内容的 Markdown 文件，提供作为比较之用：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;I get 10 times more traffic from 
-[Google](http://google.com/ &amp;quot;Google&amp;quot;)
-than from 
-[Yahoo](http://search.yahoo.com/ &amp;quot;Yahoo Search&amp;quot; 
-or
-[MSN](http://search.msn.com/ &amp;quot;MSN Search&amp;quot;).
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;I get 10 times more traffic from &lt;/span&gt;
+&lt;span class="code-line"&gt;[Google](http://google.com/ &amp;quot;Google&amp;quot;)&lt;/span&gt;
+&lt;span class="code-line"&gt;than from &lt;/span&gt;
+&lt;span class="code-line"&gt;[Yahoo](http://search.yahoo.com/ &amp;quot;Yahoo Search&amp;quot; &lt;/span&gt;
+&lt;span class="code-line"&gt;or&lt;/span&gt;
+&lt;span class="code-line"&gt;[MSN](http://search.msn.com/ &amp;quot;MSN Search&amp;quot;).&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -498,24 +498,24 @@ or
 &lt;/ul&gt;
 &lt;h3&gt;强调&lt;/h3&gt;
 &lt;p&gt;Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;，例如：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;*single asterisks*&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;_single underscores_&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;**double asterisks**&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;__double underscores__&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;会转成：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;em&amp;gt;&lt;/span&gt;single asterisks&lt;span class="nt"&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;em&amp;gt;&lt;/span&gt;single underscores&lt;span class="nt"&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;double asterisks&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;double underscores&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;em&amp;gt;&lt;/span&gt;single asterisks&lt;span class="nt"&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;em&amp;gt;&lt;/span&gt;single underscores&lt;span class="nt"&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;double asterisks&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;double underscores&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -524,7 +524,7 @@ __double underscores__
 &lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号，表示强调的 * 和 _ 之间不能有空格。&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;叫号机** 哈哈 **
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;叫号机** 哈哈 **&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -532,11 +532,11 @@ __double underscores__
 叫号机&lt;strong&gt; 哈哈 &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：
 &lt;strong&gt;this is text&lt;/strong&gt;，注意反斜线要匹配。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    this \**is\** text
-
-    this \*\*is\*\* text
-
-    \*this **is** text\*
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;    this \**is\** text&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    this \*\*is\*\* text&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    \*this **is** text\*&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -545,33 +545,33 @@ __double underscores__
 &lt;p&gt;*this &lt;strong&gt;is&lt;/strong&gt; text*&lt;/p&gt;
 &lt;h3&gt;代码&lt;/h3&gt;
 &lt;p&gt;如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Use the `printf()` function.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;Use the `printf()` function.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
 &lt;p&gt;会产生：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Use the &lt;span class="nt"&gt;&amp;lt;code&amp;gt;&lt;/span&gt;printf()&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; function.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Use the &lt;span class="nt"&gt;&amp;lt;code&amp;gt;&lt;/span&gt;printf()&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; function.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;``There is a literal backtick (`) here.``
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;``There is a literal backtick (`) here.``&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;这段语法会产生：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;There is a literal backtick (`) here.&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;There is a literal backtick (`) here.&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;A single backtick in a code span: `` ` ``
-
-A backtick-delimited string in a code span: `` `foo` ``
-
-`` ` ``,开始出插入反引号
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;A single backtick in a code span: `` ` ``&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;A backtick-delimited string in a code span: `` `foo` ``&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;`` ` ``,开始出插入反引号&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -579,14 +579,14 @@ A backtick-delimited string in a code span: `` `foo` ``
 &lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;`&lt;/code&gt;,开始出插入反引号&lt;/p&gt;
 &lt;p&gt;在代码区段内，&amp;amp; 和尖括号都会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Please don&amp;#39;t use any `&amp;lt;blink&amp;gt;` tags.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;Please don&amp;#39;t use any `&amp;lt;blink&amp;gt;` tags.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Please don't use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
 &lt;p&gt;转为：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Please don&amp;#39;t use any &lt;span class="nt"&gt;&amp;lt;code&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;blink&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; tags.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Please don&amp;#39;t use any &lt;span class="nt"&gt;&amp;lt;code&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;blink&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt; tags.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -595,9 +595,9 @@ A backtick-delimited string in a code span: `` `foo` ``
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;行内式的图片语法&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Optional title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Optional title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -610,10 +610,10 @@ A backtick-delimited string in a code span: `` `foo` ``
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;参考式的图片语法&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="err"&gt;「&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="err"&gt;」是图片参考的名称，图片参考的定义方式则和连结参考一样：&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;  &lt;span class="s"&gt;&amp;quot;Optional title attribute&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;「&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="err"&gt;」是图片参考的名称，图片参考的定义方式则和连结参考一样：&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;  &lt;span class="s"&gt;&amp;quot;Optional title attribute&amp;quot;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -628,28 +628,28 @@ A backtick-delimited string in a code span: `` `foo` ``
 &lt;h3&gt;自动链接&lt;/h3&gt;
 &lt;p&gt;Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。&lt;/p&gt;
 &lt;p&gt;网址：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;http://example.com/&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;http://example.com/&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Markdown 会转为：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://example.com/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;http://example.com/&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://example.com/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;http://example.com/&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;电子邮箱：&lt;/p&gt;
 &lt;p&gt;邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;address@example.com&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;address@example.com&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#97;&amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#97;&amp;#100;&amp;#100;&amp;#114;&amp;#101;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Markdown 会转成：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;amp;#x6D;&amp;amp;#x61;i&amp;amp;#x6C;&amp;amp;#x74;&amp;amp;#x6F;:&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&lt;/span&gt;
-&lt;span class="s"&gt;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;e&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&lt;/span&gt;
-&lt;span class="s"&gt;&amp;amp;#109;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&lt;/span&gt;
-&lt;span class="ni"&gt;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;&lt;/span&gt;e&lt;span class="ni"&gt;&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&amp;amp;#109;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;amp;#x6D;&amp;amp;#x61;i&amp;amp;#x6C;&amp;amp;#x74;&amp;amp;#x6F;:&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="s"&gt;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;e&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="s"&gt;&amp;amp;#109;&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="ni"&gt;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;&lt;/span&gt;e&lt;span class="ni"&gt;&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&amp;amp;#109;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -657,18 +657,18 @@ A backtick-delimited string in a code span: `` `foo` ``
 &lt;h3&gt;反斜杠&lt;/h3&gt;
 &lt;p&gt;Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号。&lt;/p&gt;
 &lt;p&gt;Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\   反斜线
-`   反引号
-*   星号
-_   底线
-{}  花括号
-[]  方括号
-()  括弧
-#   井字号
-+   加号
--   减号
-.   英文句点
-!   惊叹号
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;\   反斜线&lt;/span&gt;
+&lt;span class="code-line"&gt;`   反引号&lt;/span&gt;
+&lt;span class="code-line"&gt;*   星号&lt;/span&gt;
+&lt;span class="code-line"&gt;_   底线&lt;/span&gt;
+&lt;span class="code-line"&gt;{}  花括号&lt;/span&gt;
+&lt;span class="code-line"&gt;[]  方括号&lt;/span&gt;
+&lt;span class="code-line"&gt;()  括弧&lt;/span&gt;
+&lt;span class="code-line"&gt;#   井字号&lt;/span&gt;
+&lt;span class="code-line"&gt;+   加号&lt;/span&gt;
+&lt;span class="code-line"&gt;-   减号&lt;/span&gt;
+&lt;span class="code-line"&gt;.   英文句点&lt;/span&gt;
+&lt;span class="code-line"&gt;!   惊叹号&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="table"></category></entry><entry><title>Java编程思想-读书笔记</title><link href="http://www.muzeet.cn/cn/posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html" rel="alternate"></link><published>2015-10-01T00:00:00+08:00</published><updated>2016-05-14T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2015-10-01:/cn/posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html</id><summary type="html">&lt;p&gt;本文是《Thinking in java》读书笔记，记录了该书中的重点内容。&lt;/p&gt;</summary><content type="html">&lt;p&gt;《Java 编程思想》，原书英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。作为Java领域必读书籍，阅读此书时，我打算在阅读的过程中随时记录每个章节的技术要点和难点以及Java中的一些边边角角，以便巩固Java基础，也备日后随时查阅。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Java编程思想" src="http://7xq1t9.com1.z0.glb.clouddn.com/think%20in%20java%204th.jpg" title="thinking in java 4th"&gt;&lt;/p&gt;
 &lt;p align="center"&gt;&lt;em&gt;Java编程思想&lt;/em&gt;&lt;/p&gt;
@@ -885,18 +885,18 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;li&gt;&lt;code&gt;String.format()&lt;/code&gt;用以生成格式化的String对象，接受Formatter.format()方法一样的参数。方法内部也是创建Formatter对象。&lt;/li&gt;
 &lt;li&gt;正则表达式&lt;ul&gt;
 &lt;li&gt;String类的&lt;code&gt;matches()&lt;/code&gt;、&lt;code&gt;split()&lt;/code&gt;、&lt;code&gt;replace()&lt;/code&gt;方法可以接受正则表达式字符串参数&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Pattern&lt;/code&gt;和&lt;code&gt;Matcher&lt;/code&gt;，导入&lt;code&gt;java.util.regex&lt;/code&gt;包，用&lt;code&gt;static Pattern.compile()&lt;/code&gt;方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg1为正字表达式字符串&lt;/span&gt;
-&lt;span class="n"&gt;Matcher&lt;/span&gt; &lt;span class="n"&gt;matcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matcher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg2为需要检索的字符串&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;调用&lt;/span&gt;&lt;span class="n"&gt;Macther对象的方法&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断整个输入字符串是否匹配正则表达式模式&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;lookingAt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断该字符串的始部分是否匹配模式&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;参数表示搜索的起点&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;组（&lt;/span&gt;&lt;span class="n"&gt;Groups&lt;/span&gt;&lt;span class="err"&gt;）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;表示整个表达式，组号&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;表示被第一对括号括起来的组。&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;BC&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner构造器可以接受任何类型的输入对象&lt;/span&gt;&lt;span class="err"&gt;，包括&lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;InputStream&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Readable对象&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner默认使用空白字符对输入进行分词&lt;/span&gt;&lt;span class="err"&gt;，可以用正则表达式指定自定义的定界符。&lt;/span&gt;&lt;span class="sb"&gt;`Scanner对象.useDelimiter(&amp;quot;正则表达式&amp;quot;)`&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner使用正则表达式进行扫描&lt;/span&gt;&lt;span class="err"&gt;：如果正则表达式中含有定界符则永远不会匹配成功。&lt;/span&gt;
+&lt;li&gt;&lt;code&gt;Pattern&lt;/code&gt;和&lt;code&gt;Matcher&lt;/code&gt;，导入&lt;code&gt;java.util.regex&lt;/code&gt;包，用&lt;code&gt;static Pattern.compile()&lt;/code&gt;方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg1为正字表达式字符串&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;Matcher&lt;/span&gt; &lt;span class="n"&gt;matcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matcher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg2为需要检索的字符串&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;调用&lt;/span&gt;&lt;span class="n"&gt;Macther对象的方法&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断整个输入字符串是否匹配正则表达式模式&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;lookingAt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断该字符串的始部分是否匹配模式&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;参数表示搜索的起点&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;组（&lt;/span&gt;&lt;span class="n"&gt;Groups&lt;/span&gt;&lt;span class="err"&gt;）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;表示整个表达式，组号&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;表示被第一对括号括起来的组。&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;BC&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner构造器可以接受任何类型的输入对象&lt;/span&gt;&lt;span class="err"&gt;，包括&lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;InputStream&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Readable对象&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner默认使用空白字符对输入进行分词&lt;/span&gt;&lt;span class="err"&gt;，可以用正则表达式指定自定义的定界符。&lt;/span&gt;&lt;span class="sb"&gt;`Scanner对象.useDelimiter(&amp;quot;正则表达式&amp;quot;)`&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner使用正则表达式进行扫描&lt;/span&gt;&lt;span class="err"&gt;：如果正则表达式中含有定界符则永远不会匹配成功。&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -920,16 +920,16 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;li&gt;&lt;code&gt;Class.forName("完整类名");&lt;/code&gt;，会抛出&lt;code&gt;ClassNotFundException&lt;/code&gt;异常。&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;类字面常量：&lt;code&gt;类名.class&lt;/code&gt;；简单而且安全，在编译时就会受到检查，不需要置于try语句块中。类字面常量不仅可以应用于普通的类，还可以应用于接口、数组、基本类型。基本数据类型的包装器类有一个标准字段TYPE,TYPE字段是一个引用，指向对应的基本数据类型的Class对象。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;boolean.class 等价于 Boolean.TYPE
-char.class  ... Character.TYPE
-byte.class  ... Byte.TYPE
-short.class ... Short.TYPE
-int.class  ... Integer.TYPE 等价于 Integer.Class
-long.class ... Long.TYPE
-float.class ... Float.TYPE
-double.class ... Double.TYPE
-void.class  ... Void.TYPE
-__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;boolean.class 等价于 Boolean.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;char.class  ... Character.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;byte.class  ... Byte.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;short.class ... Short.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;int.class  ... Integer.TYPE 等价于 Integer.Class&lt;/span&gt;
+&lt;span class="code-line"&gt;long.class ... Long.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;float.class ... Float.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;double.class ... Double.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;void.class  ... Void.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -958,19 +958,19 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;将泛化用于Class对象时，&lt;code&gt;newInstance()&lt;/code&gt;将返回该对象的确切类型：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;
-&lt;span class="nx"&gt;Class&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-
-&lt;span class="c1"&gt;//使用泛化的Class对象事，newInstance时可以生产具体的对象&lt;/span&gt;
-&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-
-&lt;span class="c1"&gt;//并不会产生具体的类对象&lt;/span&gt;
-&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt; &lt;span class="nx"&gt;super&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getSuperclass&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="nx"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="c1"&gt;//编译不通过&lt;/span&gt;
-&lt;span class="c1"&gt;// Class&amp;lt;Toy&amp;gt; up2 = ftClass.getSuperclass();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;//使用泛化的Class对象事，newInstance时可以生产具体的对象&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;//并不会产生具体的类对象&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt; &lt;span class="nx"&gt;super&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getSuperclass&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;//编译不通过&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;// Class&amp;lt;Toy&amp;gt; up2 = ftClass.getSuperclass();&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -989,12 +989,12 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 - 空对象：使用内置的Null表示缺少对象时，每次都学要检测其是否为null，并且null没有任何的行为。空对象可以接受传递给它所代表的对象的消息，打比赛股将返回表示为实际上并不存在任何真实的对象的值。
 - 空对象最大的用处在于它更加靠近数据，因为对象表示的问题是空间内的实体
 - 空对象也可以通过实现Null接口来表示其为空&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    public interface Null{}
-    public static class NullPerson extends Person implements Null{
-            private NullPerson(){supper();};
-            public String toString(){};
-    }
-    public static final Person NULL = new NullPerson();
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;    public interface Null{}&lt;/span&gt;
+&lt;span class="code-line"&gt;    public static class NullPerson extends Person implements Null{&lt;/span&gt;
+&lt;span class="code-line"&gt;            private NullPerson(){supper();};&lt;/span&gt;
+&lt;span class="code-line"&gt;            public String toString(){};&lt;/span&gt;
+&lt;span class="code-line"&gt;    }&lt;/span&gt;
+&lt;span class="code-line"&gt;    public static final Person NULL = new NullPerson();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1005,34 +1005,34 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;接口与类型信息&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;   
-&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;u&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="kr"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;//编译错误&lt;/span&gt;
-    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;HiddenB&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="nx"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="nx"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="nx"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;
-&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="nx"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="nx"&gt;B类型可用&lt;/span&gt;
-
-&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="nx"&gt;private方法&lt;/span&gt;
-&lt;span class="nx"&gt;Method&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;反射可以调用非公共访问权限的方法，对域来说也适用。&lt;/span&gt;&lt;span class="nx"&gt;final域在修改时是安全的&lt;/span&gt;&lt;span class="err"&gt;，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。&lt;/span&gt;
+&lt;li&gt;interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;   &lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;u&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;//编译错误&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;HiddenB&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="nx"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="nx"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="nx"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="nx"&gt;B类型可用&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="nx"&gt;private方法&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Method&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;反射可以调用非公共访问权限的方法，对域来说也适用。&lt;/span&gt;&lt;span class="nx"&gt;final域在修改时是安全的&lt;/span&gt;&lt;span class="err"&gt;，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

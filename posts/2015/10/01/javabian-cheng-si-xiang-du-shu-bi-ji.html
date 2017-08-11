@@ -289,18 +289,18 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 <li><code>String.format()</code>用以生成格式化的String对象，接受Formatter.format()方法一样的参数。方法内部也是创建Formatter对象。</li>
 <li>正则表达式<ul>
 <li>String类的<code>matches()</code>、<code>split()</code>、<code>replace()</code>方法可以接受正则表达式字符串参数</li>
-<li><code>Pattern</code>和<code>Matcher</code>，导入<code>java.util.regex</code>包，用<code>static Pattern.compile()</code>方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.regex.</span><span class="o">*</span><span class="p">;</span>
-<span class="n">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">Pattern</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="o">//</span><span class="n">arg1为正字表达式字符串</span>
-<span class="n">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">matcher</span><span class="p">(</span><span class="n">arg2</span><span class="p">)</span><span class="o">//</span><span class="n">arg2为需要检索的字符串</span>
-<span class="o">...</span><span class="err">调用</span><span class="n">Macther对象的方法</span><span class="o">...</span>
-<span class="n">boolean</span> <span class="n">matches</span><span class="p">()</span><span class="o">//</span><span class="err">判断整个输入字符串是否匹配正则表达式模式</span>
-<span class="n">boolean</span> <span class="n">lookingAt</span><span class="p">()</span><span class="o">//</span><span class="err">判断该字符串的始部分是否匹配模式</span>
-<span class="n">boolean</span> <span class="n">find</span><span class="p">()</span><span class="o">//</span><span class="err">在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串</span>
-<span class="n">boolean</span> <span class="n">find</span><span class="p">(</span><span class="nb">int</span> <span class="n">start</span><span class="p">)</span><span class="o">//</span><span class="err">参数表示搜索的起点</span>
-<span class="o">*</span> <span class="err">组（</span><span class="n">Groups</span><span class="err">）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号</span><span class="mi">0</span><span class="err">表示整个表达式，组号</span><span class="mi">1</span><span class="err">表示被第一对括号括起来的组。</span><span class="n">A</span><span class="p">(</span><span class="n">B</span><span class="p">(</span><span class="n">C</span><span class="p">))</span><span class="n">D</span><span class="p">,</span><span class="err">组</span><span class="mi">0</span><span class="err">是</span><span class="n">ABCD</span><span class="p">,</span><span class="err">组</span><span class="mi">1</span><span class="err">是</span><span class="n">BC</span><span class="p">,</span><span class="err">组</span><span class="mi">2</span><span class="err">是</span><span class="n">C</span><span class="err">。</span>
-<span class="o">*</span> <span class="n">Scanner构造器可以接受任何类型的输入对象</span><span class="err">，包括</span><span class="n">File</span><span class="err">、</span><span class="n">InputStream</span><span class="err">、</span><span class="n">String</span><span class="err">、</span><span class="n">Readable对象</span><span class="err">。</span>
-<span class="o">*</span> <span class="n">Scanner默认使用空白字符对输入进行分词</span><span class="err">，可以用正则表达式指定自定义的定界符。</span><span class="sb">`Scanner对象.useDelimiter(&quot;正则表达式&quot;)`</span><span class="err">。</span>
-<span class="o">*</span> <span class="n">Scanner使用正则表达式进行扫描</span><span class="err">：如果正则表达式中含有定界符则永远不会匹配成功。</span>
+<li><code>Pattern</code>和<code>Matcher</code>，导入<code>java.util.regex</code>包，用<code>static Pattern.compile()</code>方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象<div class="highlight"><pre><span class="code-line"><span></span><span class="kn">import</span> <span class="nn">java.util.regex.</span><span class="o">*</span><span class="p">;</span></span>
+<span class="code-line"><span class="n">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">Pattern</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="o">//</span><span class="n">arg1为正字表达式字符串</span></span>
+<span class="code-line"><span class="n">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">matcher</span><span class="p">(</span><span class="n">arg2</span><span class="p">)</span><span class="o">//</span><span class="n">arg2为需要检索的字符串</span></span>
+<span class="code-line"><span class="o">...</span><span class="err">调用</span><span class="n">Macther对象的方法</span><span class="o">...</span></span>
+<span class="code-line"><span class="n">boolean</span> <span class="n">matches</span><span class="p">()</span><span class="o">//</span><span class="err">判断整个输入字符串是否匹配正则表达式模式</span></span>
+<span class="code-line"><span class="n">boolean</span> <span class="n">lookingAt</span><span class="p">()</span><span class="o">//</span><span class="err">判断该字符串的始部分是否匹配模式</span></span>
+<span class="code-line"><span class="n">boolean</span> <span class="n">find</span><span class="p">()</span><span class="o">//</span><span class="err">在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串</span></span>
+<span class="code-line"><span class="n">boolean</span> <span class="n">find</span><span class="p">(</span><span class="nb">int</span> <span class="n">start</span><span class="p">)</span><span class="o">//</span><span class="err">参数表示搜索的起点</span></span>
+<span class="code-line"><span class="o">*</span> <span class="err">组（</span><span class="n">Groups</span><span class="err">）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号</span><span class="mi">0</span><span class="err">表示整个表达式，组号</span><span class="mi">1</span><span class="err">表示被第一对括号括起来的组。</span><span class="n">A</span><span class="p">(</span><span class="n">B</span><span class="p">(</span><span class="n">C</span><span class="p">))</span><span class="n">D</span><span class="p">,</span><span class="err">组</span><span class="mi">0</span><span class="err">是</span><span class="n">ABCD</span><span class="p">,</span><span class="err">组</span><span class="mi">1</span><span class="err">是</span><span class="n">BC</span><span class="p">,</span><span class="err">组</span><span class="mi">2</span><span class="err">是</span><span class="n">C</span><span class="err">。</span></span>
+<span class="code-line"><span class="o">*</span> <span class="n">Scanner构造器可以接受任何类型的输入对象</span><span class="err">，包括</span><span class="n">File</span><span class="err">、</span><span class="n">InputStream</span><span class="err">、</span><span class="n">String</span><span class="err">、</span><span class="n">Readable对象</span><span class="err">。</span></span>
+<span class="code-line"><span class="o">*</span> <span class="n">Scanner默认使用空白字符对输入进行分词</span><span class="err">，可以用正则表达式指定自定义的定界符。</span><span class="sb">`Scanner对象.useDelimiter(&quot;正则表达式&quot;)`</span><span class="err">。</span></span>
+<span class="code-line"><span class="o">*</span> <span class="n">Scanner使用正则表达式进行扫描</span><span class="err">：如果正则表达式中含有定界符则永远不会匹配成功。</span></span>
 </pre></div>
 
 
@@ -324,16 +324,16 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 <li><code>Class.forName("完整类名");</code>，会抛出<code>ClassNotFundException</code>异常。</li>
 <li>
 <p>类字面常量：<code>类名.class</code>；简单而且安全，在编译时就会受到检查，不需要置于try语句块中。类字面常量不仅可以应用于普通的类，还可以应用于接口、数组、基本类型。基本数据类型的包装器类有一个标准字段TYPE,TYPE字段是一个引用，指向对应的基本数据类型的Class对象。</p>
-<div class="highlight"><pre><span></span>boolean.class 等价于 Boolean.TYPE
-char.class  ... Character.TYPE
-byte.class  ... Byte.TYPE
-short.class ... Short.TYPE
-int.class  ... Integer.TYPE 等价于 Integer.Class
-long.class ... Long.TYPE
-float.class ... Float.TYPE
-double.class ... Double.TYPE
-void.class  ... Void.TYPE
-__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__
+<div class="highlight"><pre><span class="code-line"><span></span>boolean.class 等价于 Boolean.TYPE</span>
+<span class="code-line">char.class  ... Character.TYPE</span>
+<span class="code-line">byte.class  ... Byte.TYPE</span>
+<span class="code-line">short.class ... Short.TYPE</span>
+<span class="code-line">int.class  ... Integer.TYPE 等价于 Integer.Class</span>
+<span class="code-line">long.class ... Long.TYPE</span>
+<span class="code-line">float.class ... Float.TYPE</span>
+<span class="code-line">double.class ... Double.TYPE</span>
+<span class="code-line">void.class  ... Void.TYPE</span>
+<span class="code-line">__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__</span>
 </pre></div>
 
 
@@ -362,19 +362,19 @@ genericIntClass = Integer.class;//等同于int.class</p>
 </li>
 </ul>
 <p>将泛化用于Class对象时，<code>newInstance()</code>将返回该对象的确切类型：</p>
-<div class="highlight"><pre><span></span><span class="c1">//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换</span>
-<span class="nx">Class</span> <span class="nx">ftclass1</span> <span class="o">=</span> <span class="nx">FancyToy</span><span class="p">.</span><span class="kr">class</span><span class="p">;</span>
-<span class="nx">FancyToy</span> <span class="nx">fancyToy1</span> <span class="o">=</span> <span class="p">(</span><span class="nx">FancyToy</span><span class="p">)</span> <span class="nx">ftclass1</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">();</span>
-
-<span class="c1">//使用泛化的Class对象事，newInstance时可以生产具体的对象</span>
-<span class="nx">Class</span><span class="o">&lt;</span><span class="nx">FancyToy</span><span class="o">&gt;</span> <span class="nx">ftClass</span> <span class="o">=</span> <span class="nx">FancyToy</span><span class="p">.</span><span class="kr">class</span><span class="p">;</span>
-<span class="nx">FancyToy</span> <span class="nx">fancyToy</span> <span class="o">=</span> <span class="nx">ftClass</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">();</span>
-
-<span class="c1">//并不会产生具体的类对象</span>
-<span class="nx">Class</span><span class="cp">&lt;?</span> <span class="nx">super</span> <span class="nx">FancyToy</span><span class="o">&gt;</span> <span class="nx">up</span> <span class="o">=</span> <span class="nx">ftClass</span><span class="o">.</span><span class="nx">getSuperclass</span><span class="p">();</span>
-<span class="nx">Object</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">up</span><span class="o">.</span><span class="nx">newInstance</span><span class="p">();</span>
-<span class="c1">//编译不通过</span>
-<span class="c1">// Class&lt;Toy&gt; up2 = ftClass.getSuperclass();</span>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="c1">//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换</span></span>
+<span class="code-line"><span class="nx">Class</span> <span class="nx">ftclass1</span> <span class="o">=</span> <span class="nx">FancyToy</span><span class="p">.</span><span class="kr">class</span><span class="p">;</span></span>
+<span class="code-line"><span class="nx">FancyToy</span> <span class="nx">fancyToy1</span> <span class="o">=</span> <span class="p">(</span><span class="nx">FancyToy</span><span class="p">)</span> <span class="nx">ftclass1</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">();</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">//使用泛化的Class对象事，newInstance时可以生产具体的对象</span></span>
+<span class="code-line"><span class="nx">Class</span><span class="o">&lt;</span><span class="nx">FancyToy</span><span class="o">&gt;</span> <span class="nx">ftClass</span> <span class="o">=</span> <span class="nx">FancyToy</span><span class="p">.</span><span class="kr">class</span><span class="p">;</span></span>
+<span class="code-line"><span class="nx">FancyToy</span> <span class="nx">fancyToy</span> <span class="o">=</span> <span class="nx">ftClass</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">();</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">//并不会产生具体的类对象</span></span>
+<span class="code-line"><span class="nx">Class</span><span class="cp">&lt;?</span> <span class="nx">super</span> <span class="nx">FancyToy</span><span class="o">&gt;</span> <span class="nx">up</span> <span class="o">=</span> <span class="nx">ftClass</span><span class="o">.</span><span class="nx">getSuperclass</span><span class="p">();</span></span>
+<span class="code-line"><span class="nx">Object</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">up</span><span class="o">.</span><span class="nx">newInstance</span><span class="p">();</span></span>
+<span class="code-line"><span class="c1">//编译不通过</span></span>
+<span class="code-line"><span class="c1">// Class&lt;Toy&gt; up2 = ftClass.getSuperclass();</span></span>
 </pre></div>
 
 
@@ -393,12 +393,12 @@ genericIntClass = Integer.class;//等同于int.class</p>
 - 空对象：使用内置的Null表示缺少对象时，每次都学要检测其是否为null，并且null没有任何的行为。空对象可以接受传递给它所代表的对象的消息，打比赛股将返回表示为实际上并不存在任何真实的对象的值。
 - 空对象最大的用处在于它更加靠近数据，因为对象表示的问题是空间内的实体
 - 空对象也可以通过实现Null接口来表示其为空</p>
-<div class="highlight"><pre><span></span>    public interface Null{}
-    public static class NullPerson extends Person implements Null{
-            private NullPerson(){supper();};
-            public String toString(){};
-    }
-    public static final Person NULL = new NullPerson();
+<div class="highlight"><pre><span class="code-line"><span></span>    public interface Null{}</span>
+<span class="code-line">    public static class NullPerson extends Person implements Null{</span>
+<span class="code-line">            private NullPerson(){supper();};</span>
+<span class="code-line">            public String toString(){};</span>
+<span class="code-line">    }</span>
+<span class="code-line">    public static final Person NULL = new NullPerson();</span>
 </pre></div>
 
 
@@ -409,34 +409,34 @@ genericIntClass = Integer.class;//等同于int.class</p>
 <li>
 <p>接口与类型信息</p>
 <ul>
-<li>interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。<div class="highlight"><pre><span></span><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">A</span><span class="p">{</span>
-    <span class="k">void</span> <span class="nx">f</span><span class="p">();</span>
-<span class="p">}</span>   
-<span class="kr">class</span> <span class="nx">B</span> <span class="kr">implements</span> <span class="nx">A</span><span class="p">{</span>
-    <span class="kr">public</span> <span class="k">void</span> <span class="nx">f</span><span class="p">(){}</span>
-    <span class="kr">public</span> <span class="k">void</span> <span class="nx">g</span><span class="p">(){}</span>
-    <span class="k">void</span> <span class="nx">u</span><span class="p">(){}</span>
-    <span class="kr">protected</span> <span class="k">void</span> <span class="nx">v</span><span class="p">(){}</span>
-    <span class="kr">private</span> <span class="k">void</span> <span class="nx">w</span><span class="p">(){}</span>
-<span class="p">}</span>
-<span class="kr">public</span> <span class="kr">class</span> <span class="nx">InterfaceVoilation</span><span class="p">{</span>
-    <span class="nx">A</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">B</span><span class="p">();</span>
-    <span class="nx">a</span><span class="p">.</span><span class="nx">f</span><span class="p">();</span>
-    <span class="nx">a</span><span class="p">.</span><span class="nx">g</span><span class="p">()</span><span class="c1">//编译错误</span>
-    <span class="nx">B</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">(</span><span class="nx">B</span><span class="p">)</span><span class="nx">a</span><span class="p">;</span>
-    <span class="nx">b</span><span class="p">.</span><span class="nx">g</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="kr">public</span> <span class="kr">class</span> <span class="nx">HiddenB</span><span class="p">{</span>
-    <span class="kr">public</span> <span class="kr">static</span> <span class="nx">A</span> <span class="nx">makeA</span><span class="p">{</span><span class="k">return</span> <span class="k">new</span> <span class="nx">B</span><span class="p">();}</span>
-<span class="p">}</span>
-<span class="nx">B类为包私有的</span><span class="err">，则在包外不能定义</span><span class="nx">B类的对象</span><span class="p">,</span><span class="err">即使</span><span class="nx">makeA</span><span class="p">()</span><span class="err">返回的是</span><span class="nx">B类型</span><span class="err">，但是</span>
-<span class="err">在包外部仍旧不能使用</span><span class="nx">A之外的所有方法</span><span class="err">，因为不能在包外部命名</span><span class="nx">B</span><span class="err">。在包外没有任何</span><span class="nx">B类型可用</span>
-
-<span class="err">解决办法：通过反射任然可以调用所有方法，甚至是</span><span class="nx">private方法</span>
-<span class="nx">Method</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">getClass</span><span class="p">().</span><span class="nx">getDeclaredMethod</span><span class="p">(</span><span class="nx">methodName</span><span class="p">);</span>
-<span class="nx">g</span><span class="p">.</span><span class="nx">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="nx">g</span><span class="p">.</span><span class="nx">invoke</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
-<span class="o">-</span> <span class="err">反射可以调用非公共访问权限的方法，对域来说也适用。</span><span class="nx">final域在修改时是安全的</span><span class="err">，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。</span>
+<li>interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。<div class="highlight"><pre><span class="code-line"><span></span><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">A</span><span class="p">{</span></span>
+<span class="code-line">    <span class="k">void</span> <span class="nx">f</span><span class="p">();</span></span>
+<span class="code-line"><span class="p">}</span>   </span>
+<span class="code-line"><span class="kr">class</span> <span class="nx">B</span> <span class="kr">implements</span> <span class="nx">A</span><span class="p">{</span></span>
+<span class="code-line">    <span class="kr">public</span> <span class="k">void</span> <span class="nx">f</span><span class="p">(){}</span></span>
+<span class="code-line">    <span class="kr">public</span> <span class="k">void</span> <span class="nx">g</span><span class="p">(){}</span></span>
+<span class="code-line">    <span class="k">void</span> <span class="nx">u</span><span class="p">(){}</span></span>
+<span class="code-line">    <span class="kr">protected</span> <span class="k">void</span> <span class="nx">v</span><span class="p">(){}</span></span>
+<span class="code-line">    <span class="kr">private</span> <span class="k">void</span> <span class="nx">w</span><span class="p">(){}</span></span>
+<span class="code-line"><span class="p">}</span></span>
+<span class="code-line"><span class="kr">public</span> <span class="kr">class</span> <span class="nx">InterfaceVoilation</span><span class="p">{</span></span>
+<span class="code-line">    <span class="nx">A</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">B</span><span class="p">();</span></span>
+<span class="code-line">    <span class="nx">a</span><span class="p">.</span><span class="nx">f</span><span class="p">();</span></span>
+<span class="code-line">    <span class="nx">a</span><span class="p">.</span><span class="nx">g</span><span class="p">()</span><span class="c1">//编译错误</span></span>
+<span class="code-line">    <span class="nx">B</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">(</span><span class="nx">B</span><span class="p">)</span><span class="nx">a</span><span class="p">;</span></span>
+<span class="code-line">    <span class="nx">b</span><span class="p">.</span><span class="nx">g</span><span class="p">();</span></span>
+<span class="code-line"><span class="p">}</span></span>
+<span class="code-line"><span class="kr">public</span> <span class="kr">class</span> <span class="nx">HiddenB</span><span class="p">{</span></span>
+<span class="code-line">    <span class="kr">public</span> <span class="kr">static</span> <span class="nx">A</span> <span class="nx">makeA</span><span class="p">{</span><span class="k">return</span> <span class="k">new</span> <span class="nx">B</span><span class="p">();}</span></span>
+<span class="code-line"><span class="p">}</span></span>
+<span class="code-line"><span class="nx">B类为包私有的</span><span class="err">，则在包外不能定义</span><span class="nx">B类的对象</span><span class="p">,</span><span class="err">即使</span><span class="nx">makeA</span><span class="p">()</span><span class="err">返回的是</span><span class="nx">B类型</span><span class="err">，但是</span></span>
+<span class="code-line"><span class="err">在包外部仍旧不能使用</span><span class="nx">A之外的所有方法</span><span class="err">，因为不能在包外部命名</span><span class="nx">B</span><span class="err">。在包外没有任何</span><span class="nx">B类型可用</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="err">解决办法：通过反射任然可以调用所有方法，甚至是</span><span class="nx">private方法</span></span>
+<span class="code-line"><span class="nx">Method</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">getClass</span><span class="p">().</span><span class="nx">getDeclaredMethod</span><span class="p">(</span><span class="nx">methodName</span><span class="p">);</span></span>
+<span class="code-line"><span class="nx">g</span><span class="p">.</span><span class="nx">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span></span>
+<span class="code-line"><span class="nx">g</span><span class="p">.</span><span class="nx">invoke</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span></span>
+<span class="code-line"><span class="o">-</span> <span class="err">反射可以调用非公共访问权限的方法，对域来说也适用。</span><span class="nx">final域在修改时是安全的</span><span class="err">，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。</span></span>
 </pre></div>
 
 

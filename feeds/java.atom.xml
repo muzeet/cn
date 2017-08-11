@@ -215,18 +215,18 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;li&gt;&lt;code&gt;String.format()&lt;/code&gt;用以生成格式化的String对象，接受Formatter.format()方法一样的参数。方法内部也是创建Formatter对象。&lt;/li&gt;
 &lt;li&gt;正则表达式&lt;ul&gt;
 &lt;li&gt;String类的&lt;code&gt;matches()&lt;/code&gt;、&lt;code&gt;split()&lt;/code&gt;、&lt;code&gt;replace()&lt;/code&gt;方法可以接受正则表达式字符串参数&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Pattern&lt;/code&gt;和&lt;code&gt;Matcher&lt;/code&gt;，导入&lt;code&gt;java.util.regex&lt;/code&gt;包，用&lt;code&gt;static Pattern.compile()&lt;/code&gt;方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg1为正字表达式字符串&lt;/span&gt;
-&lt;span class="n"&gt;Matcher&lt;/span&gt; &lt;span class="n"&gt;matcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matcher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg2为需要检索的字符串&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;调用&lt;/span&gt;&lt;span class="n"&gt;Macther对象的方法&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断整个输入字符串是否匹配正则表达式模式&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;lookingAt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断该字符串的始部分是否匹配模式&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串&lt;/span&gt;
-&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;参数表示搜索的起点&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;组（&lt;/span&gt;&lt;span class="n"&gt;Groups&lt;/span&gt;&lt;span class="err"&gt;）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;表示整个表达式，组号&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;表示被第一对括号括起来的组。&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;BC&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner构造器可以接受任何类型的输入对象&lt;/span&gt;&lt;span class="err"&gt;，包括&lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;InputStream&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Readable对象&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner默认使用空白字符对输入进行分词&lt;/span&gt;&lt;span class="err"&gt;，可以用正则表达式指定自定义的定界符。&lt;/span&gt;&lt;span class="sb"&gt;`Scanner对象.useDelimiter(&amp;quot;正则表达式&amp;quot;)`&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner使用正则表达式进行扫描&lt;/span&gt;&lt;span class="err"&gt;：如果正则表达式中含有定界符则永远不会匹配成功。&lt;/span&gt;
+&lt;li&gt;&lt;code&gt;Pattern&lt;/code&gt;和&lt;code&gt;Matcher&lt;/code&gt;，导入&lt;code&gt;java.util.regex&lt;/code&gt;包，用&lt;code&gt;static Pattern.compile()&lt;/code&gt;方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg1为正字表达式字符串&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;Matcher&lt;/span&gt; &lt;span class="n"&gt;matcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matcher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg2为需要检索的字符串&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;调用&lt;/span&gt;&lt;span class="n"&gt;Macther对象的方法&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断整个输入字符串是否匹配正则表达式模式&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;lookingAt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断该字符串的始部分是否匹配模式&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;参数表示搜索的起点&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;组（&lt;/span&gt;&lt;span class="n"&gt;Groups&lt;/span&gt;&lt;span class="err"&gt;）：组是用括号划分的正则表达式，可以根据编号引用某个组，组号&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;表示整个表达式，组号&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;表示被第一对括号括起来的组。&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;BC&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;组&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;是&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner构造器可以接受任何类型的输入对象&lt;/span&gt;&lt;span class="err"&gt;，包括&lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;InputStream&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;Readable对象&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner默认使用空白字符对输入进行分词&lt;/span&gt;&lt;span class="err"&gt;，可以用正则表达式指定自定义的定界符。&lt;/span&gt;&lt;span class="sb"&gt;`Scanner对象.useDelimiter(&amp;quot;正则表达式&amp;quot;)`&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Scanner使用正则表达式进行扫描&lt;/span&gt;&lt;span class="err"&gt;：如果正则表达式中含有定界符则永远不会匹配成功。&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -250,16 +250,16 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;li&gt;&lt;code&gt;Class.forName("完整类名");&lt;/code&gt;，会抛出&lt;code&gt;ClassNotFundException&lt;/code&gt;异常。&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;类字面常量：&lt;code&gt;类名.class&lt;/code&gt;；简单而且安全，在编译时就会受到检查，不需要置于try语句块中。类字面常量不仅可以应用于普通的类，还可以应用于接口、数组、基本类型。基本数据类型的包装器类有一个标准字段TYPE,TYPE字段是一个引用，指向对应的基本数据类型的Class对象。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;boolean.class 等价于 Boolean.TYPE
-char.class  ... Character.TYPE
-byte.class  ... Byte.TYPE
-short.class ... Short.TYPE
-int.class  ... Integer.TYPE 等价于 Integer.Class
-long.class ... Long.TYPE
-float.class ... Float.TYPE
-double.class ... Double.TYPE
-void.class  ... Void.TYPE
-__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;boolean.class 等价于 Boolean.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;char.class  ... Character.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;byte.class  ... Byte.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;short.class ... Short.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;int.class  ... Integer.TYPE 等价于 Integer.Class&lt;/span&gt;
+&lt;span class="code-line"&gt;long.class ... Long.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;float.class ... Float.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;double.class ... Double.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;void.class  ... Void.TYPE&lt;/span&gt;
+&lt;span class="code-line"&gt;__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -288,19 +288,19 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;将泛化用于Class对象时，&lt;code&gt;newInstance()&lt;/code&gt;将返回该对象的确切类型：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;
-&lt;span class="nx"&gt;Class&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-
-&lt;span class="c1"&gt;//使用泛化的Class对象事，newInstance时可以生产具体的对象&lt;/span&gt;
-&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-
-&lt;span class="c1"&gt;//并不会产生具体的类对象&lt;/span&gt;
-&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt; &lt;span class="nx"&gt;super&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getSuperclass&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="nx"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="c1"&gt;//编译不通过&lt;/span&gt;
-&lt;span class="c1"&gt;// Class&amp;lt;Toy&amp;gt; up2 = ftClass.getSuperclass();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;//使用泛化的Class对象事，newInstance时可以生产具体的对象&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;//并不会产生具体的类对象&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?&lt;/span&gt; &lt;span class="nx"&gt;super&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ftClass&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getSuperclass&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;//编译不通过&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="c1"&gt;// Class&amp;lt;Toy&amp;gt; up2 = ftClass.getSuperclass();&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -319,12 +319,12 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 - 空对象：使用内置的Null表示缺少对象时，每次都学要检测其是否为null，并且null没有任何的行为。空对象可以接受传递给它所代表的对象的消息，打比赛股将返回表示为实际上并不存在任何真实的对象的值。
 - 空对象最大的用处在于它更加靠近数据，因为对象表示的问题是空间内的实体
 - 空对象也可以通过实现Null接口来表示其为空&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    public interface Null{}
-    public static class NullPerson extends Person implements Null{
-            private NullPerson(){supper();};
-            public String toString(){};
-    }
-    public static final Person NULL = new NullPerson();
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;    public interface Null{}&lt;/span&gt;
+&lt;span class="code-line"&gt;    public static class NullPerson extends Person implements Null{&lt;/span&gt;
+&lt;span class="code-line"&gt;            private NullPerson(){supper();};&lt;/span&gt;
+&lt;span class="code-line"&gt;            public String toString(){};&lt;/span&gt;
+&lt;span class="code-line"&gt;    }&lt;/span&gt;
+&lt;span class="code-line"&gt;    public static final Person NULL = new NullPerson();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -335,34 +335,34 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;接口与类型信息&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;   
-&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;u&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="kr"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-    &lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;//编译错误&lt;/span&gt;
-    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;HiddenB&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="nx"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="nx"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="nx"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;
-&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="nx"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="nx"&gt;B类型可用&lt;/span&gt;
-
-&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="nx"&gt;private方法&lt;/span&gt;
-&lt;span class="nx"&gt;Method&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;反射可以调用非公共访问权限的方法，对域来说也适用。&lt;/span&gt;&lt;span class="nx"&gt;final域在修改时是安全的&lt;/span&gt;&lt;span class="err"&gt;，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。&lt;/span&gt;
+&lt;li&gt;interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;   &lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;u&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;//编译错误&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;HiddenB&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="nx"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="nx"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="nx"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="nx"&gt;B类型可用&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="nx"&gt;private方法&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Method&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="err"&gt;反射可以调用非公共访问权限的方法，对域来说也适用。&lt;/span&gt;&lt;span class="nx"&gt;final域在修改时是安全的&lt;/span&gt;&lt;span class="err"&gt;，运行时系统会在不抛出异常的情况下接受任何修改，但是实际上不会发生任何修改。&lt;/span&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

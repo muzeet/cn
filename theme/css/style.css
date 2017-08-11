@@ -3386,12 +3386,61 @@ font-weight: bold;
 
 /*add for code highlight*/
 .highlight {
-	background-color: #002b36; color: #93a1a1;
-	-webkit-border-radius: 10px;/**苹果；谷歌，等一些浏览器认，因为他们都用的是webkit内核**/
-	-moz-border-radius: 10px;/*专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
-    border-radius: 10px;/*Mozilla/Firefox 和 Safari 3支持该属性*/
-	border-style:none;
+	background-color: #002b36; 
+	/*color: #93a1a1;*/
+	-webkit-border-radius: 6px;/**苹果；谷歌，等一些浏览器认，因为他们都用的是webkit内核**/
+	-moz-border-radius: 6px;/*专门支持Mozilla Firefox 火狐浏览器的CSS属性*/
+    border-radius: 6px;/*Mozilla/Firefox 和 Safari 3支持该属性*/
+	
+	font-family: "Source Code Pro", monospace;
+    /*overflow-x: auto;*/
+    display: block;
+    /*border: solid 1px #585858;*/
+	margin: 0 1em;
+	
+	/* This uses `white-space: pre-wrap` to get elements within <pre> tags to wrap. Python, for code chunks within three backticks (```), doesn't wordwrap code lines by default, because they're within <pre> tags, which don't wrap by default. See https://github.com/github/markup/issues/168 , which is specifically about this parsing issue, even though that link's discussion is talking about GitHub. */
+	white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+.highlight pre {
+    counter-reset: linecounter;
+    padding-left: 1.6em;
+    /*border-left: 3px solid !important;*/
+    /*border-left-color: #FF8000 !important;*/
+	border:0px red solid;
+}
+.highlight pre span.code-line {
+    counter-increment: linecounter;
+
+    padding-left: 1.6em;
+    text-indent: -1.6em;
+	
+    display: inline-block;
+	border:0px blue solid;
+}
+.highlight pre span.code-line:before {
+    content: counter(linecounter);
+    padding-right: .6em;
+    display: inline-block;
+    color: #999988;
+    text-align: right;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	margin-right:1em;
+	border:0px green solid;
+	
+
+	border-right: 1px solid !important;
+	border-right-color: #585858 !important;
+}
+
+
 .paginator
 {
 	text-align:center;
