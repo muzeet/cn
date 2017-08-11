@@ -3393,10 +3393,10 @@ font-weight: bold;
     border-radius: 6px;/*Mozilla/Firefox 和 Safari 3支持该属性*/
 	
 	font-family: "Source Code Pro", monospace;
-    /*overflow-x: auto;*/
+    /*overflow: auto;*/
     display: block;
     /*border: solid 1px #585858;*/
-	margin: 0 1em;
+	margin: 0 .2em;
 	
 	/* This uses `white-space: pre-wrap` to get elements within <pre> tags to wrap. Python, for code chunks within three backticks (```), doesn't wordwrap code lines by default, because they're within <pre> tags, which don't wrap by default. See https://github.com/github/markup/issues/168 , which is specifically about this parsing issue, even though that link's discussion is talking about GitHub. */
 	white-space: pre-wrap;       /* css-3 */

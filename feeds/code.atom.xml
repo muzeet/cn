@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - Code</title><link href="http://www.muzeet.cn/cn/" rel="alternate"></link><link href="http://www.muzeet.cn/cn/feeds/code.atom.xml" rel="self"></link><id>http://www.muzeet.cn/cn/</id><updated>2016-06-07T00:00:00+08:00</updated><entry><title>测试代码高亮</title><link href="http://www.muzeet.cn/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2016-06-06:/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html</id><summary type="html">&lt;p&gt;测试代码高亮by highlight.js。&lt;/p&gt;</summary><content type="html">&lt;pre&gt;&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;code class="java"&gt;&lt;/span&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - Code</title><link href="http://www.muzeet.cn/cn/" rel="alternate"></link><link href="http://www.muzeet.cn/cn/feeds/code.atom.xml" rel="self"></link><id>http://www.muzeet.cn/cn/</id><updated>2016-06-07T00:00:00+08:00</updated><entry><title>测试代码高亮</title><link href="http://www.muzeet.cn/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html" rel="alternate"></link><published>2016-06-06T00:00:00+08:00</published><updated>2016-06-07T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2016-06-06:/cn/posts/2016/06/06/ce-shi-dai-ma-gao-liang.html</id><summary type="html">&lt;p&gt;测试代码高亮by highlight.js。&lt;/p&gt;</summary><content type="html">&lt;p&gt;highlight.js设置代码高亮&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;code&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;java&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;public class HelloWorld {&lt;/span&gt;
 &lt;span class="code-line"&gt;    /**&lt;/span&gt;
 &lt;span class="code-line"&gt;    * 输出一行字符串“Hello World!”&lt;/span&gt;
 &lt;span class="code-line"&gt;    * @param args&lt;/span&gt;
 &lt;span class="code-line"&gt;    */&lt;/span&gt;
 &lt;span class="code-line"&gt;    public static void main(String[] args) {&lt;/span&gt;
-&lt;span class="code-line"&gt;         System.out.println("Hello World!");&lt;/span&gt;
+&lt;span class="code-line"&gt;         System.out.println(&amp;quot;Hello World!&amp;quot;);&lt;/span&gt;
 &lt;span class="code-line"&gt;    }&lt;/span&gt;
 &lt;span class="code-line"&gt;}&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/span&gt;
-&lt;/pre&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/code&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="nt"&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;代码高亮 语言 描述 来源地址 link&lt;/p&gt;
+
+&lt;p&gt;pygments+pelican插件better_codeblock_line_numbering&lt;/p&gt;
+&lt;p&gt;：：：+语言，可以选择不同语言高亮&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;HelloWorld&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="cm"&gt;* 输出一行字符串“Hello World!”&lt;/span&gt;&lt;/span&gt;
