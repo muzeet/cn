@@ -19,11 +19,11 @@
 	<!--
 	<script type="text/javascript" src="../../../../theme/js/highlight.pack.js"></script>
 	-->
+	
     <link href="http://www.muzeet.cn/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
     <link href="http://www.muzeet.cn/cn/feeds/sheng-huo.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Categories Atom Feed" />
     
 </head>
-
 <!--
 <script>
     hljs.initHighlightingOnLoad();
@@ -170,7 +170,7 @@
 </section>
 
         </section><!-- #content -->
-        <section id="widgets" class="grid col-300 fit" >
+        <section id="widgets" class="grid col-300 fit sidebar" >
             <!--
             <section id="widget-search" class="widget-wrapper widget_search">
 
@@ -191,6 +191,7 @@
 				</form>
 				</div>
 			</section>
+
 			
             <section id="widget-category" class="widget-wrapper widget_archive">
                 <div class="widget-title">
@@ -210,8 +211,8 @@
                 <div class="widget-title">
                     最近文章
                 </div>
-				<div>
-				<ul id="recent-posts">
+				<div class="recent-article">
+				<ul class="recent-posts">
 					<li>
 					  <a href="../../../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a>
 					</li>
@@ -238,7 +239,7 @@
                 <div class="widget-title">
                     最近评论
                 </div>
-				<div>
+				<div class="recent-comments">
 				<ul id="recent-posts">
 			
 				</ul>
@@ -249,7 +250,9 @@
                 <div class="widget-title">
                    友情链接
                 </div>
+				<div>
                 <span><a href="http://www.demiaowu.cn/">暗淡了乌云</a>&nbsp;|&nbsp;<a href="http://www.demiaowu.cn/">暗淡了乌云</a></span>
+				</div>
             </section>
 
 
@@ -257,13 +260,13 @@
                 <div class="widget-title">
                     有用链接
                 </div>
-                <ul>
+				<div>
 				    <span>
                         <a href="http://getpelican.com/">Pelican</a>
                         <a href="http://python.org/">Python.org</a>
                         <a href="http://jinja.pocoo.org/">Jinja2</a>
 					</span>
-                </ul>
+				</div>
             </section>
             
 			<section id="widget-copyright" class="widget-wrapper widget_archive">
@@ -292,7 +295,7 @@
 					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
 						<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"" alt="知识共享许可协议"></img>
 					</a>
-				</div>
+		</div>
         <div class="grid col-300 ">
 		
         </div>
