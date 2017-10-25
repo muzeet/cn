@@ -1140,13 +1140,13 @@ h1 {
 
 h2 {
     font-size: 1.875em; /* = 30px */
-    margin-bottom: .5em;
+    margin-bottom: .75em;
     margin-top: .75em;
 	padding-bottom: 10px;
 	
 	font-weight: bold;
    
-    border-bottom: 0px solid #eee;
+    border-bottom: 2px solid #eee;
 
 }
 
