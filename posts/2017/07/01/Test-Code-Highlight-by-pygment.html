@@ -21,7 +21,7 @@
 	-->
 	
     <link href="http://www.muzeet.cn/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
-    <link href="http://www.muzeet.cn/cn/feeds/bo-ke-she-ji.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Categories Atom Feed" />
+    <link href="http://www.muzeet.cn/cn/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Categories Atom Feed" />
     
 </head>
 <!--
@@ -44,6 +44,7 @@
             <li  class="active"><a href="../../../../pages/Articles-about-Code.html">程序人生</a></li>
             <li  class="active"><a href="../../../../category/读书/">读书</a></li>
             <li  class="active"><a href="../../../../category/博客设计/">博客设计</a></li>
+            <li  class="active"><a href="../../../../http://www.muzeet.cn/MyRecord">个人笔记</a></li>
             <li  class="active"><a href="../../../../pages/about-me.html">关于本站</a></li>
 
         </ul></nav><!-- /#menu -->
@@ -76,34 +77,34 @@
         <h2>1. 测试code block</h2>
 <p>下面是一段代码，代码使用pygment进行高亮处理。</p>
 <p>求二叉树的第k个节点：</p>
-<div class="highlight"><pre><span class="code-line"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KthNode</span></span>
-<span class="code-line"><span class="o">{</span></span>
-<span class="code-line">     <span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">kthNode</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">pRoot</span><span class="o">,</span> <span class="kt">int</span> <span class="n">k</span><span class="o">)</span></span>
-<span class="code-line">     <span class="o">{</span></span>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KthNode</span></span>
+<span class="code-line"><span class="p">{</span></span>
+<span class="code-line">     <span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">kthNode</span><span class="p">(</span><span class="n">TreeNode</span> <span class="n">pRoot</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span></span>
+<span class="code-line">     <span class="p">{</span></span>
 <span class="code-line">        <span class="c1">//求二叉排序树的第k个节点，只需要中序遍历，即可</span></span>
-<span class="code-line">        <span class="k">if</span><span class="o">(</span><span class="n">pRoot</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">)</span></span>
-<span class="code-line">            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span></span>
-<span class="code-line">        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;();</span></span>
-<span class="code-line">        <span class="n">TreeNode</span> <span class="n">p</span> <span class="o">=</span> <span class="n">pRoot</span><span class="o">;</span></span>
-<span class="code-line">        <span class="n">TreeNode</span> <span class="n">kthNode</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span></span>
-<span class="code-line">        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span></span>
-<span class="code-line">        <span class="k">while</span><span class="o">(</span><span class="n">p</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">||</span> <span class="o">!</span><span class="n">stack</span><span class="o">.</span><span class="na">empty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">count</span> <span class="o">!=</span><span class="n">k</span> <span class="o">){</span></span>
-<span class="code-line">            <span class="k">if</span><span class="o">(</span><span class="n">p</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span></span>
-<span class="code-line">                <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">p</span><span class="o">);</span></span>
-<span class="code-line">                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">left</span><span class="o">;</span></span>
-<span class="code-line">            <span class="o">}</span></span>
-<span class="code-line">            <span class="k">else</span><span class="o">{</span></span>
-<span class="code-line">               <span class="n">p</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span></span>
-<span class="code-line">               <span class="n">count</span><span class="o">++;</span></span>
-<span class="code-line">               <span class="k">if</span><span class="o">(</span><span class="n">count</span> <span class="o">==</span> <span class="n">k</span><span class="o">)</span></span>
-<span class="code-line">                   <span class="n">kthNode</span> <span class="o">=</span> <span class="n">p</span><span class="o">;</span></span>
-<span class="code-line">               <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">right</span><span class="o">;</span></span>
-<span class="code-line">            <span class="o">}</span></span>
-<span class="code-line">        <span class="o">}</span></span>
-<span class="code-line">        <span class="k">return</span> <span class="n">kthNode</span><span class="o">;</span></span>
-<span class="code-line">     <span class="o">}</span></span>
-<span class="code-line"><span class="o">}</span></span>
-</pre></div>
+<span class="code-line">        <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line">            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span></span>
+<span class="code-line">        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span><span class="p">();</span></span>
+<span class="code-line">        <span class="n">TreeNode</span> <span class="n">p</span> <span class="o">=</span> <span class="n">pRoot</span><span class="p">;</span></span>
+<span class="code-line">        <span class="n">TreeNode</span> <span class="n">kthNode</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span></span>
+<span class="code-line">        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></span>
+<span class="code-line">        <span class="k">while</span><span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">||</span> <span class="o">!</span><span class="n">stack</span><span class="p">.</span><span class="na">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">count</span> <span class="o">!=</span><span class="n">k</span> <span class="p">){</span></span>
+<span class="code-line">            <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span></span>
+<span class="code-line">                <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">p</span><span class="p">);</span></span>
+<span class="code-line">                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="na">left</span><span class="p">;</span></span>
+<span class="code-line">            <span class="p">}</span></span>
+<span class="code-line">            <span class="k">else</span><span class="p">{</span></span>
+<span class="code-line">               <span class="n">p</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span></span>
+<span class="code-line">               <span class="n">count</span><span class="o">++</span><span class="p">;</span></span>
+<span class="code-line">               <span class="k">if</span><span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="n">k</span><span class="p">)</span></span>
+<span class="code-line">                   <span class="n">kthNode</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span></span>
+<span class="code-line">               <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="na">right</span><span class="p">;</span></span>
+<span class="code-line">            <span class="p">}</span></span>
+<span class="code-line">        <span class="p">}</span></span>
+<span class="code-line">        <span class="k">return</span> <span class="n">kthNode</span><span class="p">;</span></span>
+<span class="code-line">     <span class="p">}</span></span>
+<span class="code-line"><span class="p">}</span></span>
+<span class="code-line"></code></pre></div>
     </div><!-- /.entry-content -->
     <footer class="post-meta">
 	    

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - Java</title><link href="http://www.muzeet.cn/cn/" rel="alternate"></link><link href="http://www.muzeet.cn/cn/feeds/java.atom.xml" rel="self"></link><id>http://www.muzeet.cn/cn/</id><updated>2016-05-14T00:00:00+08:00</updated><entry><title>Java编程思想-读书笔记</title><link href="http://www.muzeet.cn/cn/posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html" rel="alternate"></link><published>2015-10-01T00:00:00+08:00</published><updated>2016-05-14T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2015-10-01:/cn/posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html</id><summary type="html">&lt;p&gt;本文是《Thinking in java》读书笔记，记录了该书中的重点内容。&lt;/p&gt;</summary><content type="html">&lt;p&gt;《Java 编程思想》，原书英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。作为Java领域必读书籍，阅读此书时，我打算在阅读的过程中随时记录每个章节的技术要点和难点以及Java中的一些边边角角，以便巩固Java基础，也备日后随时查阅。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>OxCAFEBABE - Java</title><link href="http://www.muzeet.cn/cn/" rel="alternate"></link><link href="http://www.muzeet.cn/cn%5Cfeeds/java.atom.xml" rel="self"></link><id>http://www.muzeet.cn/cn/</id><updated>2016-05-14T00:00:00+08:00</updated><entry><title>Java编程思想-读书笔记</title><link href="http://www.muzeet.cn/cn%5Cposts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html" rel="alternate"></link><published>2015-10-01T00:00:00+08:00</published><updated>2016-05-14T00:00:00+08:00</updated><author><name>muzeet</name></author><id>tag:www.muzeet.cn,2015-10-01:/cn\posts/2015/10/01/javabian-cheng-si-xiang-du-shu-bi-ji.html</id><summary type="html">&lt;p&gt;本文是《Thinking in java》读书笔记，记录了该书中的重点内容。&lt;/p&gt;</summary><content type="html">&lt;p&gt;《Java 编程思想》，原书英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。作为Java领域必读书籍，阅读此书时，我打算在阅读的过程中随时记录每个章节的技术要点和难点以及Java中的一些边边角角，以便巩固Java基础，也备日后随时查阅。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Java编程思想" src="http://7xq1t9.com1.z0.glb.clouddn.com/think%20in%20java%204th.jpg" title="thinking in java 4th"&gt;&lt;/p&gt;
 &lt;p align="center"&gt;&lt;em&gt;Java编程思想&lt;/em&gt;&lt;/p&gt;
 
@@ -219,7 +219,7 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;li&gt;String类的&lt;code&gt;matches()&lt;/code&gt;、&lt;code&gt;split()&lt;/code&gt;、&lt;code&gt;replace()&lt;/code&gt;方法可以接受正则表达式字符串参数&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;Pattern&lt;/code&gt;和&lt;code&gt;Matcher&lt;/code&gt;，导入&lt;code&gt;java.util.regex&lt;/code&gt;包，用&lt;code&gt;static Pattern.compile()&lt;/code&gt;方法编译正则表达式生成Pattern对象，Pattern对象的matcher()方法接受要检索的字符串作为参数，生成Matcher对象&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.regex.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg1为正字表达式字符串&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="n"&gt;Matcher&lt;/span&gt; &lt;span class="n"&gt;matcher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matcher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;arg2为需要检索的字符串&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="err"&gt;调用&lt;/span&gt;&lt;span class="n"&gt;Macther对象的方法&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;/span&gt;
@@ -227,7 +227,7 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;lookingAt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;判断该字符串的始部分是否匹配模式&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;在字符串中查找多个匹配，能像迭代器一样前向遍历输入字符串&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;参数表示搜索的起点&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
@@ -256,17 +256,17 @@ Exception：表示可以被抛出的基本类型，在java类库、用户方法�
 &lt;li&gt;&lt;code&gt;Class.forName("完整类名");&lt;/code&gt;，会抛出&lt;code&gt;ClassNotFundException&lt;/code&gt;异常。&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;类字面常量：&lt;code&gt;类名.class&lt;/code&gt;；简单而且安全，在编译时就会受到检查，不需要置于try语句块中。类字面常量不仅可以应用于普通的类，还可以应用于接口、数组、基本类型。基本数据类型的包装器类有一个标准字段TYPE,TYPE字段是一个引用，指向对应的基本数据类型的Class对象。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;boolean.class 等价于 Boolean.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;char.class  ... Character.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;byte.class  ... Byte.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;short.class ... Short.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;int.class  ... Integer.TYPE 等价于 Integer.Class&lt;/span&gt;
-&lt;span class="code-line"&gt;long.class ... Long.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;float.class ... Float.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;double.class ... Double.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;void.class  ... Void.TYPE&lt;/span&gt;
-&lt;span class="code-line"&gt;__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;boolean.class 等价于 Boolean.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;char.class  ... Character.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;byte.class  ... Byte.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;short.class ... Short.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;int.class  ... Integer.TYPE 等价于 Integer.Class&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;long.class ... Long.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;float.class ... Float.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;double.class ... Double.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;void.class  ... Void.TYPE&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;__使用`.class`创建对Class对象的引用时，不会自动地初始化该类的对象。使用Class.forName()生成对象引用时会立即初始化__&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
@@ -294,7 +294,7 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;将泛化用于Class对象时，&lt;code&gt;newInstance()&lt;/code&gt;将返回该对象的确切类型：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;//没有使用泛化的Class对象，只能生成Object类型的对象，需要强制类型转换&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="nx"&gt;Class&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt; &lt;span class="nx"&gt;fancyToy1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FancyToy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;ftclass1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;/span&gt;
@@ -307,15 +307,15 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;span class="code-line"&gt;&lt;span class="nx"&gt;Object&lt;/span&gt; &lt;span class="nx"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;up&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="c1"&gt;//编译不通过&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;span class="c1"&gt;// Class&amp;lt;Toy&amp;gt; up2 = ftClass.getSuperclass();&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;编译器允许声明某个Class是每个类的超类Class，&lt;code&gt;Class&amp;lt;? Super SomeClass&amp;gt;&lt;/code&gt;，而不会接受直接已知的超类Class，&lt;code&gt;getSuperClass()&lt;/code&gt;返回的是基类，并且编译器在编译期就知道是什么类型，由于是含糊类型，所以&lt;code&gt;newInstance()&lt;/code&gt;返回的不是精确类型。
 - Class引用的转型语法，&lt;code&gt;newObject = NewObjectClass引用.cast(OldObject)&lt;/code&gt;
 - 传统的类型转换，由RTTI确保转型的正确性，如果执行一个错误的类型转换会抛出ClassCastException
 - 动态的instanceof
-&lt;em&gt; &lt;code&gt;instanceof()&lt;/code&gt;有严格的比较限制，只可将其与命名类型进行比较，而不能与Class对象作比较。(只能与具体的类名进行比较，不能与Class对象数组中对象进行逐一比较)。&lt;code&gt;对象 instanceof 类名&lt;/code&gt;。
-&lt;/em&gt; &lt;code&gt;Class.isInstance()&lt;/code&gt;，&lt;code&gt;Class对象.isInstance(类的对象)&lt;/code&gt;。
+* &lt;code&gt;instanceof()&lt;/code&gt;有严格的比较限制，只可将其与命名类型进行比较，而不能与Class对象作比较。(只能与具体的类名进行比较，不能与Class对象数组中对象进行逐一比较)。&lt;code&gt;对象 instanceof 类名&lt;/code&gt;。
+* &lt;code&gt;Class.isInstance()&lt;/code&gt;，&lt;code&gt;Class对象.isInstance(类的对象)&lt;/code&gt;。
 - 注册工厂：基类中含有所有实例类的工厂的集合，各导出类中含有内部类作为自己的工厂。
 - instanceof与Class：instanceof保持了类型的概念，是这个类或者是这个类的派生类都将返回真，而用==或者&lt;code&gt;equals()&lt;/code&gt;比较实际的Class对象，并没有考虑继承，它或者是这个确切的类型或者不是。
 - 反射：运行时的类信息
@@ -325,13 +325,13 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 - 空对象：使用内置的Null表示缺少对象时，每次都学要检测其是否为null，并且null没有任何的行为。空对象可以接受传递给它所代表的对象的消息，打比赛股将返回表示为实际上并不存在任何真实的对象的值。
 - 空对象最大的用处在于它更加靠近数据，因为对象表示的问题是空间内的实体
 - 空对象也可以通过实现Null接口来表示其为空&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;    public interface Null{}&lt;/span&gt;
-&lt;span class="code-line"&gt;    public static class NullPerson extends Person implements Null{&lt;/span&gt;
-&lt;span class="code-line"&gt;            private NullPerson(){supper();};&lt;/span&gt;
-&lt;span class="code-line"&gt;            public String toString(){};&lt;/span&gt;
-&lt;span class="code-line"&gt;    }&lt;/span&gt;
-&lt;span class="code-line"&gt;    public static final Person NULL = new NullPerson();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;    public interface Null{}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;    public static class NullPerson extends Person implements Null{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;            private NullPerson(){supper();};&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;            public String toString(){};&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;    }&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;    public static final Person NULL = new NullPerson();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
@@ -343,34 +343,34 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;interface关键字的一种重要目标就是允许程序员隔离构件，进而降低耦合。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;   &lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;u&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;(){}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;//编译错误&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;B&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;HiddenB&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kr"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;A&lt;/span&gt; &lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="nx"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="nx"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="nx"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="nx"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="nx"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="nx"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="nx"&gt;B类型可用&lt;/span&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;}&lt;/span&gt;   &lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;protected&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;{}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;InterfaceVoilation&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;编译错误&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;HiddenB&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="n"&gt;makeA&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="n"&gt;B类为包私有的&lt;/span&gt;&lt;span class="err"&gt;，则在包外不能定义&lt;/span&gt;&lt;span class="n"&gt;B类的对象&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;即使&lt;/span&gt;&lt;span class="n"&gt;makeA&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;返回的是&lt;/span&gt;&lt;span class="n"&gt;B类型&lt;/span&gt;&lt;span class="err"&gt;，但是&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;在包外部仍旧不能使用&lt;/span&gt;&lt;span class="n"&gt;A之外的所有方法&lt;/span&gt;&lt;span class="err"&gt;，因为不能在包外部命名&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;。在包外没有任何&lt;/span&gt;&lt;span class="n"&gt;B类型可用&lt;/span&gt;&lt;/span&gt;
 &lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="nx"&gt;private方法&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="nx"&gt;Method&lt;/span&gt; &lt;span class="nx"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;span class="code-line"&gt;&lt;span class="err"&gt;解决办法：通过反射任然可以调用所有方法，甚至是&lt;/span&gt;&lt;span class="n"&gt;private方法&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;Method&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;getDeclaredMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;methodName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setAccessible&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="k"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
@@ -389,4 +389,4 @@ genericIntClass = Integer.class;//等同于int.class&lt;/p&gt;
 &lt;h2&gt;18. Java I/O系统&lt;/h2&gt;
 &lt;h2&gt;19. 枚举类型&lt;/h2&gt;
 &lt;h2&gt;20. 注解&lt;/h2&gt;
-&lt;h2&gt;21. 并发&lt;/h2&gt;</content><category term="table"></category></entry></feed>
+&lt;h2&gt;21. 并发&lt;/h2&gt;</content><category term="Java"></category><category term="table"></category></entry></feed>
