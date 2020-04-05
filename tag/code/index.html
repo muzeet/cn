@@ -4,11 +4,17 @@
 <head>
     <title>OxCAFEBABE</title>
     <meta charset="utf-8" />
+	<!-- http://t.co/dKP3o1e -->
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- CSS3 自适应页面-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<!--<link rel="stylesheet" id="responsive-style-css"  href="../../theme/css/tomorrow-night-bright.css" type="text/css" media="all" />-->
+	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/archive.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/style.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/pygmentMy.css' type="text/css" media="all" />
-	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/archive.css' type="text/css" media="all" />
 	<!--
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/androidstudio.css' type="text/css" media="all" />
 	-->
@@ -23,11 +29,6 @@
     <link href="http://www.muzeet.cn/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="OxCAFEBABE Full Atom Feed" />
     
 </head>
-<!--
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
--->
 
 <body id="index" class="blog"  onload="$('pre').addClass('prettyprint');window.prettyPrint && prettyPrint();">
 <div id="container" class="hfeed">
@@ -49,7 +50,9 @@
         </ul></nav><!-- /#menu -->
     </header>
     <section id="wrapper" class="clearfix">
+	    <!--content 作为容器，由其他类型页面继承-->
         <section id="content" class="grid col-620" >
+			    <!--content block的标题头-->
 <h4 class="content-archive">Articles tagged with <span style="color:rgb(0,102,204)">code</span>: </h4>
                 <section class="breadcrumb-list">
 				<!--
@@ -58,15 +61,20 @@
                 </section>
 
 
+
+<div>
 <ul>
-<li class="posts"><article class="post hentry">
+<li class="posts">
+<article class="post hentry">
 	<header>
 		<div class="post-info">
-		<span class="post-lable">发布于：</span>
+		    <span class="post-lable">发布于：</span>
 			<abbr class="date" title="2016-06-06T00:00:00+08:00"> 
 				<a href="../../archives/2016/index.html">2016-06-06 </a>
 			</abbr>
-		<span class="post-lable">分类：</span>
+			<!--分割线-->
+			<span class="middle-stub"></span>
+		    <span class="post-lable">分类：</span>
 			<abbr class="category">
 				<a href="../../category/Code/">Code</a>
 			</abbr>
@@ -75,9 +83,9 @@
 		<h2 class="title" >
 			<a href="../../posts/2016/06/06/ce-shi-dai-ma-gao-liang.html" rel="bookmark" title="Permalink to 测试代码高亮">测试代码高亮</a>
 		</h2>
-		
 	</header>
-	<div class="summary"><p>highlight.js设置代码高亮</p>
+	<div class="summary">
+		<div><p>highlight.js设置代码高亮</p>
 <div class="highlight"><pre><span class="code-line"><span></span><code><span class="nt">&lt;pre&gt;</span></span>
 <span class="code-line"><span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">&quot;java&quot;</span><span class="nt">&gt;</span></span>
 <span class="code-line">public class HelloWorld {</span>
@@ -92,14 +100,17 @@
 <span class="code-line"><span class="nt">&lt;/code&gt;</span></span>
 <span class="code-line"><span class="nt">&lt;/pre&gt;</span></span>
 <span...</div>
+	</div>
 	<footer>
 		<div class="readmore">
 			<span class="more"><a href="../../posts/2016/06/06/ce-shi-dai-ma-gao-liang.html">继续阅读</a></span>
 		</div>
 	</footer>
-</article></li>
+</article>
+</li>
 <hr/>
 </ul>
+</div>
 <p class="paginator">
 	<span id="previous_page">
 	</span>
@@ -197,7 +208,7 @@
                    友情链接
                 </div>
 				<div>
-                <span><a href="http://www.demiaowu.cn/">暗淡了乌云</a>&nbsp;|&nbsp;<a href="http://www.demiaowu.cn/">暗淡了乌云</a></span>
+					<span><a href="http://www.demiaowu.cn/">暗淡了乌云</a>|<a href="http://www.muzeet.cn/MyRecord">个人笔记</a></span>
 				</div>
             </section>
 
@@ -216,18 +227,25 @@
             </section>
             
 			<section id="widget-copyright" class="widget-wrapper widget_archive">
-			<div class="widget-title">
-                    版权协议
-            </div>
-			 
-				<div class="grid col-300 copyright" >
-					<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>
-					<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+				<div class="widget-title">
+						版权协议
 				</div>
-			 </section>
+				<div class="grid col-300 copyright" >
+					<span class="copyright_href">
+						<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+						<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank">
+							<img src="../../theme/image/by-nc-sa.png" alt="知识共享许可协议"></img>
+						</a>
+					</span>
+					<span class="copyright_text">
+						<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank">CC2.5: 知识共享署名-非商业性使用</a>
+					</span>
+				</div>
+			</section>
         </section><!-- widgets -->
     </section><!-- /#wrapper -->
-    <footer id="footer" class="clearfix"><section class="footer-wrapper">
+    <footer id="footer" class="clearfix">
+	<section class="footer-wrapper">
         <div class="grid col-940" >
             <div class="grid col-540"></div>
             <div class="grid col-380 fit" >
@@ -236,31 +254,15 @@
                 </ul>
             </div>
         </div>
-		
-		<div class="grid col-300 copyright" >
-					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
-						<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"" alt="知识共享许可协议"></img>
-					</a>
-		</div>
-        <div class="grid col-300 ">
-		
-        </div>
         <div class="grid col-300 fit powered">
-          Copyright © 2017 - muzeet - Powered by Pelican
+          <!--Copyright © 2017 - muzeet - Powered by Pelican-->
+		  <span>Copyright © 2017</sapn>
+		  <span>-</span>
+		  <span><script>document.write(new Date().getFullYear());</script></span>
+		  <span> - muzeet - Powered by Pelican</span>
         </div>
     </section></footer>
 </div>
-
-<!--
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('pre').addClass('prettyprint linenums') 
-		//添加Google code Hight需要的class
-		prettyPrint();
-	});
-		
-</script>
--->
 
 </body>
 </html>

@@ -6,9 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<!--<link rel="stylesheet" id="responsive-style-css"  href="../../theme/css/tomorrow-night-bright.css" type="text/css" media="all" />-->
+	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/archive.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/style.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/pygmentMy.css' type="text/css" media="all" />
-	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/archive.css' type="text/css" media="all" />
+	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/bshare.css' type="text/css" media="all" />
 	<!--
 	<link rel="stylesheet" id="responsive-style-css"  href='../../theme/css/androidstudio.css' type="text/css" media="all" />
 	-->
@@ -16,6 +17,10 @@
 	<script type="text/javascript" src="../../theme/js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="../../theme/js/numberLines.js"></script>
 	<script type="text/javascript" src="../../theme/js/prettify.js"></script>
+	<!--
+	<script type="text/javascript" src="../../theme/js/bs-engine.js"></script>
+	<script type="text/javascript" src="../../theme/js/bsMore.js"></script>
+	<script type="text/javascript" src="../../theme/js/bshareS887.js"></script>-->
 	<!--
 	<script type="text/javascript" src="../../theme/js/highlight.pack.js"></script>
 	-->
@@ -65,7 +70,28 @@
 <article>
     <div id="ev_article">
 	<dd>
-		<span class="archives_year archives_content">
+	    <!--手机页面时隐藏-->
+		<div class="archives_year" id="moth_day">
+			<time datetime="2017-07-01T00:00:00+08:00" pubdate>
+				<span class='month'>07</span>
+				<span class='day'>01</span>
+				<span class='year'>2017</span>
+			</time>
+		</div>
+	</dd>
+	<dd>
+		<div class="archives_year">
+		    <!--
+			<time datetime="2017-07-01T00:00:00+08:00" pubdate>
+				<span class='month'>07</span>
+				<span class='day'>01</span>
+				<span class='year'>2017</span>
+			</time>
+			-->
+			<h1><a href="../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a></h1>
+		</div>
+		<!--
+		<span class="archives_year">
 			<time datetime="2017-07-01T00:00:00+08:00" pubdate>
 				<span class='year'>2017</span>
 				<span class='month'>07</span>
@@ -73,12 +99,26 @@
 			</time>
 			<h1><a href="../../posts/2017/07/01/Test-Code-Highlight-by-pygment.html">代码高亮（pygment）</a></h1>
 		</span>
+		-->
 	</dd>
 	<dd>
-		<footer class="post-meta archives_content" id="archive_footer">
-			<span class="meta-prep">分类:</span>
+		<footer class="post-meta" id="archive_footer">
+			<!--仅在手机页面时和分类一起显示时间-->
+			<span class="meta prep moth_year_day">
+				<time datetime="2017-07-01T00:00:00+08:00" pubdate>
+					<span class='month'>07</span>
+					<span class='day'>01</span>
+					<span class='year' id="mobile_year">2017</span>
+				</time>
+			</span>
+			<span class="meta-prep">标签:</span>
+			<!--
 			<abbr class="category">
 				<a href="../../category/博客设计/">博客设计</a>
+			</abbr>
+			-->
+			<abbr class="label">
+                <a href="../../tag/代码高亮/">代码高亮</a>
 			</abbr>
 		</footer>
 	</dd>
@@ -187,13 +227,21 @@
             </section>
             
 			<section id="widget-copyright" class="widget-wrapper widget_archive">
-			<div class="widget-title">
-                    版权协议
-            </div>
-			 
+				<div class="widget-title">
+					版权协议
+				</div>
 				<div class="grid col-300 copyright" >
-					<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>
+					<!--<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>-->
 					<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+					<span class="copyright_href">
+						<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+						<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank">
+							<img src="../../theme/image/by-nc-sa.png" alt="知识共享许可协议"></img>
+						</a>
+					</span>
+					<span class="copyright_text">
+						<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank">CC2.5: 知识共享署名-非商业性使用</a>
+					</span>
 				</div>
 			 </section>
         </section><!-- widgets -->
@@ -206,18 +254,12 @@
                     <!-- TO BE CONTINUED -->
                 </ul>
             </div>
-        </div>
-		
-		<div class="grid col-300 copyright" >
-					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
-						<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"" alt="知识共享许可协议"></img>
-					</a>
-		</div>
-        <div class="grid col-300 ">
-		
-        </div>
+        </div>	
         <div class="grid col-300 fit powered">
-          Copyright © 2017 - muzeet - Powered by Pelican
+          <span>Copyright © 2017</sapn>
+		  <span>-</span>
+		  <span><script>document.write(new Date().getFullYear());</script></span>
+		  <span> - muzeet - Powered by Pelican</span>
         </div>
     </section></footer>
 </div>

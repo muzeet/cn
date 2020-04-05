@@ -6,9 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<!--<link rel="stylesheet" id="responsive-style-css"  href="../../../../theme/css/tomorrow-night-bright.css" type="text/css" media="all" />-->
+	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/archive.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/style.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/pygmentMy.css' type="text/css" media="all" />
-	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/archive.css' type="text/css" media="all" />
+	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/bshare.css' type="text/css" media="all" />
 	<!--
 	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/androidstudio.css' type="text/css" media="all" />
 	-->
@@ -16,6 +17,10 @@
 	<script type="text/javascript" src="../../../../theme/js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="../../../../theme/js/numberLines.js"></script>
 	<script type="text/javascript" src="../../../../theme/js/prettify.js"></script>
+	<!--
+	<script type="text/javascript" src="../../../../theme/js/bs-engine.js"></script>
+	<script type="text/javascript" src="../../../../theme/js/bsMore.js"></script>
+	<script type="text/javascript" src="../../../../theme/js/bshareS887.js"></script>-->
 	<!--
 	<script type="text/javascript" src="../../../../theme/js/highlight.pack.js"></script>
 	-->
@@ -68,8 +73,11 @@
             <!--<a href="../../../../2016/06/06/index.html">2016-06-06 </a>-->
 			<a href="../../../../archives/2016/index.html">2016-06-06 </a>
         </abbr>
-        <span class="meta-prep">&nbsp;|&nbsp;标签：</span>
+		<span class="middle-stub">|</span>
+        <span class="meta-prep">标签：</span>
+		<abbr class="label">
                 <a href="../../../../tag/table/">table</a>
+		</abbr>
         <!-- TOBE COMMENTS -->
     </div>
     </header>
@@ -84,28 +92,35 @@
 </div>
     </div><!-- /.entry-content -->
     <footer class="post-meta">
-	    
-		<span class="meta-prep">muzeet&nbsp;发布于</span>
+		<span class="meta-prep">muzeet</span>
+		<span class="middle-stub2"></span>
+		<span class="meta-prep">发布于:</span>
         <abbr class="date">
-            <span>&nbsp;2016-06-06</span>
+			<span>2016-06-06</span>
         </abbr>
-        <span class="meta-prep">&nbsp;&nbsp;分类:</span>
+		<span class="middle-stub2"></span>
+		<span class="meta-prep">分类:</span>
         <abbr class="category">
             <a href="../../../../category/生活/">生活</a>
         </abbr>
     </footer>
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_qzone">QQ空间</a>
-		<a class="jiathis_button_tsina">新浪微博</a>
-		<a class="jiathis_button_tqq">腾讯微博</a>
-		<a class="jiathis_button_weixin">微信</a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-		<a class="jiathis_counter_style"></a>
+	<!-- bshare Button BEGIN -->
+	<div id="bshare-div">
+	  <div class="bshare-custom">
+		<a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a>
+		<a title="分享到微信" class="bshare-weixin"></a>
+		<a title="分享到有道云笔记" class="bshare-youdaonote"></a>
+		<a title="分享到豆瓣" class="bshare-douban"></a>
+		<a title="分享到电子邮件" class="bshare-email"></a>
+		<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+		<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+		<span class="BSHARE_COUNT bshare-share-count">0</span>
+	  </div>
+	  <script type="text/javascript" charset="utf-8" src="../../../../theme/js/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+	  <script type="text/javascript" charset="utf-8" src="../../../../theme/js/bshareC0.js"></script>
 	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
+	<!-- bshare Button END -->
+		
 	<!--
     <section id="respond">
         <div id="disqus_thread">
@@ -271,13 +286,21 @@
             </section>
             
 			<section id="widget-copyright" class="widget-wrapper widget_archive">
-			<div class="widget-title">
-                    版权协议
-            </div>
-			 
+				<div class="widget-title">
+					版权协议
+				</div>
 				<div class="grid col-300 copyright" >
-					<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>
+					<!--<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="知识共享许可协议"></img>-->
 					<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+					<span class="copyright_href">
+						<!--<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">知识共享许可协议</a>-->
+						<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank">
+							<img src="../../../../theme/image/by-nc-sa.png" alt="知识共享许可协议"></img>
+						</a>
+					</span>
+					<span class="copyright_text">
+						<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank">CC2.5: 知识共享署名-非商业性使用</a>
+					</span>
 				</div>
 			 </section>
         </section><!-- widgets -->
@@ -290,18 +313,12 @@
                     <!-- TO BE CONTINUED -->
                 </ul>
             </div>
-        </div>
-		
-		<div class="grid col-300 copyright" >
-					<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
-						<img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"" alt="知识共享许可协议"></img>
-					</a>
-		</div>
-        <div class="grid col-300 ">
-		
-        </div>
+        </div>	
         <div class="grid col-300 fit powered">
-          Copyright © 2017 - muzeet - Powered by Pelican
+          <span>Copyright © 2017</sapn>
+		  <span>-</span>
+		  <span><script>document.write(new Date().getFullYear());</script></span>
+		  <span> - muzeet - Powered by Pelican</span>
         </div>
     </section></footer>
 </div>
