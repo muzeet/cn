@@ -2716,6 +2716,10 @@ a img.aligncenter {
 img.wp-smiley {
 	vertical-align: middle;
 }
+iframe { 
+	clear:both;
+	width:100%;
+}
 
 /* =WordPress Gallery
 -------------------------------------------------------------- */
@@ -3059,6 +3063,11 @@ BDO[DIR="rtl"] {
 	.show-980 {
 		display: block;
 	}
+	
+	iframe { 
+		clear:both;
+		width:100%;
+	}
 
 }
 
@@ -3099,6 +3108,12 @@ BDO[DIR="rtl"] {
 	#logo h1{
 		font-size: 2.0em; 
 		text-align:center;
+	}
+	
+	img, object,iframe { 
+		/*max-width: 100%;*/
+		clear:both;
+		width:100%;
 	}
 	
 	body {
@@ -3444,6 +3459,10 @@ BDO[DIR="rtl"] {
 		padding-bottom: 10px;
 		text-align: center;
 	}
+	iframe { 
+		clear:both;
+		width:100%;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -3505,6 +3524,11 @@ BDO[DIR="rtl"] {
 	#footer .social-icons {
 		text-align: center;
 	}
+	
+	iframe { 
+		clear:both;
+		width:100%;
+	}
 }
 
 @media screen and (max-width: 320px) {
@@ -3535,6 +3559,11 @@ BDO[DIR="rtl"] {
 	
 	.show-320 {
 		display: block;
+	}
+	
+	iframe { 
+		clear:both;
+		width:100%;
 	}
 }
 
@@ -3584,6 +3613,11 @@ BDO[DIR="rtl"] {
 	
 	.show-240 {
 		display: block;
+	}
+	
+	iframe { 
+		clear:both;
+		width:100%;
 	}
 }
 
