@@ -2878,7 +2878,7 @@ table.cart td.actions .coupon .input-text {
 }
 
 .copyright_href {
-	margin: .2em 0 0 0;
+	margin: 0 0 0 0;
 	border:0px red solid;
 	display:block;
 }
@@ -3031,8 +3031,11 @@ BDO[DIR="rtl"] {
 	}
 
 	.copyright,
-	.scroll-top,
 	.powered {
+		float: left;
+	}
+	
+	.scroll-top {
 		float: right;
 	}
 
@@ -3133,21 +3136,22 @@ BDO[DIR="rtl"] {
 		float:none;
 		margin:0; 
 		padding:0;
+		border:1px solid #e0e0e0;
 	}
 	
 	#post {
 		margin: 0 .8em 0 .8em;
-		border: 1px green solid;
+		border: 0px green solid;
 	}
 	
 	div.category_one
 	{
-		border: 1px red solid;
+		border: 0px red solid;
 		margin: 0 .8em 0 .8em;
 	}
 	
 	.archive_list {
-		border: 1px red solid;
+		border: 0px red solid;
 		/*padding-left:.8em;*/
 		margin: 0 .8em 0 .8em;
 	}
@@ -3208,6 +3212,8 @@ BDO[DIR="rtl"] {
 		margin:0 0 0 0;
 		padding:0.8em .8em 0 0;
 	}
+	
+	
 	
 	.footer-wrapper {
 		width:100%;
@@ -3569,7 +3575,7 @@ BDO[DIR="rtl"] {
 		height: 13px;
 		line-height: 13px;
 		text-align: left;
-		border:1px red solid;
+		border:0px red solid;
 	}
 	
 	.hide-240 {
