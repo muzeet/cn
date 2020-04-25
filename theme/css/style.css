@@ -1545,6 +1545,7 @@ form div {
 
 #post-meta-head{
 	text-align:center;
+	font-size: .9em;
 }
 
 .post-edit {
@@ -3193,6 +3194,7 @@ BDO[DIR="rtl"] {
 		clear: both;
 		margin:0;
 		padding:0;
+		border:1px blue solid;
 	}
 	
 	#moth_day {
@@ -3213,7 +3215,7 @@ BDO[DIR="rtl"] {
 		float:left;
 		margin: 0;
 		padding: 0;
-		border: 0px blue solid;
+		border: 1px blue solid;
 		font-size: 1em;	
 	}
 	
@@ -3893,8 +3895,8 @@ img
 }
 
 .fa {
-	border:1px red solid;
-	margin-right:.2em;
+	border:0px blue solid;
+	margin-right:.06em;
 }
 
 
