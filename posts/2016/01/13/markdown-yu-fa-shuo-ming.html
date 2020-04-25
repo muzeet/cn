@@ -10,6 +10,7 @@
     <link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/style.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/pygmentMy.css' type="text/css" media="all" />
 	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/bshare.css' type="text/css" media="all" />
+	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/font-awesome/css/font-awesome.min.css' type="text/css" media="all" />
 	<!--
 	<link rel="stylesheet" id="responsive-style-css"  href='../../../../theme/css/androidstudio.css' type="text/css" media="all" />
 	-->
@@ -17,6 +18,10 @@
 	<script type="text/javascript" src="../../../../theme/js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="../../../../theme/js/numberLines.js"></script>
 	<script type="text/javascript" src="../../../../theme/js/prettify.js"></script>
+	 <!--Leancloud 操作库:-->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!--Valine 的核心代码库:-->
+	<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 	<!--
 	<script type="text/javascript" src="../../../../theme/js/bs-engine.js"></script>
 	<script type="text/javascript" src="../../../../theme/js/bsMore.js"></script>
@@ -68,13 +73,15 @@
     <h2 class="post-title" >Markdown 语法说明</h2>
     
     <div id="post-meta-head" class="post-meta">
-        <span class="meta-prep">发布于：</span>
+        <!--<span class="meta-prep">发布于：</span>-->
+		<span class="meta-prep"><i class="fa fa-calendar"></i></sapn>
         <abbr class="date" title="2016-01-13T00:00:00+08:00"> 
             <!--<a href="../../../../2016/01/13/index.html">2016-01-13 </a>-->
 			<a href="../../../../archives/2016/index.html">2016-01-13 </a>
         </abbr>
 		<span class="middle-stub">|</span>
-        <span class="meta-prep">标签：</span>
+        <!--<span class="meta-prep">标签：</span>-->
+		<span class="meta-prep"><i class="fa fa-tag"></i></sapn>
 		<abbr class="label">
                 <a href="../../../../tag/table/">table</a>
 		</abbr>
@@ -720,68 +727,24 @@ inside a list item.</p>
 	  <script type="text/javascript" charset="utf-8" src="../../../../theme/js/bshareC0.js"></script>
 	</div>
 	<!-- bshare Button END -->
-		
-	<!--
-    <section id="respond">
-        <div id="disqus_thread">
-        <script type="text/javascript">
-        var disqus_identifier = "posts/2016/01/13/markdown-yu-fa-shuo-ming.html";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-        </script>
-        </div>
-		
-    </section>
-	-->
-
 	
-	
-	<!-- 多说评论框 start -->
-	<!--
-	<div class="comments">
-		<h2>Comments !</h2>
-		<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
-		<!-- 多说评论框 end -->
-		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-		<script type="text/javascript">
-		var duoshuoQuery = {short_name:"muzeet"};
-			(function() {
-				var ds = document.createElement('script');
-				ds.type = 'text/javascript';ds.async = true;
-				ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-				ds.charset = 'UTF-8';
-				(document.getElementsByTagName('head')[0] 
-				 || document.getElementsByTagName('body')[0]).appendChild(ds);
-			})();
-			</script>
-		<!-- 多说公共JS代码 end -->
-		<!--
-	</div>
-	-->
-	</br>
 	<section class="respond" id="comments">
 		  <div class="comments">
 			<h2>Comments !</h2>
-			<!-- Duoshuo Comment BEGIN -->
-			<div class="ds-thread"></div>
-			<script type="text/javascript">
-				var duoshuoQuery = {short_name:"muzeet"};
-		  (function() {
-		   var ds = document.createElement('script');
-		   ds.type = 'text/javascript';ds.async = true;
-		   ds.src = 'http://static.duoshuo.com/embed.js';
-		   ds.charset = 'UTF-8';
-		   (document.getElementsByTagName('head')[0]
-			|| document.getElementsByTagName('body')[0]).appendChild(ds);
-
-		   })();
-		  </script>
-		  <noscript>Please enable JavaScript to view the comments.</noscript>
+			<div id="vcomments"></div>
+				<script>
+					new Valine({
+						// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+						av: AV, 
+						el: '#vcomments', // 
+						appId: 'FScGVnrn6wOhRpKVUHWT54XL-gzGzoHsz', // 这里填写上面得到的APP ID
+						appKey: 'bza3XqJF4mi5Jnqi97gHP1aj', // 这里填写上面得到的APP KEY
+						avatar: mm, // 设置默认评论列表
+						placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!' // [v1.0.7 new]留言框占位提示文字
+					});
+				</script>
+		  </div>
 	</section>
-<!-- Duoshuo Comment END -->
 
 </section>
 

@@ -1539,7 +1539,7 @@ form div {
 .post-meta {
 	clear: both;
 	color: #9f9f9f;
-	font-size: 12px;
+	font-size: 1em;
 
 }
 
@@ -3890,6 +3890,11 @@ img
 {
 	border:0px red solid;
 	margin-top:1.2em;
+}
+
+.fa {
+	border:1px red solid;
+	margin-right:.4em;
 }
 
 
