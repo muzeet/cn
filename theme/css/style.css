@@ -1146,7 +1146,7 @@ h2 {
 	
 	font-weight: bold;
    
-    border-bottom: 2px solid #eee;
+    border-bottom: 0px solid #eee;
 
 }
 
@@ -1810,6 +1810,7 @@ form div {
 .post-title{
 	text-align:center;
 	color:#000;
+	border-bottom: 2px solid #eee;	
 }
 .pages-title{
 	text-align:left;
@@ -1820,13 +1821,19 @@ form div {
 	border-bottom: 2px solid #eee;	
 }
 
+#entry_article h1{
+	font-size: 2.2em;
+}
+
 .title a{
 	text-align:left;
+	color: inherit;
 	color: #444;
 }
 
 .title a:hover{
-	color: rgb(1,63,125);
+	/*color: rgb(1,63,125);*/
+	color: #0181eb;
 }
 
 .top-widget .widget-title {
